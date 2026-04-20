@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "v4-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/hugueslourmieres/Documents/Website v4", "run", "dev", "--", "-p", "3001"],
+      "port": 3001
+    }
+  ]
+}

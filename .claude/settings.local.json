@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/hugueslourmieres/Documents/Website v4/**)",
+      "Bash(npm run:*)",
+      "Bash(npx vercel:*)"
+    ]
+  }
+}

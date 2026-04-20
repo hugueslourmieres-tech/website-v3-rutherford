@@ -1,0 +1,585 @@
+[
+  {
+    "slug": "ppwr-dpp-for-offset-printing",
+    "title": "PPWR and Digital Product Passport: What Offset Printers Should Prepare For",
+    "excerpt": "A practical guide to PPWR and DPP readiness for packaging, labels, and offset printing operations serving the European market.",
+    "lead": "What the new EU packaging rules and Digital Product Passport model mean for offset printers, converters, and print supply chains.",
+    "image": "/images/ppwr-dpp-hero.png",
+    "paragraphs": [
+      "PPWR and Digital Product Passport requirements are becoming strategic topics for packaging printers and converters. Even when the detailed obligations vary by product category, the direction is clear: packaging and printed products sold into the European market will require stronger data, better traceability, and clearer evidence of compliance.",
+      "The Packaging and Packaging Waste Regulation (PPWR) entered into force in February 2025 and will generally apply from August 2026. According to the European Commission, the regulation is designed to reduce packaging waste, improve recyclability, increase recycled content where relevant, and harmonize packaging rules across the EU market.",
+      "In parallel, the Ecodesign for Sustainable Products Regulation introduces the Digital Product Passport concept. The European Commission describes the DPP as a digital identity card for products, components, and materials, built to support sustainability, circularity, and legal compliance. GS1 also frames the DPP as a digital record that improves traceability and transparency throughout the value chain.",
+      "For offset printing companies, the operational implication is straightforward: product, substrate, job, and quality data will matter more. Printers that can connect production data, specifications, approvals, and traceability records in a structured way will be better positioned to answer customer requests and future compliance checks.",
+      "This does not mean every printer needs to rebuild its workflow overnight. It does mean that investments in standardization, connected quality systems, and better production visibility are becoming more strategic. The print businesses that prepare now will be in a stronger position to support brand owners, packaging buyers, and regulatory expectations over the next few years."
+    ],
+    "originalUrl": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "category": "Rutherford Insights",
+    "sources": [
+      {
+        "label": "European Commission – Packaging waste and PPWR overview",
+        "href": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      },
+      {
+        "label": "European Commission – Ecodesign for Sustainable Products Regulation",
+        "href": "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en"
+      },
+      {
+        "label": "GS1 – What is a Digital Product Passport?",
+        "href": "https://support.gs1.org/support/solutions/articles/43000758761-what-is-a-digital-product-passport-"
+      }
+    ]
+  },
+  {
+    "slug": "paper-crisis",
+    "title": "Paper crisis",
+    "excerpt": "How offset printers can respond to substrate volatility by reducing waste, stabilizing makeready, and protecting margin.",
+    "lead": "How offset printers can respond to substrate volatility by reducing waste, stabilizing makeready, and protecting margin.",
+    "image": "https://www.rutherford.fr/images/f-converti-fgd-1678.webp",
+    "paragraphs": [
+      "Paper cost inflation changes the economics of print very quickly. When substrate prices rise and lead times get longer, the traditional “start, adjust, and throw away sheets” approach becomes much more expensive than before.",
+      "For offset printers, the first priority is to reduce avoidable waste. Better presetting and stronger closed-loop control shorten the path to saleable sheets, which directly lowers paper consumption and improves cost control during unstable market conditions.",
+      "This is why Rutherford positions accurate ink-key behavior, job-by-job learning, and consistent color guidance as practical tools rather than abstract automation features. In a volatile substrate market, every avoided adjustment matters.",
+      "The article’s message remains highly relevant today: the more expensive paper becomes, the more value there is in precise setup, repeatable color, and stable production data. Waste reduction is no longer just a quality topic; it is a margin-protection strategy.",
+      "For print businesses serving demanding packaging, label, and commercial customers, efficient makeready is one of the fastest ways to protect profitability while keeping delivery times and customer expectations under control."
+    ],
+    "originalUrl": "https://www.rutherford.fr/paper-crisis.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "the-shelby-company",
+    "title": "The Shelby Company",
+    "excerpt": "The Shelby Company case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "The Shelby Company shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/1615818368518-1834.webp",
+    "paragraphs": [
+      "The Shelby Company is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "The Shelby Company is highlighted with a workflow built around IntelliTrax2, X-Rite, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/the-shelby-company.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "obeikan-group",
+    "title": "Obeikan Group",
+    "excerpt": "Obeikan Group case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Obeikan Group in Saudi Arabia shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/1612787881683-1876.webp",
+    "paragraphs": [
+      "Obeikan Group is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Obeikan Group is highlighted with a workflow built around X-Rite, Pantone, CIP3, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/obeikan-group.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "measure-color-21.1",
+    "title": "Measure Color 21.1",
+    "excerpt": "A product update focused on stronger integrations, better quality reporting, and improved data flow across the print workflow.",
+    "lead": "A product update focused on stronger integrations, better quality reporting, and improved data flow across the print workflow.",
+    "image": "https://www.rutherford.fr/images/1618917324266-1834.webp",
+    "paragraphs": [
+      "MeasureColor 21.1 represents the kind of software evolution that matters in production: not cosmetic change, but stronger connectivity, smoother score handling, and better visibility from the pressroom to quality management.",
+      "For offset printers, this matters because quality systems only create value when they connect easily with the devices and platforms already used on site. Integrations with tools such as ColorCert, GMG, IntelliTrax2, and MeasureColor Reports make the workflow more reliable and easier to scale.",
+      "The operational benefit is straightforward: more consistent reporting, less friction in target management, and faster access to quality information for operators, supervisors, and brand-facing teams.",
+      "In practical terms, software updates like this help standardize communication between measurement, reference management, and reporting. That creates a more robust quality loop and reduces the manual work needed to keep systems aligned.",
+      "For printers looking to industrialize quality control, these improvements are part of a bigger trend: color data is becoming more connected, more actionable, and more central to production performance."
+    ],
+    "originalUrl": "https://www.rutherford.fr/measure-color-21.1.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "yazawa-printing-shi-ze-yin-shua",
+    "title": "Yazawa Printing 矢沢印刷",
+    "excerpt": "Yazawa Printing 矢沢印刷 case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Yazawa Printing 矢沢印刷 in Japan shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/1610632125047-917.webp",
+    "paragraphs": [
+      "Yazawa Printing 矢沢印刷 is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Yazawa Printing 矢沢印刷 is highlighted with a workflow built around IntelliTrax2, X-Rite, Pantone, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/yazawa-printing-shi-ze-yin-shua.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "extended-gamut-from-lefrancq",
+    "title": "Extended Gamut from LEFRANCQ",
+    "excerpt": "Extended Gamut from LEFRANCQ case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Extended Gamut from LEFRANCQ shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "/images/lefrancq-extended-gamut.jpg",
+    "paragraphs": [
+      "Extended Gamut from LEFRANCQ is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Extended Gamut from LEFRANCQ is highlighted with a workflow built around IntelliTrax2, Colorware, Esko, Equinox, X-Rite, Pantone, CIP3, and Extended Gamut.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/extended-gamut-from-lefrancq.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "offset-machinist",
+    "title": "Offset machinist",
+    "excerpt": "Offset press expertise in offset printing: why people, skills, and operational culture still matter.",
+    "lead": "Behind every stable pressroom, there are operators who understand how to combine technical control, discipline, and print craftsmanship.",
+    "image": "https://www.rutherford.fr/images/1608302721084-1920.jpeg",
+    "paragraphs": [
+      "Behind every stable pressroom, there are operators who understand how to combine technical control, discipline, and print craftsmanship.",
+      "Printing performance is never only about equipment. It is also about people, know-how, and the ability to maintain standards every day. In offset production, the best results usually come from teams that combine technical discipline with a strong sense of craft.",
+      "That is why Rutherford regularly highlights the people behind the presses: operators, production managers, color specialists, and plant teams who make stability possible in real working conditions.",
+      "From a business perspective, a strong production culture leads to fewer do-overs, better communication with customers, and a more repeatable quality level. It also makes automation easier to adopt because the team understands what the system should deliver and how to verify it.",
+      "This article is a reminder that sustainable print performance depends on both technology and people. The strongest plants are the ones that invest in both."
+    ],
+    "originalUrl": "https://www.rutherford.fr/offset-machinist.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "lefrancq-packaging-testimonial",
+    "title": "LEFRANCQ PACKAGING Testimonial",
+    "excerpt": "LEFRANCQ PACKAGING case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "LEFRANCQ PACKAGING in France shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "/images/lefrancq-packaging-testimonial.jpg",
+    "paragraphs": [
+      "LEFRANCQ PACKAGING is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "LEFRANCQ PACKAGING is highlighted with a workflow built around IntelliPack, IntelliTrax2, MeasureColor, Colorware, Esko, Equinox, X-Rite, Pantone, and Extended Gamut.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/lefrancq-packaging-testimonial.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "pantone-2021",
+    "title": "Pantone 2021",
+    "excerpt": "Why color trends still matter in packaging, branding, and premium print production.",
+    "lead": "Why color trends still matter in packaging, branding, and premium print production.",
+    "image": "https://www.rutherford.fr/images/1608727010967-1920.webp",
+    "paragraphs": [
+      "Pantone’s color announcements are often seen as a design story, but they also have practical implications for print. When brands adopt new reference colors, printers need to evaluate how those hues translate in production and how to maintain consistency across jobs and substrates.",
+      "For offset printing, that means checking gamut capability, ink behavior, and the control strategy required to reproduce vibrant shades reliably. Trend colors become a production challenge as soon as they move from screen to press.",
+      "This is especially true in packaging and premium commercial work, where color is tied directly to brand recognition and shelf impact. Strong color management processes help printers respond to trend-driven briefs without compromising repeatability.",
+      "The broader lesson is simple: color communication starts in design, but it only delivers value when it can be printed consistently. That is where measurement, standards, and controlled workflows make the difference."
+    ],
+    "originalUrl": "https://www.rutherford.fr/pantone-2021.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "girl-power",
+    "title": "Girl Power",
+    "excerpt": "Women in print in offset printing: why people, skills, and operational culture still matter.",
+    "lead": "The printing industry grows stronger when it values diverse profiles, technical expertise, and more inclusive leadership across production, quality, and innovation roles.",
+    "image": "https://www.rutherford.fr/images/1604335028710-1834.webp",
+    "paragraphs": [
+      "The printing industry grows stronger when it values diverse profiles, technical expertise, and more inclusive leadership across production, quality, and innovation roles.",
+      "Printing performance is never only about equipment. It is also about people, know-how, and the ability to maintain standards every day. In offset production, the best results usually come from teams that combine technical discipline with a strong sense of craft.",
+      "That is why Rutherford regularly highlights the people behind the presses: operators, production managers, color specialists, and plant teams who make stability possible in real working conditions.",
+      "From a business perspective, a strong production culture leads to fewer do-overs, better communication with customers, and a more repeatable quality level. It also makes automation easier to adopt because the team understands what the system should deliver and how to verify it.",
+      "This article is a reminder that sustainable print performance depends on both technology and people. The strongest plants are the ones that invest in both."
+    ],
+    "originalUrl": "https://www.rutherford.fr/girl-power.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "lefrancq-packaging",
+    "title": "LEFRANCQ PACKAGING",
+    "excerpt": "LEFRANCQ PACKAGING case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "LEFRANCQ PACKAGING in France shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/1606137638175-1838.webp",
+    "paragraphs": [
+      "LEFRANCQ PACKAGING is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "LEFRANCQ PACKAGING is highlighted with a workflow built around IntelliPack, IntelliTrax2, MeasureColor, Colorware, Esko, Equinox, X-Rite, Pantone, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/lefrancq-packaging.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "westrock-aguascalientes",
+    "title": "WestRock Aguascalientes",
+    "excerpt": "WestRock Aguascalientes case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "WestRock Aguascalientes shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/1605621658952-1880.webp",
+    "paragraphs": [
+      "WestRock Aguascalientes is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "WestRock Aguascalientes is highlighted with a workflow built around X-Rite, Pantone, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/westrock-aguascalientes.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "wauters-bpack-video",
+    "title": "Wauters - Bpack Video",
+    "excerpt": "Wauters - Bpack case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Wauters - Bpack shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "/images/wauters-bpack.jpg",
+    "paragraphs": [
+      "Wauters - Bpack is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Wauters - Bpack is highlighted with a workflow built around MeasureColor, Colorware, X-Rite, and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/wauters-bpack-video.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "keep-your-production-under-control",
+    "title": "Keep Your Production UNDER CONTROL",
+    "excerpt": "How connected presetting, closed-loop color control, and quality reporting create a more predictable offset workflow.",
+    "lead": "How connected presetting, closed-loop color control, and quality reporting create a more predictable offset workflow.",
+    "image": "https://www.rutherford.fr/images/1605013025472-1878.webp",
+    "paragraphs": [
+      "Production control in offset printing depends on more than a single device or a single console. It depends on how presetting, measurement, guidance, and reporting work together across the entire production cycle.",
+      "This article highlights a workflow philosophy built around Rutherford applications, IntelliTrax2 from X-Rite, and MeasureColor. The aim is to create a continuous process from setup to verification instead of relying on disconnected steps.",
+      "When these layers are connected, printers gain faster makeready, better visibility into variation, and a more reliable path to target color. That reduces paper waste while making operators more effective under production pressure.",
+      "The result is not only higher quality. It is also better control of time, substrate, and customer expectations. For modern print plants, that combination is essential."
+    ],
+    "originalUrl": "https://www.rutherford.fr/keep-your-production-under-control.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "ask-advertising",
+    "title": "ASK ADVERTISING",
+    "excerpt": "ASK ADVERTISING case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "ASK ADVERTISING in India shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/1604490287273-1852.webp",
+    "paragraphs": [
+      "ASK ADVERTISING is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "ASK ADVERTISING is highlighted with a workflow built around MeasureColor, Pantone, CIP3, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/ask-advertising.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "intelliloop-v.1.20",
+    "title": "IntelliLoop v.1.20",
+    "excerpt": "A workflow update focused on strengthening closed-loop color control and production consistency.",
+    "lead": "A workflow update focused on strengthening closed-loop color control and production consistency.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-24.webp",
+    "paragraphs": [
+      "IntelliLoop updates matter because closed-loop color control is only as effective as the quality of the logic behind it. When software evolves, the practical goal is always the same: reach target faster and keep the process stable job after job.",
+      "For offset printers, this type of release improves day-to-day production by refining how measurement data is interpreted and translated into console guidance. That helps reduce unnecessary intervention and improves operator confidence.",
+      "In the broader Rutherford ecosystem, IntelliLoop plays a central role between measurement and on-press action. It helps transform reading data into useful production decisions rather than passive reporting.",
+      "Version updates therefore support a bigger operational objective: better repeatability, better waste control, and more reliable color performance over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/intelliloop-v.1.20.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "gs-monaco-",
+    "title": "GS MONACO",
+    "excerpt": "GS MONACO case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "GS MONACO in Monaco shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1834.webp",
+    "paragraphs": [
+      "GS MONACO is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "GS MONACO is highlighted with a workflow built around IntelliPack, IntelliTrax2, X-Rite, and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/gs-monaco-.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "stopplayingpiano",
+    "title": "Stopplayingpiano",
+    "excerpt": "Why printers should replace manual ink-key correction with a more stable, data-driven workflow.",
+    "lead": "Why printers should replace manual ink-key correction with a more stable, data-driven workflow.",
+    "image": "/images/stopplayingpiano-operator.jpg",
+    "paragraphs": [
+      "“Playing the piano” on a press console is a familiar image in offset printing: operators chasing color manually across the width of the sheet, one key at a time. It is also a sign that the preset and control workflow is not doing enough on its own.",
+      "Rutherford uses this phrase to describe a problem that many plants still accept as normal. When the setup baseline is weak, operators spend valuable time compensating for variation instead of controlling production efficiently.",
+      "The answer is not removing operator expertise. It is giving operators a better starting point through stronger presets, better measurement, and a more responsive closed-loop system.",
+      "The less the team has to “play the piano,” the faster it can reach target color, reduce waste, and make repeat jobs more predictable. That is the production logic behind the ColorLoop message."
+    ],
+    "originalUrl": "https://www.rutherford.fr/stopplayingpiano.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "seb.-wolf-gmbh",
+    "title": "Seb. Wolf GmbH",
+    "excerpt": "Seb. Wolf GmbH case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Seb. Wolf GmbH shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1146.webp",
+    "paragraphs": [
+      "Seb. Wolf GmbH is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Seb. Wolf GmbH is highlighted with a workflow built around Colorware, X-Rite, and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/seb.-wolf-gmbh.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "colorconsulting",
+    "title": "Colorconsulting",
+    "excerpt": "Colorconsulting case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Colorconsulting shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1828.webp",
+    "paragraphs": [
+      "Colorconsulting is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Colorconsulting is highlighted with a workflow built around IntelliTrax2 and X-Rite.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/colorconsulting.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "la-galiote-prenant",
+    "title": "LA GALIOTE PRENANT",
+    "excerpt": "LA GALIOTE PRENANT case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "LA GALIOTE PRENANT shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-25.webp",
+    "paragraphs": [
+      "LA GALIOTE PRENANT is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "LA GALIOTE PRENANT is highlighted with a workflow built around IntelliPack, IntelliTrax2, X-Rite, Pantone, CIP3, CIP4, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/la-galiote-prenant.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "wauters-bpack",
+    "title": "Wauters BPack",
+    "excerpt": "Wauters BPack case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Wauters BPack in France shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1918.webp",
+    "paragraphs": [
+      "Wauters BPack is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Wauters BPack is highlighted with a workflow built around IntelliPack, X-Rite, and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/wauters-bpack.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "ar-packaging-majujaya",
+    "title": "AR PACKAGING Majujaya",
+    "excerpt": "AR PACKAGING Majujaya case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "AR PACKAGING Majujaya in Indonesia shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1482.webp",
+    "paragraphs": [
+      "AR PACKAGING Majujaya is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "AR PACKAGING Majujaya is highlighted with a workflow built around IntelliPack, IntelliTrax2, X-Rite, Pantone, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/ar-packaging-majujaya.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "yamada-photo-process-co.ltd",
+    "title": "YAMADA PHOTO PROCESS CO.LTD",
+    "excerpt": "YAMADA PHOTO PROCESS CO.LTD case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "YAMADA PHOTO PROCESS CO.LTD shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-29.webp",
+    "paragraphs": [
+      "YAMADA PHOTO PROCESS CO.LTD is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "YAMADA PHOTO PROCESS CO.LTD is highlighted with a workflow built around IntelliPack, IntelliTrax2, X-Rite, Pantone, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/yamada-photo-process-co.ltd.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "roi",
+    "title": "ROI",
+    "excerpt": "Why return on investment in offset print automation should be measured through waste reduction, time savings, and repeatability.",
+    "lead": "Why return on investment in offset print automation should be measured through waste reduction, time savings, and repeatability.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-30.webp",
+    "paragraphs": [
+      "In offset printing, ROI is rarely driven by one spectacular metric. It is usually built through many small operational gains: fewer startup sheets, shorter makeready, less manual correction, and better repeatability on repeat jobs.",
+      "That is why Rutherford frames ROI through real production behavior. If a plant can reach color faster and hold quality more consistently, it saves substrate, operator time, and rework across the full year.",
+      "The financial effect is often stronger than expected because the same improvements touch multiple cost areas at once: paper, ink, labor, downtime, and customer-facing quality issues.",
+      "Viewed this way, automation is not only a technical upgrade. It is a decision about how efficiently the pressroom converts time and materials into sellable sheets."
+    ],
+    "originalUrl": "https://www.rutherford.fr/roi.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "grupo-lappi-etiquetas",
+    "title": "GRUPO LAPPÍ ETIQUETAS",
+    "excerpt": "GRUPO LAPPÍ ETIQUETAS case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "GRUPO LAPPÍ ETIQUETAS in Spain shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-834.webp",
+    "paragraphs": [
+      "GRUPO LAPPÍ ETIQUETAS is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "GRUPO LAPPÍ ETIQUETAS is highlighted with a workflow built around IntelliTrax2, X-Rite, Pantone, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/grupo-lappi-etiquetas.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "yuto",
+    "title": "YUTO",
+    "excerpt": "YUTO case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "YUTO shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1526.webp",
+    "paragraphs": [
+      "YUTO is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "YUTO is highlighted with a workflow built around IntelliTrax2, X-Rite, Pantone, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/yuto.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "worldwide-support-",
+    "title": "Worldwide Support",
+    "excerpt": "Why remote support and structured service matter for fast-moving print plants.",
+    "lead": "Why remote support and structured service matter for fast-moving print plants.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-31.webp",
+    "paragraphs": [
+      "Support is a critical part of print automation. Even the best workflow loses value if a plant cannot get a quick answer when a console, device, or job setup issue appears during production.",
+      "Worldwide support allows print sites to keep moving with faster troubleshooting, clearer escalation, and more consistent guidance across time zones and production environments.",
+      "For printers, that means shorter interruptions and a better chance of resolving issues before they become costly production delays. It also helps teams adopt new tools more confidently.",
+      "Rutherford’s support story is therefore part of the product story: a workflow is only useful when the teams using it can rely on practical, fast, and knowledgeable assistance."
+    ],
+    "originalUrl": "https://www.rutherford.fr/worldwide-support-.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "westrock-mps",
+    "title": "WestRock MPS",
+    "excerpt": "WestRock MPS case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "WestRock MPS shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-32.webp",
+    "paragraphs": [
+      "WestRock MPS is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "WestRock MPS is highlighted with a workflow built around IntelliTrax2, X-Rite, and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/westrock-mps.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "-moderna-printing",
+    "title": "Moderna Printing",
+    "excerpt": "Moderna Printing case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Moderna Printing in Belgium shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-33.webp",
+    "paragraphs": [
+      "Moderna Printing is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Moderna Printing is highlighted with a workflow built around IntelliTrax2 and Pantone.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/-moderna-printing.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "self-financed-rutherford-system",
+    "title": "self-financed Rutherford system",
+    "excerpt": "How waste reduction and faster makeready can help automation projects pay for themselves.",
+    "lead": "How waste reduction and faster makeready can help automation projects pay for themselves.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-34.webp",
+    "paragraphs": [
+      "Automation projects in print are often evaluated through upfront cost alone, but the more relevant question is how quickly they reduce recurring waste and inefficiency.",
+      "When presetting, closed-loop control, and measurement are working together, printers often recover value through lower paper waste, less manual tuning, and faster access to saleable sheets.",
+      "That is why a Rutherford system can be described as self-financed in practical terms: the operational gains accumulate every day, and those gains help offset the initial investment.",
+      "For plant managers, this approach reframes automation from a capital expenditure into a productivity engine. It connects technical change directly to margin improvement."
+    ],
+    "originalUrl": "https://www.rutherford.fr/self-financed-rutherford-system.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "glossop-cartons",
+    "title": "Glossop Cartons",
+    "excerpt": "Glossop Cartons case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Glossop Cartons shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-907.webp",
+    "paragraphs": [
+      "Glossop Cartons is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Glossop Cartons is highlighted with a workflow built around IntelliTrax2, X-Rite, Pantone, CIP3, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/glossop-cartons.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "heidelberg-xl-75",
+    "title": "Heidelberg XL 75",
+    "excerpt": "Heidelberg XL 75 case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Heidelberg XL 75 shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/image-collee-1590.webp",
+    "paragraphs": [
+      "Heidelberg XL 75 is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Heidelberg XL 75 is highlighted with a workflow built around IntelliPack, IntelliTrax2, MeasureColor, Colorware, X-Rite, Pantone, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/heidelberg-xl-75.html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "printwell-inc.",
+    "title": "Printwell Inc.",
+    "excerpt": "Printwell Inc. case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Printwell Inc. shows how disciplined color workflows, measurement, and automation can improve productivity in sheetfed offset production.",
+    "image": "https://www.rutherford.fr/images/image-collee-320-37.webp",
+    "paragraphs": [
+      "Printwell Inc. is featured here as a practical example of how print businesses are modernizing sheetfed offset production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Printwell Inc. is highlighted with a workflow built around MeasureColor, X-Rite, Pantone, CIP3, and closed-loop.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/printwell-inc..html",
+    "category": "Rutherford Blog"
+  },
+  {
+    "slug": "koenig-bauer",
+    "title": "Koenig & Bauer",
+    "excerpt": "Koenig & Bauer case study for offset printing standardization, quality control, and faster makeready.",
+    "lead": "Koenig & Bauer shows how disciplined color workflows, measurement, and automation can improve productivity in packaging and label production.",
+    "image": "https://www.rutherford.fr/images/1603379105417-2-1834.webp",
+    "paragraphs": [
+      "Koenig & Bauer is featured here as a practical example of how print businesses are modernizing packaging and label production. The story is not just about adding software or hardware: it is about reducing variation, reaching color faster, and making daily production easier for operators and managers alike.",
+      "Koenig & Bauer is highlighted with a workflow built around IntelliPack, IntelliTrax2, MeasureColor, Colorware, X-Rite, Pantone, and CIP3.",
+      "For offset printers, the real value of this type of deployment is operational stability. Better presets, faster measurements, and more reliable feedback loops help teams reach target color with less paper, fewer correction cycles, and a more controlled startup on every repeat job.",
+      "This article also reflects a wider trend in industrial print: customers expect measurable consistency across shifts, presses, and production sites. Standardized workflows make it easier to onboard operators, scale quality procedures, and give brand owners more confidence in the result.",
+      "Rutherford’s role in these projects is to connect the console, the measurement layer, and the reporting workflow into one usable process. The outcome is a production environment where quality becomes easier to repeat, easier to document, and easier to improve over time."
+    ],
+    "originalUrl": "https://www.rutherford.fr/koenig-bauer.html",
+    "category": "Rutherford Blog"
+  }
+]
