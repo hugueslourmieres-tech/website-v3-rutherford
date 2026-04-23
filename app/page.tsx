@@ -21,6 +21,10 @@ const RutherfordIdentitySection = dynamic(
   () => import('@/components/rutherford-identity-section').then((module) => module.RutherfordIdentitySection),
   { ssr: true }
 );
+const PPWRSection = dynamic(
+  () => import('@/components/ppwr-section').then((module) => module.PPWRSection),
+  { ssr: true }
+);
 const VideoShowcase = dynamic(
   () => import('@/components/video-showcase').then((module) => module.VideoShowcase),
   { ssr: true }
@@ -158,6 +162,8 @@ export default function HomePage() {
       <FlexoShowcase />
 
       <VideoShowcase />
+
+      <PPWRSection />
 
       <TeamShowcase />
 
