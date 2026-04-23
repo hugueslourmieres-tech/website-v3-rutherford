@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLanguage, type Locale } from '@/components/language-provider';
 
-type CaseKey = 'lefrancq' | 'wauters' | 'gsmonaco';
+type CaseKey = 'viappiani' | 'autajon' | 'moderna' | 'avery';
 
 type CaseStudy = {
   key: CaseKey;
@@ -14,22 +14,28 @@ type CaseStudy = {
 
 const caseStudies: CaseStudy[] = [
   {
-    key: 'lefrancq',
-    company: 'LEFRANCQ Packaging',
-    videoId: '0bUlKQ-lIZs',
-    videoTitle: 'LEFRANCQ Packaging — testimonial',
-  },
-  {
-    key: 'wauters',
-    company: "Wauters B'Pack",
+    key: 'viappiani',
+    company: 'Viappiani Printing',
     videoId: 'r7_4EdplcdE',
-    videoTitle: "Wauters B'Pack x Rutherford",
+    videoTitle: 'Testimonial – Viappiani Printing',
   },
   {
-    key: 'gsmonaco',
-    company: 'GS Monaco',
+    key: 'autajon',
+    company: 'Autajon Packaging Milan',
     videoId: 'FTjkGK2K-wI',
-    videoTitle: 'GS Monaco — testimonial',
+    videoTitle: 'Testimonial – Autajon Packaging Milan',
+  },
+  {
+    key: 'moderna',
+    company: 'Moderna Printing',
+    videoId: 'vYN1mjCK9VU',
+    videoTitle: 'Testimonial – Moderna Printing',
+  },
+  {
+    key: 'avery',
+    company: 'Avery Dennison Queretaro',
+    videoId: '0bUlKQ-lIZs',
+    videoTitle: 'Testimonial – Avery Dennison Queretaro',
   },
 ];
 
@@ -41,10 +47,6 @@ function fallbackThumbnail(videoId: string) {
   return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 }
 
-function videoUrl(videoId: string) {
-  return `https://www.youtube.com/watch?v=${videoId}`;
-}
-
 type CaseCopy = { challenge: string; result: string };
 
 type Copy = {
@@ -54,6 +56,8 @@ type Copy = {
   challengeLabel: string;
   resultLabel: string;
   cta: string;
+  prev: string;
+  next: string;
   cases: Record<CaseKey, CaseCopy>;
 };
 
@@ -62,22 +66,28 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Case studies',
     headline: 'Results from the field',
     intro:
-      'Three stories where Rutherford helped offset teams hit targets faster, reduce waste, and standardize production.',
+      'Stories from the field where Rutherford helped offset teams hit targets faster, reduce waste, and standardize production.',
     challengeLabel: 'Challenge',
     resultLabel: 'Result',
-    cta: 'Watch testimonial',
+    cta: 'Play testimonial',
+    prev: 'Previous testimonial',
+    next: 'Next testimonial',
     cases: {
-      lefrancq: {
-        challenge: 'Color inconsistency slowing down packaging offset production.',
-        result: 'Faster makeready, stable deliveries, and stronger customer confidence.',
+      viappiani: {
+        challenge: 'Maintaining precision and speed on demanding commercial offset jobs.',
+        result: 'Faster makeready, less waste, and tighter color control with Rutherford closed-loop.',
       },
-      wauters: {
-        challenge: 'Maintaining packaging quality at scale while speeding up setup.',
-        result: 'Stronger repeatability and more predictable output shift to shift.',
+      autajon: {
+        challenge: 'Holding brand color consistency across high-end packaging production.',
+        result: 'Stronger color consistency and better press efficiency shift to shift.',
       },
-      gsmonaco: {
-        challenge: 'Matching demanding brand color standards on commercial offset jobs.',
-        result: 'Tighter color control, shorter makeready, and fewer reruns.',
+      moderna: {
+        challenge: 'Slow, manual startups driving makeready waste on sheetfed offset.',
+        result: 'Smarter startups, reduced waste, and faster time to saleable sheets.',
+      },
+      avery: {
+        challenge: 'Scaling color consistency across international label production.',
+        result: 'Standardized pressroom, reliable color quality, and cleaner data across sites.',
       },
     },
   },
@@ -85,22 +95,28 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Cas clients',
     headline: 'Des résultats sur le terrain',
     intro:
-      'Trois histoires où Rutherford a aidé des équipes offset à atteindre leurs cibles plus vite, réduire la gâche et standardiser la production.',
+      'Des histoires terrain où Rutherford a aidé des équipes offset à atteindre leurs cibles plus vite, réduire la gâche et standardiser la production.',
     challengeLabel: 'Défi',
     resultLabel: 'Résultat',
-    cta: 'Voir le témoignage',
+    cta: 'Lire le témoignage',
+    prev: 'Témoignage précédent',
+    next: 'Témoignage suivant',
     cases: {
-      lefrancq: {
-        challenge: 'Constance couleur instable qui ralentit la production offset packaging.',
-        result: 'Calage plus rapide, livraisons stables, confiance client renforcée.',
+      viappiani: {
+        challenge: 'Maintenir précision et vitesse sur des travaux offset commerciaux exigeants.',
+        result: 'Calage plus rapide, moins de gâche et contrôle couleur plus fin grâce au closed-loop Rutherford.',
       },
-      wauters: {
-        challenge: 'Maintenir la qualité packaging à l’échelle tout en accélérant le calage.',
-        result: 'Meilleure répétabilité et sorties plus prévisibles d’une équipe à l’autre.',
+      autajon: {
+        challenge: 'Tenir la constance couleur marque sur du packaging haut de gamme.',
+        result: 'Constance couleur renforcée et meilleure efficacité presse d’une équipe à l’autre.',
       },
-      gsmonaco: {
-        challenge: 'Tenir des exigences couleur marque fortes sur des travaux offset commerciaux.',
-        result: 'Contrôle couleur plus fin, calage plus court, moins de relances.',
+      moderna: {
+        challenge: 'Calages lents et manuels qui font grimper la gâche sur offset feuille à feuille.',
+        result: 'Démarrages plus intelligents, moins de gâche et accès plus rapide aux feuilles vendables.',
+      },
+      avery: {
+        challenge: 'Scaler la constance couleur sur de la production d’étiquettes internationale.',
+        result: 'Atelier standardisé, qualité couleur fiable et données plus propres entre sites.',
       },
     },
   },
@@ -108,22 +124,28 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Referenzen',
     headline: 'Ergebnisse aus der Praxis',
     intro:
-      'Drei Geschichten, in denen Rutherford Offsetteams geholfen hat, Ziele schneller zu erreichen, Makulatur zu reduzieren und die Produktion zu standardisieren.',
+      'Geschichten aus der Praxis, in denen Rutherford Offsetteams geholfen hat, Ziele schneller zu erreichen, Makulatur zu reduzieren und die Produktion zu standardisieren.',
     challengeLabel: 'Herausforderung',
     resultLabel: 'Ergebnis',
-    cta: 'Testimonial ansehen',
+    cta: 'Testimonial abspielen',
+    prev: 'Vorheriges Testimonial',
+    next: 'Nächstes Testimonial',
     cases: {
-      lefrancq: {
-        challenge: 'Farbinkonsistenz bremst die Verpackungs-Offsetproduktion.',
-        result: 'Schnelleres Einrichten, stabile Lieferungen, mehr Kundenvertrauen.',
+      viappiani: {
+        challenge: 'Präzision und Geschwindigkeit bei anspruchsvollen kommerziellen Offsetaufträgen halten.',
+        result: 'Schnelleres Einrichten, weniger Makulatur und engere Farbsteuerung mit Rutherford Closed-Loop.',
       },
-      wauters: {
-        challenge: 'Verpackungsqualität im Maßstab halten und Einrichtung beschleunigen.',
-        result: 'Höhere Wiederholbarkeit und vorhersagbarere Ergebnisse pro Schicht.',
+      autajon: {
+        challenge: 'Marken-Farbkonstanz in der hochwertigen Verpackungsproduktion halten.',
+        result: 'Stärkere Farbkonstanz und bessere Druckeffizienz von Schicht zu Schicht.',
       },
-      gsmonaco: {
-        challenge: 'Hohe Marken-Farbvorgaben bei kommerziellen Offset-Jobs halten.',
-        result: 'Engere Farbsteuerung, kürzeres Einrichten, weniger Nachdrucke.',
+      moderna: {
+        challenge: 'Langsame, manuelle Einrichtungen treiben die Makulatur im Bogenoffset hoch.',
+        result: 'Intelligentere Starts, weniger Makulatur und schneller zu verkaufbaren Bogen.',
+      },
+      avery: {
+        challenge: 'Farbkonstanz in der internationalen Etikettenproduktion skalieren.',
+        result: 'Standardisierter Druckraum, zuverlässige Farbqualität und sauberere Daten standortübergreifend.',
       },
     },
   },
@@ -131,22 +153,28 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Case study',
     headline: 'Risultati dal campo',
     intro:
-      'Tre storie in cui Rutherford ha aiutato team offset a colpire prima i target, ridurre lo scarto e standardizzare la produzione.',
+      'Storie dal campo in cui Rutherford ha aiutato team offset a colpire prima i target, ridurre lo scarto e standardizzare la produzione.',
     challengeLabel: 'Sfida',
     resultLabel: 'Risultato',
     cta: 'Guarda il video',
+    prev: 'Testimonianza precedente',
+    next: 'Testimonianza successiva',
     cases: {
-      lefrancq: {
-        challenge: 'Inconsistenza colore che rallenta la produzione offset packaging.',
-        result: 'Avviamento più rapido, consegne stabili, maggiore fiducia del cliente.',
+      viappiani: {
+        challenge: 'Mantenere precisione e velocità su lavori offset commerciali esigenti.',
+        result: 'Avviamento più rapido, meno scarto e controllo colore più fine con il closed-loop Rutherford.',
       },
-      wauters: {
-        challenge: 'Mantenere qualità packaging su scala mentre si accelera il setup.',
-        result: 'Maggior ripetibilità e output più prevedibile tra i turni.',
+      autajon: {
+        challenge: 'Reggere la consistenza colore brand su packaging di alta gamma.',
+        result: 'Maggior consistenza colore e migliore efficienza di stampa tra i turni.',
       },
-      gsmonaco: {
-        challenge: 'Reggere standard di colore brand esigenti su lavori offset commerciali.',
-        result: 'Controllo colore più fine, avviamento più corto, meno riavvii.',
+      moderna: {
+        challenge: 'Avviamenti lenti e manuali che alzano lo scarto su offset foglio.',
+        result: 'Startup più intelligenti, meno scarto e accesso più rapido ai fogli vendibili.',
+      },
+      avery: {
+        challenge: 'Scalare la consistenza colore su produzione etichette internazionale.',
+        result: 'Pressroom standardizzato, qualità colore affidabile e dati più puliti tra i siti.',
       },
     },
   },
@@ -154,52 +182,105 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Casos prácticos',
     headline: 'Resultados desde la planta',
     intro:
-      'Tres historias donde Rutherford ayudó a equipos offset a alcanzar objetivos más rápido, reducir el desperdicio y estandarizar la producción.',
+      'Historias desde la planta donde Rutherford ayudó a equipos offset a alcanzar objetivos más rápido, reducir el desperdicio y estandarizar la producción.',
     challengeLabel: 'Reto',
     resultLabel: 'Resultado',
     cta: 'Ver testimonio',
+    prev: 'Testimonio anterior',
+    next: 'Testimonio siguiente',
     cases: {
-      lefrancq: {
-        challenge: 'Inconsistencia de color que ralentiza la producción offset de envases.',
-        result: 'Puesta a punto más rápida, entregas estables y mayor confianza del cliente.',
+      viappiani: {
+        challenge: 'Mantener precisión y velocidad en trabajos offset comerciales exigentes.',
+        result: 'Puesta a punto más rápida, menos desperdicio y control de color más fino con closed-loop Rutherford.',
       },
-      wauters: {
-        challenge: 'Mantener la calidad del envase a escala mientras se acelera el setup.',
-        result: 'Mayor repetibilidad y salida más predecible turno a turno.',
+      autajon: {
+        challenge: 'Sostener la consistencia de color de marca en envases premium.',
+        result: 'Mayor consistencia de color y mejor eficiencia de prensa turno a turno.',
       },
-      gsmonaco: {
-        challenge: 'Sostener estándares de color de marca exigentes en offset comercial.',
-        result: 'Control de color más fino, puesta a punto más corta, menos reruns.',
+      moderna: {
+        challenge: 'Arranques lentos y manuales que aumentan el desperdicio en offset pliego.',
+        result: 'Arranques más inteligentes, menos desperdicio y acceso más rápido a pliegos vendibles.',
+      },
+      avery: {
+        challenge: 'Escalar la consistencia de color en producción de etiquetas internacional.',
+        result: 'Pressroom estandarizado, calidad de color fiable y datos más limpios entre plantas.',
       },
     },
   },
 };
 
-function VideoThumbnail({ videoId, title }: { videoId: string; title: string }) {
-  const [src, setSrc] = useState(thumbnail(videoId));
+function CaseMedia({
+  study,
+  isPlaying,
+  onPlay,
+  ctaLabel,
+}: {
+  study: CaseStudy;
+  isPlaying: boolean;
+  onPlay: () => void;
+  ctaLabel: string;
+}) {
+  const [src, setSrc] = useState(thumbnail(study.videoId));
 
   useEffect(() => {
-    setSrc(thumbnail(videoId));
-  }, [videoId]);
+    setSrc(thumbnail(study.videoId));
+  }, [study.videoId]);
+
+  if (isPlaying) {
+    return (
+      <div className="case-study-media case-study-media-playing">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${study.videoId}?autoplay=1&rel=0&modestbranding=1`}
+          title={study.videoTitle}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
 
   return (
-    <img
-      src={src}
-      alt={title}
-      loading="lazy"
-      className="case-study-thumb"
-      onError={() => {
-        if (src !== fallbackThumbnail(videoId)) {
-          setSrc(fallbackThumbnail(videoId));
-        }
-      }}
-    />
+    <button
+      type="button"
+      className="case-study-media"
+      onClick={onPlay}
+      aria-label={`${ctaLabel} — ${study.company}`}
+    >
+      <img
+        src={src}
+        alt={study.videoTitle}
+        loading="lazy"
+        className="case-study-thumb"
+        onError={() => {
+          if (src !== fallbackThumbnail(study.videoId)) {
+            setSrc(fallbackThumbnail(study.videoId));
+          }
+        }}
+      />
+      <span className="case-study-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </span>
+    </button>
   );
 }
 
 export function CaseStudiesShowcase() {
   const { locale } = useLanguage();
   const t = COPY[locale];
+  const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+
+  const slide = useCallback((direction: 1 | -1) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const firstCard = track.querySelector<HTMLElement>('.case-study-card');
+    const step = firstCard ? firstCard.offsetWidth + 22 : track.clientWidth * 0.6;
+    track.scrollBy({ left: step * direction, behavior: 'smooth' });
+  }, []);
 
   return (
     <section className="section case-studies-section" id="cases">
@@ -210,49 +291,63 @@ export function CaseStudiesShowcase() {
           <p className="case-studies-intro">{t.intro}</p>
         </header>
 
-        <div className="case-studies-grid">
-          {caseStudies.map((study) => {
-            const copy = t.cases[study.key];
-            const href = videoUrl(study.videoId);
-            return (
-              <article className="case-study-card" key={study.videoId}>
-                <a
-                  className="case-study-media"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${study.company} — ${study.videoTitle}`}
-                >
-                  <VideoThumbnail videoId={study.videoId} title={study.videoTitle} />
-                  <span className="case-study-play" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </a>
-                <div className="case-study-body">
-                  <h3>
-                    <a href={href} target="_blank" rel="noreferrer">
-                      {study.company}
-                    </a>
-                  </h3>
-                  <dl className="case-study-detail">
-                    <div>
-                      <dt>{t.challengeLabel}</dt>
-                      <dd>{copy.challenge}</dd>
-                    </div>
-                    <div>
-                      <dt>{t.resultLabel}</dt>
-                      <dd>{copy.result}</dd>
-                    </div>
-                  </dl>
-                  <a className="case-study-cta" href={href} target="_blank" rel="noreferrer">
-                    {t.cta} <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-            );
-          })}
+        <div className="case-studies-slider">
+          <button
+            type="button"
+            className="case-studies-arrow case-studies-arrow-left"
+            onClick={() => slide(-1)}
+            aria-label={t.prev}
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+
+          <div className="case-studies-track" ref={trackRef}>
+            {caseStudies.map((study) => {
+              const copy = t.cases[study.key];
+              const isPlaying = activeVideoId === study.videoId;
+              return (
+                <article className="case-study-card" key={study.videoId}>
+                  <CaseMedia
+                    study={study}
+                    isPlaying={isPlaying}
+                    onPlay={() => setActiveVideoId(study.videoId)}
+                    ctaLabel={t.cta}
+                  />
+                  <div className="case-study-body">
+                    <h3>{study.company}</h3>
+                    <dl className="case-study-detail">
+                      <div>
+                        <dt>{t.challengeLabel}</dt>
+                        <dd>{copy.challenge}</dd>
+                      </div>
+                      <div>
+                        <dt>{t.resultLabel}</dt>
+                        <dd>{copy.result}</dd>
+                      </div>
+                    </dl>
+                    {!isPlaying ? (
+                      <button
+                        type="button"
+                        className="case-study-cta"
+                        onClick={() => setActiveVideoId(study.videoId)}
+                      >
+                        {t.cta} <span aria-hidden="true">→</span>
+                      </button>
+                    ) : null}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <button
+            type="button"
+            className="case-studies-arrow case-studies-arrow-right"
+            onClick={() => slide(1)}
+            aria-label={t.next}
+          >
+            <span aria-hidden="true">›</span>
+          </button>
         </div>
       </div>
     </section>

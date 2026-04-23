@@ -32,6 +32,10 @@ const ContactSection = dynamic(
   () => import('@/components/contact-section').then((module) => module.ContactSection),
   { ssr: true }
 );
+const BlogPreviewSection = dynamic(
+  () => import('@/components/blog-preview-section').then((module) => module.BlogPreviewSection),
+  { ssr: true }
+);
 const TeamShowcase = dynamic(
   () => import('@/components/team-showcase').then((module) => module.TeamShowcase),
   { ssr: true }
@@ -62,7 +66,7 @@ type HeroCopy = {
 const HERO_COPY: Record<Locale, HeroCopy> = {
   en: {
     eyebrow: 'Offset printing expertise',
-    headlineLead: 'Rutherford helps offset printers improve color control and',
+    headlineLead: 'Improve color control and',
     headlineAccent: 'reduce makeready waste.',
     supporting:
       'From closed-loop workflow expertise to modern production software, Rutherford supports offset teams that want faster setup, stronger repeatability, and clearer press-side control. ColorLoop is Rutherford’s latest software platform for smarter offset production.',
@@ -72,7 +76,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
   },
   fr: {
     eyebrow: 'Expertise impression offset',
-    headlineLead: 'Rutherford aide les imprimeurs offset à mieux maîtriser la couleur et',
+    headlineLead: 'Améliorer le contrôle couleur et',
     headlineAccent: 'réduire la gâche au calage.',
     supporting:
       "De l’expertise closed-loop aux logiciels de production modernes, Rutherford accompagne les équipes offset qui veulent un calage plus rapide, une meilleure répétabilité et un contrôle presse plus clair. ColorLoop est la dernière plateforme logicielle de Rutherford pour une production offset plus intelligente.",
@@ -82,8 +86,8 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
   },
   de: {
     eyebrow: 'Expertise im Offsetdruck',
-    headlineLead: 'Rutherford hilft Offsetdruckereien, die Farbsteuerung zu verbessern und',
-    headlineAccent: 'Makulatur beim Einrichten zu reduzieren.',
+    headlineLead: 'Farbsteuerung verbessern und',
+    headlineAccent: 'Makulatur beim Einrichten reduzieren.',
     supporting:
       'Von Closed-Loop-Workflow-Expertise bis zu moderner Produktionssoftware unterstützt Rutherford Offsetteams, die schnelleres Einrichten, bessere Wiederholbarkeit und klarere Maschinensteuerung wollen. ColorLoop ist Rutherfords neueste Softwareplattform für eine intelligentere Offsetproduktion.',
     primaryCta: 'Konsolenvalidierung anfragen',
@@ -92,7 +96,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
   },
   it: {
     eyebrow: 'Expertise nella stampa offset',
-    headlineLead: 'Rutherford aiuta gli stampatori offset a migliorare il controllo colore e',
+    headlineLead: 'Migliorare il controllo colore e',
     headlineAccent: 'ridurre lo scarto di avviamento.',
     supporting:
       "Dall’expertise closed-loop ai software di produzione moderni, Rutherford supporta i team offset che vogliono avviamenti più rapidi, maggiore ripetibilità e un controllo di macchina più chiaro. ColorLoop è l’ultima piattaforma software di Rutherford per una produzione offset più intelligente.",
@@ -102,7 +106,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
   },
   es: {
     eyebrow: 'Experiencia en impresión offset',
-    headlineLead: 'Rutherford ayuda a los impresores offset a mejorar el control del color y',
+    headlineLead: 'Mejorar el control del color y',
     headlineAccent: 'reducir el desperdicio de puesta a punto.',
     supporting:
       'Desde la experiencia closed-loop hasta el software de producción moderno, Rutherford acompaña a los equipos offset que buscan puestas a punto más rápidas, mejor repetibilidad y un control de prensa más claro. ColorLoop es la última plataforma de software de Rutherford para una producción offset más inteligente.',
@@ -151,13 +155,15 @@ export default function HomePage() {
 
       <HowRutherfordHelps />
 
-      <ColorLoopSection />
-
       <ConsoleValidationCTA />
+
+      <ColorLoopSection />
 
       <CaseStudiesShowcase />
 
       <AudienceSection />
+
+      <BlogPreviewSection />
 
       <PPWRSection />
 
