@@ -190,7 +190,7 @@ export function ColorLoopShowcase() {
   }, []);
 
   return (
-    <section className={`colorloop-showcase ${active ? 'is-active' : ''}`} id="offset" ref={sectionRef}>
+    <section className={`colorloop-showcase ${active ? 'is-active' : ''}`} id="colorloop" ref={sectionRef}>
       <div className="container colorloop-stage">
         <div className="colorloop-copy">
           <p className="section-kicker">Offset</p>

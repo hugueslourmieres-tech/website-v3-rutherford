@@ -18,13 +18,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     Locale,
     {
       home: string;
-      offset: string;
-      flexo: string;
-      videos: string;
-      contact: string;
+      colorloop: string;
+      cases: string;
       blog: string;
       support: string;
       console: string;
+      contact: string;
       openNav: string;
       mainNav: string;
       ticker: string[];
@@ -33,13 +32,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
   > = {
     en: {
       home: 'Home',
-      offset: 'Offset',
-      flexo: 'Flexo',
-      videos: 'Videos',
-      contact: 'Contact',
+      colorloop: 'ColorLoop',
+      cases: 'Case Studies',
       blog: 'Blog',
       support: 'Support',
       console: 'Console Validation',
+      contact: 'Contact',
       openNav: 'Open navigation',
       mainNav: 'Main navigation',
       localeLabel: 'Language selector',
@@ -52,13 +50,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     },
     fr: {
       home: 'Accueil',
-      offset: 'Offset',
-      flexo: 'Flexo',
-      videos: 'Vidéos',
-      contact: 'Contact',
+      colorloop: 'ColorLoop',
+      cases: 'Cas clients',
       blog: 'Blog',
       support: 'Support',
       console: 'Validation console',
+      contact: 'Contact',
       openNav: 'Ouvrir la navigation',
       mainNav: 'Navigation principale',
       localeLabel: 'Sélecteur de langue',
@@ -71,13 +68,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     },
     de: {
       home: 'Start',
-      offset: 'Offset',
-      flexo: 'Flexo',
-      videos: 'Videos',
-      contact: 'Kontakt',
+      colorloop: 'ColorLoop',
+      cases: 'Referenzen',
       blog: 'Blog',
       support: 'Support',
       console: 'Konsolenvalidierung',
+      contact: 'Kontakt',
       openNav: 'Navigation öffnen',
       mainNav: 'Hauptnavigation',
       localeLabel: 'Sprachauswahl',
@@ -90,13 +86,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     },
     it: {
       home: 'Home',
-      offset: 'Offset',
-      flexo: 'Flexo',
-      videos: 'Video',
-      contact: 'Contatto',
+      colorloop: 'ColorLoop',
+      cases: 'Case study',
       blog: 'Blog',
       support: 'Supporto',
       console: 'Validazione console',
+      contact: 'Contatto',
       openNav: 'Apri navigazione',
       mainNav: 'Navigazione principale',
       localeLabel: 'Selettore lingua',
@@ -109,13 +104,12 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     },
     es: {
       home: 'Inicio',
-      offset: 'Offset',
-      flexo: 'Flexo',
-      videos: 'Vídeos',
-      contact: 'Contacto',
+      colorloop: 'ColorLoop',
+      cases: 'Casos prácticos',
       blog: 'Blog',
       support: 'Soporte',
       console: 'Validación de consola',
+      contact: 'Contacto',
       openNav: 'Abrir navegación',
       mainNav: 'Navegación principal',
       localeLabel: 'Selector de idioma',
@@ -184,20 +178,17 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           <a className={current === 'home' ? 'is-current' : undefined} href="/" onClick={() => setOpen(false)}>
             {labels.home}
           </a>
-          <a href="/#offset" onClick={() => setOpen(false)}>
-            {labels.offset}
+          <a href="/#colorloop" onClick={() => setOpen(false)}>
+            {labels.colorloop}
           </a>
-          <a href="/#flexo" onClick={() => setOpen(false)}>
-            {labels.flexo}
-          </a>
-          <a href="/#videos" onClick={() => setOpen(false)}>
-            {labels.videos}
-          </a>
-          <a href="/#contact" onClick={() => setOpen(false)}>
-            {labels.contact}
+          <a href="/#cases" onClick={() => setOpen(false)}>
+            {labels.cases}
           </a>
           <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
             {labels.blog}
+          </a>
+          <a href="/#contact" onClick={() => setOpen(false)}>
+            {labels.contact}
           </a>
           <a
             className="mobile-nav-link mobile-nav-link-accent"
@@ -266,13 +257,13 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           </div>
 
           <a
-            className="button button-accent header-button"
+            className={`button button-accent header-button ${current === 'support' ? 'is-current' : ''}`}
             href="/support"
           >
             {labels.support}
           </a>
           <a
-            className="button button-dark header-button"
+            className={`button button-dark header-button ${current === 'console-validation' ? 'is-current' : ''}`}
             href="/console-validation"
           >
             {labels.console}

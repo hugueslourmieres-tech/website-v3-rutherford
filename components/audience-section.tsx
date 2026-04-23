@@ -1,0 +1,144 @@
+'use client';
+
+import { useLanguage, type Locale } from '@/components/language-provider';
+
+type Card = { title: string; body: string };
+
+type Copy = {
+  kicker: string;
+  headline: string;
+  intro: string;
+  cards: Card[];
+};
+
+const COPY: Record<Locale, Copy> = {
+  en: {
+    kicker: 'Who we work with',
+    headline: 'Who Rutherford works with',
+    intro:
+      'If any of these sound familiar, Rutherford is likely a good fit. We work best with teams that care about real press outcomes.',
+    cards: [
+      {
+        title: 'Offset printers',
+        body: 'Printers who want faster makeready and more stable color results across jobs, shifts, and presses.',
+      },
+      {
+        title: 'Packaging converters',
+        body: 'Converters looking for stronger production control, standardization, and repeatability across their pressroom.',
+      },
+      {
+        title: 'Decision makers',
+        body: 'Leaders evaluating workflow modernization, closed-loop color strategy, or console compatibility before a rollout.',
+      },
+    ],
+  },
+  fr: {
+    kicker: 'Pour qui nous travaillons',
+    headline: 'Avec qui travaille Rutherford',
+    intro:
+      'Si l’une de ces situations vous parle, Rutherford est probablement un bon choix. Nous travaillons avec des équipes qui se concentrent sur les résultats presse réels.',
+    cards: [
+      {
+        title: 'Imprimeurs offset',
+        body: 'Imprimeurs qui cherchent un calage plus rapide et une constance couleur plus stable entre travaux, équipes et presses.',
+      },
+      {
+        title: 'Converters packaging',
+        body: 'Converters qui veulent un contrôle de production plus fort, plus de standardisation et de répétabilité dans l’atelier.',
+      },
+      {
+        title: 'Décideurs',
+        body: 'Dirigeants qui évaluent la modernisation du workflow, une stratégie closed-loop ou la compatibilité console avant un déploiement.',
+      },
+    ],
+  },
+  de: {
+    kicker: 'Mit wem wir arbeiten',
+    headline: 'Mit wem Rutherford arbeitet',
+    intro:
+      'Wenn Ihnen eine dieser Situationen vertraut ist, passt Rutherford wahrscheinlich gut. Wir arbeiten am besten mit Teams, denen reale Pressenergebnisse wichtig sind.',
+    cards: [
+      {
+        title: 'Offsetdruckereien',
+        body: 'Druckereien, die schnelleres Einrichten und stabilere Farbergebnisse über Aufträge, Schichten und Maschinen hinweg wollen.',
+      },
+      {
+        title: 'Verpackungsverarbeiter',
+        body: 'Converter, die stärkere Produktionskontrolle, Standardisierung und Wiederholbarkeit in der Druckerei suchen.',
+      },
+      {
+        title: 'Entscheider',
+        body: 'Führungskräfte, die Workflow-Modernisierung, Closed-Loop-Farbstrategie oder Konsolen-Kompatibilität vor einem Rollout bewerten.',
+      },
+    ],
+  },
+  it: {
+    kicker: 'Con chi lavoriamo',
+    headline: 'Con chi lavora Rutherford',
+    intro:
+      'Se una di queste situazioni ti suona familiare, Rutherford probabilmente fa al caso tuo. Lavoriamo meglio con team che pensano ai risultati reali in macchina.',
+    cards: [
+      {
+        title: 'Stampatori offset',
+        body: 'Stampatori che vogliono avviamenti più rapidi e risultati colore più stabili tra lavori, turni e macchine.',
+      },
+      {
+        title: 'Converter packaging',
+        body: 'Converter che cercano maggior controllo produttivo, standardizzazione e ripetibilità in pressroom.',
+      },
+      {
+        title: 'Decisori',
+        body: 'Leader che valutano modernizzazione del workflow, strategia closed-loop colore o compatibilità console prima di un rollout.',
+      },
+    ],
+  },
+  es: {
+    kicker: 'Con quién trabajamos',
+    headline: 'Con quién trabaja Rutherford',
+    intro:
+      'Si alguna de estas situaciones le resulta familiar, Rutherford probablemente encaja. Trabajamos mejor con equipos centrados en resultados reales de prensa.',
+    cards: [
+      {
+        title: 'Impresores offset',
+        body: 'Impresores que quieren puestas a punto más rápidas y resultados de color más estables entre trabajos, turnos y prensas.',
+      },
+      {
+        title: 'Converters de packaging',
+        body: 'Converters que buscan mayor control de producción, estandarización y repetibilidad en la sala de prensa.',
+      },
+      {
+        title: 'Decisores',
+        body: 'Líderes que evalúan modernización de flujo, estrategia closed-loop de color o compatibilidad de consola antes de un despliegue.',
+      },
+    ],
+  },
+};
+
+export function AudienceSection() {
+  const { locale } = useLanguage();
+  const t = COPY[locale];
+
+  return (
+    <section className="section audience-section" id="audience">
+      <div className="container audience-shell">
+        <header className="audience-header">
+          <p className="section-kicker">{t.kicker}</p>
+          <h2 className="audience-headline">{t.headline}</h2>
+          <p className="audience-intro">{t.intro}</p>
+        </header>
+
+        <div className="audience-grid">
+          {t.cards.map((c, i) => (
+            <article className="audience-card" key={c.title}>
+              <span className="audience-card-index" aria-hidden="true">
+                0{i + 1}
+              </span>
+              <h3>{c.title}</h3>
+              <p>{c.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

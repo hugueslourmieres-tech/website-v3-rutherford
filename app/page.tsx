@@ -1,16 +1,35 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import { useLanguage, type Locale } from '@/components/language-provider';
 import { SiteNav } from '@/components/site-nav';
 
-const ColorLoopShowcase = dynamic(
-  () => import('@/components/colorloop-showcase').then((module) => module.ColorLoopShowcase),
+const BrandExplainerSection = dynamic(
+  () => import('@/components/brand-explainer-section').then((module) => module.BrandExplainerSection),
   { ssr: true }
 );
-const FlexoShowcase = dynamic(
-  () => import('@/components/flexo-showcase').then((module) => module.FlexoShowcase),
+const HowRutherfordHelps = dynamic(
+  () => import('@/components/how-rutherford-helps').then((module) => module.HowRutherfordHelps),
+  { ssr: true }
+);
+const ColorLoopSection = dynamic(
+  () => import('@/components/colorloop-section').then((module) => module.ColorLoopSection),
+  { ssr: true }
+);
+const ConsoleValidationCTA = dynamic(
+  () => import('@/components/console-validation-cta').then((module) => module.ConsoleValidationCTA),
+  { ssr: true }
+);
+const CaseStudiesShowcase = dynamic(
+  () => import('@/components/case-studies-showcase').then((module) => module.CaseStudiesShowcase),
+  { ssr: true }
+);
+const AudienceSection = dynamic(
+  () => import('@/components/audience-section').then((module) => module.AudienceSection),
+  { ssr: true }
+);
+const ContactSection = dynamic(
+  () => import('@/components/contact-section').then((module) => module.ContactSection),
   { ssr: true }
 );
 const TeamShowcase = dynamic(
@@ -25,87 +44,77 @@ const PPWRSection = dynamic(
   () => import('@/components/ppwr-section').then((module) => module.PPWRSection),
   { ssr: true }
 );
-const VideoShowcase = dynamic(
-  () => import('@/components/video-showcase').then((module) => module.VideoShowcase),
-  { ssr: true }
-);
 const SiteFooter = dynamic(
   () => import('@/components/site-footer').then((module) => module.SiteFooter),
   { ssr: true }
 );
 
+type HeroCopy = {
+  eyebrow: string;
+  headlineLead: string;
+  headlineAccent: string;
+  supporting: string;
+  primaryCta: string;
+  secondaryCta: string;
+  tertiaryCta: string;
+};
+
+const HERO_COPY: Record<Locale, HeroCopy> = {
+  en: {
+    eyebrow: 'Offset printing expertise',
+    headlineLead: 'Rutherford helps offset printers improve color control and',
+    headlineAccent: 'reduce makeready waste.',
+    supporting:
+      'From closed-loop workflow expertise to modern production software, Rutherford supports offset teams that want faster setup, stronger repeatability, and clearer press-side control. ColorLoop is Rutherford’s latest software platform for smarter offset production.',
+    primaryCta: 'Request console validation',
+    secondaryCta: 'Request an audit',
+    tertiaryCta: 'Discover ColorLoop',
+  },
+  fr: {
+    eyebrow: 'Expertise impression offset',
+    headlineLead: 'Rutherford aide les imprimeurs offset à mieux maîtriser la couleur et',
+    headlineAccent: 'réduire la gâche au calage.',
+    supporting:
+      "De l’expertise closed-loop aux logiciels de production modernes, Rutherford accompagne les équipes offset qui veulent un calage plus rapide, une meilleure répétabilité et un contrôle presse plus clair. ColorLoop est la dernière plateforme logicielle de Rutherford pour une production offset plus intelligente.",
+    primaryCta: 'Demander une validation console',
+    secondaryCta: 'Demander un audit',
+    tertiaryCta: 'Découvrir ColorLoop',
+  },
+  de: {
+    eyebrow: 'Expertise im Offsetdruck',
+    headlineLead: 'Rutherford hilft Offsetdruckereien, die Farbsteuerung zu verbessern und',
+    headlineAccent: 'Makulatur beim Einrichten zu reduzieren.',
+    supporting:
+      'Von Closed-Loop-Workflow-Expertise bis zu moderner Produktionssoftware unterstützt Rutherford Offsetteams, die schnelleres Einrichten, bessere Wiederholbarkeit und klarere Maschinensteuerung wollen. ColorLoop ist Rutherfords neueste Softwareplattform für eine intelligentere Offsetproduktion.',
+    primaryCta: 'Konsolenvalidierung anfragen',
+    secondaryCta: 'Audit anfragen',
+    tertiaryCta: 'ColorLoop entdecken',
+  },
+  it: {
+    eyebrow: 'Expertise nella stampa offset',
+    headlineLead: 'Rutherford aiuta gli stampatori offset a migliorare il controllo colore e',
+    headlineAccent: 'ridurre lo scarto di avviamento.',
+    supporting:
+      "Dall’expertise closed-loop ai software di produzione moderni, Rutherford supporta i team offset che vogliono avviamenti più rapidi, maggiore ripetibilità e un controllo di macchina più chiaro. ColorLoop è l’ultima piattaforma software di Rutherford per una produzione offset più intelligente.",
+    primaryCta: 'Richiedi validazione console',
+    secondaryCta: 'Richiedi un audit',
+    tertiaryCta: 'Scopri ColorLoop',
+  },
+  es: {
+    eyebrow: 'Experiencia en impresión offset',
+    headlineLead: 'Rutherford ayuda a los impresores offset a mejorar el control del color y',
+    headlineAccent: 'reducir el desperdicio de puesta a punto.',
+    supporting:
+      'Desde la experiencia closed-loop hasta el software de producción moderno, Rutherford acompaña a los equipos offset que buscan puestas a punto más rápidas, mejor repetibilidad y un control de prensa más claro. ColorLoop es la última plataforma de software de Rutherford para una producción offset más inteligente.',
+    primaryCta: 'Solicitar validación de consola',
+    secondaryCta: 'Solicitar una auditoría',
+    tertiaryCta: 'Descubrir ColorLoop',
+  },
+};
+
 export default function HomePage() {
   const { locale } = useLanguage();
-  const copy: Record<
-    Locale,
-    {
-      kicker: string;
-      titleLine1: string;
-      titleLine2: string;
-      stamp: string;
-      subheadline: string;
-      description: string;
-      primaryCta: string;
-      secondaryCta: string;
-    }
-  > = {
-    en: {
-      kicker: 'Save ink, paper and energy 🌱',
-      titleLine1: 'ColorLoop',
-      titleLine2: 'Connect',
-      stamp: 'PPWR Friendly',
-      subheadline: 'Your new color management and production tracking tool for flexo and offset.',
-      description:
-        'Developed with Veoria, ColorLoop Connect helps offset and flexo teams centralize production data, color workflows, machine status and compliance visibility in one place. It supports practical preparation for PPWR and Digital Product Passport requirements while creating a clearer operational layer for traceability, reporting and day-to-day production management.',
-      primaryCta: 'colorloop.ai',
-      secondaryCta: 'Explore ColorLoop',
-    },
-    fr: {
-      kicker: 'Économisez l’encre, le papier et l’énergie 🌱',
-      titleLine1: 'ColorLoop',
-      titleLine2: 'Connect',
-      stamp: 'Compatible PPWR',
-      subheadline: 'Votre nouvel outil de gestion de la couleur et de suivi de production pour la flexo et l’offset.',
-      description:
-        'Développé avec Veoria, ColorLoop Connect aide les équipes offset et flexo à centraliser les données de production, les workflows couleur, l’état des machines et la visibilité conformité dans une seule interface. Il facilite la préparation au PPWR et au passeport produit numérique tout en apportant une couche opérationnelle claire pour la traçabilité, le reporting et le pilotage quotidien de la production.',
-      primaryCta: 'colorloop.ai',
-      secondaryCta: 'Explorer ColorLoop',
-    },
-    de: {
-      kicker: 'Tinte, Papier und Energie sparen 🌱',
-      titleLine1: 'ColorLoop',
-      titleLine2: 'Connect',
-      stamp: 'PPWR-freundlich',
-      subheadline: 'Ihr neues Werkzeug für Farbmanagement und Produktionsverfolgung in Flexo und Offset.',
-      description:
-        'ColorLoop Connect wurde gemeinsam mit Veoria entwickelt und hilft Offset- und Flexoteams dabei, Produktionsdaten, Farbworkflows, Maschinenstatus und Compliance-Transparenz an einem Ort zu bündeln. Die Lösung unterstützt die Vorbereitung auf PPWR- und Digital Product Passport-Anforderungen und schafft eine klarere operative Ebene für Rückverfolgbarkeit, Reporting und tägliches Produktionsmanagement.',
-      primaryCta: 'colorloop.ai',
-      secondaryCta: 'ColorLoop entdecken',
-    },
-    it: {
-      kicker: 'Risparmia inchiostro, carta ed energia 🌱',
-      titleLine1: 'ColorLoop',
-      titleLine2: 'Connect',
-      stamp: 'Compatibile PPWR',
-      subheadline: 'Il tuo nuovo strumento di gestione del colore e monitoraggio della produzione per flexo e offset.',
-      description:
-        'Sviluppato con Veoria, ColorLoop Connect aiuta i team offset e flexo a centralizzare dati di produzione, workflow colore, stato delle macchine e visibilità sulla conformità in un’unica piattaforma. Supporta la preparazione ai requisiti PPWR e Digital Product Passport creando un livello operativo più chiaro per tracciabilità, reporting e gestione quotidiana della produzione.',
-      primaryCta: 'colorloop.ai',
-      secondaryCta: 'Scopri ColorLoop',
-    },
-    es: {
-      kicker: 'Ahorre tinta, papel y energía 🌱',
-      titleLine1: 'ColorLoop',
-      titleLine2: 'Connect',
-      stamp: 'Compatible con PPWR',
-      subheadline: 'Su nueva herramienta de gestión del color y seguimiento de producción para flexo y offset.',
-      description:
-        'Desarrollado con Veoria, ColorLoop Connect ayuda a los equipos de offset y flexo a centralizar datos de producción, flujos de color, estado de las máquinas y visibilidad de cumplimiento en un solo lugar. Facilita la preparación para PPWR y Digital Product Passport al crear una capa operativa más clara para trazabilidad, reporting y gestión diaria de la producción.',
-      primaryCta: 'colorloop.ai',
-      secondaryCta: 'Descubrir ColorLoop',
-    },
-  };
-  const t = copy[locale];
+  const t = HERO_COPY[locale];
 
   return (
     <main className="page-shell" id="top">
@@ -114,41 +123,22 @@ export default function HomePage() {
       <section className="hero-section">
         <div className="container hero-stack">
           <div className="hero-copy">
-            <p className="hero-kicker">{t.kicker}</p>
-            <h1>
-              <span className="hero-line">{t.titleLine1}</span>
-              <span className="hero-line hero-line-accent">{t.titleLine2}</span>
+            <p className="hero-kicker">{t.eyebrow}</p>
+            <h1 className="hero-headline">
+              {t.headlineLead}{' '}
+              <span className="hero-headline-accent">{t.headlineAccent}</span>
             </h1>
-            <span className="hero-stamp" aria-hidden="true">
-              {t.stamp}
-            </span>
-            <p className="hero-subheadline">{t.subheadline}</p>
-            <div className="hero-packshot" aria-hidden="true">
-              <Image
-                src="/images/ImacCGSColorloopGraphicStudio-2.webp"
-                alt=""
-                width={1366}
-                height={768}
-                sizes="(max-width: 768px) 92vw, (max-width: 1280px) 78vw, 980px"
-                priority
-              />
-            </div>
-            <p className="hero-description">{t.description}</p>
+            <p className="hero-supporting">{t.supporting}</p>
 
             <div className="hero-actions">
-              <a
-                className="button button-dark"
-                href="https://colorloop.ai/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="button button-dark hero-cta" href="/console-validation">
                 {t.primaryCta}
               </a>
-              <a
-                className="button button-light"
-                href="#offset"
-              >
+              <a className="button button-light hero-cta" href="#contact">
                 {t.secondaryCta}
+              </a>
+              <a className="hero-text-link" href="#colorloop">
+                {t.tertiaryCta} <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -157,15 +147,23 @@ export default function HomePage() {
 
       <RutherfordIdentitySection />
 
-      <ColorLoopShowcase />
+      <BrandExplainerSection />
 
-      <FlexoShowcase />
+      <HowRutherfordHelps />
 
-      <VideoShowcase />
+      <ColorLoopSection />
+
+      <ConsoleValidationCTA />
+
+      <CaseStudiesShowcase />
+
+      <AudienceSection />
 
       <PPWRSection />
 
       <TeamShowcase />
+
+      <ContactSection />
 
       <SiteFooter />
     </main>

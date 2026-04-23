@@ -17,116 +17,70 @@ const platformLinks = [
   { label: 'PPWRConnect.com', href: 'https://ppwrconnect.com/' },
 ];
 
-type ResourceKey = 'blog' | 'support' | 'console';
+type ResourceKey = 'blog' | 'support' | 'console' | 'contact';
+type CompanyKey = 'about' | 'colorloop' | 'cases';
 
 type Copy = {
-  kicker: string;
-  title: string;
   tagline: string;
-  firstName: string;
-  lastName: string;
-  company: string;
-  email: string;
-  help: string;
-  placeholder: string;
-  send: string;
   platforms: string;
   resources: string;
+  company: string;
   follow: string;
   rights: string;
   resourceLabels: Record<ResourceKey, string>;
+  companyLabels: Record<CompanyKey, string>;
 };
 
 const COPY: Record<Locale, Copy> = {
   en: {
-    kicker: 'Get in touch',
-    title: 'Talk to Rutherford',
-    tagline:
-      "Tell us about your press environment, project or compliance needs. We usually get back within one working day.",
-    firstName: 'First name',
-    lastName: 'Last name',
-    company: 'Company',
-    email: 'Email',
-    help: 'How can we help?',
-    placeholder: "Share details about your setup, workflow or what you're trying to achieve.",
-    send: 'Send request',
+    tagline: 'Offset printing expertise, software, and technology — helping printers modernize production control.',
     platforms: 'Platforms',
     resources: 'Resources',
+    company: 'Company',
     follow: 'Follow',
     rights: 'All rights reserved',
-    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Console Validation' },
+    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Console Validation', contact: 'Contact' },
+    companyLabels: { about: 'About Rutherford', colorloop: 'ColorLoop', cases: 'Case Studies' },
   },
   fr: {
-    kicker: 'Nous contacter',
-    title: 'Parlez à Rutherford',
-    tagline:
-      "Décrivez votre environnement machine, votre projet ou vos besoins de conformité. Nous revenons vers vous sous un jour ouvré.",
-    firstName: 'Prénom',
-    lastName: 'Nom',
-    company: 'Entreprise',
-    email: 'Email',
-    help: 'Comment pouvons-nous vous aider ?',
-    placeholder: "Partagez les détails sur votre installation, votre workflow ou ce que vous cherchez à accomplir.",
-    send: 'Envoyer',
+    tagline: 'Expertise offset, logiciel et technologie — pour moderniser le contrôle de production.',
     platforms: 'Plateformes',
     resources: 'Ressources',
+    company: 'Entreprise',
     follow: 'Suivre',
     rights: 'Tous droits réservés',
-    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Validation console' },
+    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Validation console', contact: 'Contact' },
+    companyLabels: { about: 'À propos', colorloop: 'ColorLoop', cases: 'Cas clients' },
   },
   de: {
-    kicker: 'Kontakt aufnehmen',
-    title: 'Sprechen Sie mit Rutherford',
-    tagline:
-      'Beschreiben Sie Ihre Druckumgebung, Ihr Projekt oder Ihre Compliance-Anforderungen. Wir antworten in der Regel innerhalb eines Werktags.',
-    firstName: 'Vorname',
-    lastName: 'Nachname',
-    company: 'Unternehmen',
-    email: 'E-Mail',
-    help: 'Wie können wir helfen?',
-    placeholder: 'Teilen Sie uns Details zu Ihrem Setup, Workflow oder Ihrem Ziel mit.',
-    send: 'Anfrage senden',
+    tagline: 'Offset-Expertise, Software und Technologie — zur Modernisierung der Produktionssteuerung.',
     platforms: 'Plattformen',
     resources: 'Ressourcen',
+    company: 'Unternehmen',
     follow: 'Folgen',
     rights: 'Alle Rechte vorbehalten',
-    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Konsolenvalidierung' },
+    resourceLabels: { blog: 'Blog', support: 'Support', console: 'Konsolenvalidierung', contact: 'Kontakt' },
+    companyLabels: { about: 'Über Rutherford', colorloop: 'ColorLoop', cases: 'Referenzen' },
   },
   it: {
-    kicker: 'Contattaci',
-    title: 'Parla con Rutherford',
-    tagline:
-      'Descrivi il tuo ambiente di stampa, il progetto o le esigenze di conformità. Di norma rispondiamo entro un giorno lavorativo.',
-    firstName: 'Nome',
-    lastName: 'Cognome',
-    company: 'Azienda',
-    email: 'Email',
-    help: 'Come possiamo aiutarti?',
-    placeholder: 'Condividi dettagli sul tuo setup, workflow o obiettivo.',
-    send: 'Invia richiesta',
+    tagline: 'Expertise offset, software e tecnologia — per modernizzare il controllo di produzione.',
     platforms: 'Piattaforme',
     resources: 'Risorse',
+    company: 'Azienda',
     follow: 'Seguici',
     rights: 'Tutti i diritti riservati',
-    resourceLabels: { blog: 'Blog', support: 'Supporto', console: 'Validazione console' },
+    resourceLabels: { blog: 'Blog', support: 'Supporto', console: 'Validazione console', contact: 'Contatto' },
+    companyLabels: { about: 'Chi siamo', colorloop: 'ColorLoop', cases: 'Case study' },
   },
   es: {
-    kicker: 'Contáctanos',
-    title: 'Habla con Rutherford',
-    tagline:
-      'Describa su entorno de impresión, su proyecto o sus necesidades de cumplimiento. Solemos responder en un día hábil.',
-    firstName: 'Nombre',
-    lastName: 'Apellido',
-    company: 'Correo electrónico',
-    email: 'Email',
-    help: '¿Cómo podemos ayudarle?',
-    placeholder: 'Comparta detalles sobre su configuración, flujo de trabajo u objetivo.',
-    send: 'Enviar solicitud',
+    tagline: 'Experiencia offset, software y tecnología — para modernizar el control de producción.',
     platforms: 'Plataformas',
     resources: 'Recursos',
+    company: 'Empresa',
     follow: 'Seguir',
     rights: 'Todos los derechos reservados',
-    resourceLabels: { blog: 'Blog', support: 'Soporte', console: 'Validación de consola' },
+    resourceLabels: { blog: 'Blog', support: 'Soporte', console: 'Validación de consola', contact: 'Contacto' },
+    companyLabels: { about: 'Sobre Rutherford', colorloop: 'ColorLoop', cases: 'Casos prácticos' },
   },
 };
 
@@ -139,71 +93,55 @@ export function SiteFooter() {
     { key: 'blog', href: '/blog' },
     { key: 'support', href: '/support' },
     { key: 'console', href: '/console-validation' },
+    { key: 'contact', href: '/#contact' },
+  ];
+
+  const companyLinks: { key: CompanyKey; href: string }[] = [
+    { key: 'about', href: '/#about' },
+    { key: 'colorloop', href: '/#colorloop' },
+    { key: 'cases', href: '/#cases' },
   ];
 
   return (
-    <footer className="site-footer" id="contact">
+    <footer className="site-footer">
       <div className="container">
         <div className="footer-shell">
-          <div className="footer-top">
-            <div className="footer-contact-block">
-              <div className="footer-contact-header">
-                <p className="footer-contact-kicker">{t.kicker}</p>
-                <h2 className="footer-contact-title">{t.title}</h2>
-                <p className="footer-contact-tagline">{t.tagline}</p>
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <p className="footer-brand-name">Rutherford.fr</p>
+              <p className="footer-brand-tagline">{t.tagline}</p>
+              <div className="footer-brand-social">
+                <p className="footer-column-label">{t.follow}</p>
+                <SocialLinks links={socialLinks} className="footer-socials" />
               </div>
-              <form
-                action="https://formsubmit.co/contact@roterford.fr"
-                method="POST"
-                className="footer-form"
-              >
-                <input type="hidden" name="_subject" value="New Rutherford contact request" />
-                <input type="hidden" name="_template" value="table" />
-                <input
-                  type="text"
-                  name="_honey"
-                  className="footer-honeypot"
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-
-                <div className="footer-form-row">
-                  <label>
-                    <span>{t.firstName}</span>
-                    <input type="text" name="first_name" required />
-                  </label>
-                  <label>
-                    <span>{t.lastName}</span>
-                    <input type="text" name="last_name" required />
-                  </label>
-                </div>
-
-                <div className="footer-form-row">
-                  <label>
-                    <span>{t.company}</span>
-                    <input type="text" name="company" required />
-                  </label>
-                  <label>
-                    <span>{t.email}</span>
-                    <input type="email" name="email" required />
-                  </label>
-                </div>
-
-                <label>
-                  <span>{t.help}</span>
-                  <textarea name="message" rows={5} placeholder={t.placeholder} />
-                </label>
-
-                <button type="submit" className="footer-form-submit">
-                  {t.send}
-                </button>
-              </form>
             </div>
 
-            <div className="footer-nav-block">
+            <nav className="footer-columns" aria-label="Footer">
               <section className="footer-column">
-                <h3>{t.platforms}</h3>
-                <ul className="footer-column-list">
+                <h3 className="footer-column-label">{t.company}</h3>
+                <ul>
+                  {companyLinks.map((link) => (
+                    <li key={link.key}>
+                      <a href={link.href}>{t.companyLabels[link.key]}</a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="footer-column">
+                <h3 className="footer-column-label">{t.resources}</h3>
+                <ul>
+                  {resourceLinks.map((link) => (
+                    <li key={link.key}>
+                      <a href={link.href}>{t.resourceLabels[link.key]}</a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section className="footer-column">
+                <h3 className="footer-column-label">{t.platforms}</h3>
+                <ul>
                   {platformLinks.map((link) => (
                     <li key={link.label}>
                       <a href={link.href} target="_blank" rel="noreferrer">
@@ -213,33 +151,13 @@ export function SiteFooter() {
                   ))}
                 </ul>
               </section>
-
-              <section className="footer-column">
-                <h3>{t.resources}</h3>
-                <ul className="footer-column-list">
-                  {resourceLinks.map((link) => (
-                    <li key={link.key}>
-                      <a href={link.href}>{t.resourceLabels[link.key]}</a>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section className="footer-column footer-column-follow">
-                <h3>{t.follow}</h3>
-                <SocialLinks links={socialLinks} className="footer-socials" />
-              </section>
-            </div>
+            </nav>
           </div>
 
           <div className="footer-bottom">
-            <div className="footer-bottom-brand">
-              <span className="footer-bottom-name">Rutherford.fr</span>
-              <span className="footer-bottom-sep" aria-hidden="true">•</span>
-              <span>© {year}</span>
-              <span className="footer-bottom-sep" aria-hidden="true">•</span>
-              <span>{t.rights}</span>
-            </div>
+            <p className="footer-bottom-text">
+              © {year} Rutherford.fr — {t.rights}
+            </p>
           </div>
         </div>
       </div>
