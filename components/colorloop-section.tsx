@@ -173,10 +173,10 @@ export function ColorLoopSection() {
 
         <div className="colorloop-offset-packshot">
           <Image
-            src="/images/ColorLoop Graphic Studio screenshot.jpg"
-            alt="ColorLoop Graphic Studio dashboard"
-            width={2400}
-            height={1500}
+            src="/images/ImacCGSColorloopGraphicStudio-2.webp"
+            alt="ColorLoop Graphic Studio on iMac"
+            width={1366}
+            height={768}
             sizes="(max-width: 768px) 92vw, (max-width: 1200px) 80vw, 1080px"
           />
         </div>

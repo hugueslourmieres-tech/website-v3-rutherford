@@ -1,67 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage, type Locale } from '@/components/language-provider';
 
-function useCountUp(target: number, active: boolean) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (!active) {
-      return;
-    }
-
-    let frame = 0;
-    let start = 0;
-    const duration = 1400;
-
-    const tick = (timestamp: number) => {
-      if (!start) {
-        start = timestamp;
-      }
-
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.round(target * eased));
-
-      if (progress < 1) {
-        frame = window.requestAnimationFrame(tick);
-      }
-    };
-
-    frame = window.requestAnimationFrame(tick);
-    return () => window.cancelAnimationFrame(frame);
-  }, [active, target]);
-
-  return value;
-}
-
-function AnimatedStat({ target, suffix, label }: { target: number; suffix: string; label: string }) {
-  const [active, setActive] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
-  const value = useCountUp(target, active);
-
-  useEffect(() => {
-    if (!ref.current) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true);
-        }
-      },
-      { threshold: 0.35 }
-    );
-
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
+function Stat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
   return (
-    <div className="rutherford-stat" ref={ref}>
+    <div className="rutherford-stat">
       <dt>
         {value}
         <span>{suffix}</span>
@@ -164,6 +109,25 @@ export function RutherfordIdentitySection() {
 
   return (
     <section className="section rutherford-identity-section">
+      <div className="rutherford-identity-background" aria-hidden="true">
+        {slides.map((src, index) => (
+          <div
+            key={src}
+            className={`rutherford-slide ${index === slideIndex ? 'is-active' : ''}`}
+          >
+            <Image
+              src={src}
+              alt=""
+              fill
+              className="rutherford-slide-image"
+              sizes="100vw"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+        <div className="rutherford-identity-overlay" />
+      </div>
+
       <div className="container rutherford-identity-shell">
         <div className="rutherford-identity-copy">
           <p className="section-kicker">{t.kicker}</p>
@@ -171,35 +135,10 @@ export function RutherfordIdentitySection() {
           <p className="rutherford-identity-body">{t.body}</p>
         </div>
 
-        <div className="rutherford-slideshow" aria-label="Rutherford team slideshow">
-          <div className="rutherford-slideshow-frame">
-            {slides.map((src, index) => (
-              <div
-                key={src}
-                className={`rutherford-slide ${index === slideIndex ? 'is-active' : ''}`}
-                aria-hidden={index !== slideIndex}
-              >
-                <Image
-                  src={src}
-                  alt="Rutherford team slideshow"
-                  fill
-                  className="rutherford-slide-image"
-                  sizes="(max-width: 768px) 92vw, 900px"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="rutherford-slideshow-dots" aria-hidden="true">
-            {slides.map((src, index) => (
-              <span key={src} className={`rutherford-slideshow-dot ${index === slideIndex ? 'is-active' : ''}`} />
-            ))}
-          </div>
-        </div>
-
         <dl className="rutherford-stats-grid">
-          <AnimatedStat target={25} suffix="+" label={t.years} />
-          <AnimatedStat target={30} suffix="+" label={t.countries} />
-          <AnimatedStat target={1000} suffix="+" label={t.systems} />
+          <Stat value={25} suffix="+" label={t.years} />
+          <Stat value={30} suffix="+" label={t.countries} />
+          <Stat value={1000} suffix="+" label={t.systems} />
         </dl>
       </div>
     </section>
