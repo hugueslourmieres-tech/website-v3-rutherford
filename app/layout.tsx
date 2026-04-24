@@ -3,7 +3,7 @@ import { LanguageProvider } from '@/components/language-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://website-v3-rutherford.vercel.app'),
+  metadataBase: new URL('https://rutherford.fr'),
   title: 'Rutherford.fr | Closed-loop color control',
   description:
     'Rutherford.fr powered by X-Rite Pantone. ColorLoop combines CIP3 / CIP4 preset, measurement and closed-loop color control for offset printing.',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     title: 'Rutherford.fr | Closed-loop color control',
     description:
       'Rutherford.fr powered by X-Rite Pantone. ColorLoop combines CIP3 / CIP4 preset, measurement and closed-loop color control for offset printing.',
-    url: 'https://website-v3-rutherford.vercel.app',
+    url: 'https://rutherford.fr',
     siteName: 'Rutherford.fr',
     images: [
       {
-        url: '/images/Imac CGS Colorloop Graphic Studio.jpg',
-        width: 1365,
-        height: 768,
-        alt: 'ColorLoop Graphic Studio on iMac',
+        url: '/images/Bundle Rutherford-4.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Rutherford team',
       },
     ],
     locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Rutherford.fr | Closed-loop color control',
     description:
       'Rutherford.fr powered by X-Rite Pantone. ColorLoop combines CIP3 / CIP4 preset, measurement and closed-loop color control for offset printing.',
-    images: ['/images/Imac CGS Colorloop Graphic Studio.jpg'],
+    images: ['/images/Bundle Rutherford-4.jpg'],
   },
 };
 
