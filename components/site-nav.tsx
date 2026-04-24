@@ -183,7 +183,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
             {labels.blog}
           </a>
-          <a href="/#contact" onClick={() => setOpen(false)}>
+          <a href="mailto:contact@rutherford.fr" onClick={() => setOpen(false)}>
             {labels.contact}
           </a>
           <a

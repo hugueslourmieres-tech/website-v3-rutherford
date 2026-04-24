@@ -89,7 +89,7 @@ export function TeamShowcase() {
           <p className="section-kicker team-content-kicker">{t.kicker}</p>
           <h2 className="team-content-headline">{t.headline}</h2>
           <p className="team-content-body">{t.body}</p>
-          <a className="button button-accent team-content-cta" href="#contact">
+          <a className="button button-accent team-content-cta" href="mailto:contact@rutherford.fr">
             {t.ctaLabel}
           </a>
         </div>

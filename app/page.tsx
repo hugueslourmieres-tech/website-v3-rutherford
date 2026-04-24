@@ -29,10 +29,6 @@ const AudienceSection = dynamic(
   () => import('@/components/audience-section').then((module) => module.AudienceSection),
   { ssr: true }
 );
-const ContactSection = dynamic(
-  () => import('@/components/contact-section').then((module) => module.ContactSection),
-  { ssr: true }
-);
 const BlogPreviewSection = dynamic(
   () => import('@/components/blog-preview-section').then((module) => module.BlogPreviewSection),
   { ssr: true }
@@ -149,7 +145,7 @@ export default function HomePage() {
               <a className="button button-dark hero-cta" href="/console-validation">
                 {t.primaryCta}
               </a>
-              <a className="button button-light hero-cta" href="#contact">
+              <a className="button button-light hero-cta" href="mailto:contact@rutherford.fr">
                 {t.secondaryCta}
               </a>
             </div>
@@ -176,8 +172,6 @@ export default function HomePage() {
       <PPWRSection />
 
       <TeamShowcase />
-
-      <ContactSection />
 
       <SiteFooter />
     </main>

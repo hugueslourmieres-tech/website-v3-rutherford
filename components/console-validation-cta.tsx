@@ -111,7 +111,7 @@ export function ConsoleValidationCTA() {
             >
               {t.primaryCta}
             </a>
-            <a className="button button-light-on-dark" href="#contact">
+            <a className="button button-light-on-dark" href="mailto:contact@rutherford.fr">
               {t.secondaryCta}
             </a>
           </div>
