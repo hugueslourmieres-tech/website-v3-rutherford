@@ -16,7 +16,7 @@ type Copy = {
 const COPY: Record<Locale, Copy> = {
   en: {
     kicker: 'Contact',
-    title: 'Talk to our team',
+    title: 'Talk to an expert',
     tagline: 'Drop us a line — we usually get back within one working day.',
     name: 'Name',
     email: 'Email',
@@ -26,7 +26,7 @@ const COPY: Record<Locale, Copy> = {
   },
   fr: {
     kicker: 'Contact',
-    title: 'Parlez à notre équipe',
+    title: 'Parlez à un expert',
     tagline: 'Écrivez-nous — nous revenons vers vous sous un jour ouvré.',
     name: 'Nom',
     email: 'Email',
@@ -36,7 +36,7 @@ const COPY: Record<Locale, Copy> = {
   },
   de: {
     kicker: 'Kontakt',
-    title: 'Sprechen Sie mit unserem Team',
+    title: 'Sprechen Sie mit einem Experten',
     tagline: 'Schreiben Sie uns — wir antworten in der Regel innerhalb eines Werktags.',
     name: 'Name',
     email: 'E-Mail',
@@ -46,7 +46,7 @@ const COPY: Record<Locale, Copy> = {
   },
   it: {
     kicker: 'Contatto',
-    title: 'Parla con il nostro team',
+    title: 'Parla con un esperto',
     tagline: 'Scrivici — rispondiamo di norma entro un giorno lavorativo.',
     name: 'Nome',
     email: 'Email',
@@ -56,7 +56,7 @@ const COPY: Record<Locale, Copy> = {
   },
   es: {
     kicker: 'Contacto',
-    title: 'Hable con nuestro equipo',
+    title: 'Hable con un experto',
     tagline: 'Escríbanos — respondemos normalmente en un día hábil.',
     name: 'Nombre',
     email: 'Email',
