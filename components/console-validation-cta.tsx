@@ -103,7 +103,12 @@ export function ConsoleValidationCTA() {
 
           <p className="console-cta-supporting">{t.supporting}</p>
           <div className="console-cta-actions">
-            <a className="button button-accent" href="/console-validation">
+            <a
+              className="button button-accent"
+              href="https://form.typeform.com/to/elOTOK?typeform-source=rgproducts.typeform.com#english=xxxxx"
+              target="_blank"
+              rel="noreferrer"
+            >
               {t.primaryCta}
             </a>
             <a className="button button-light-on-dark" href="#contact">

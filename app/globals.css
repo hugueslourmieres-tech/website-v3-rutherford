@@ -320,6 +320,18 @@ svg {
   color: #ffffff;
 }
 
+.button-outline-dark {
+  background: transparent;
+  border-color: #111111;
+  color: #111111;
+}
+
+.button-outline-dark:hover,
+.button-outline-dark:focus-visible {
+  background: #111111;
+  color: #ffffff;
+}
+
 .header-button {
   flex: 0 0 auto;
   min-height: 50px;

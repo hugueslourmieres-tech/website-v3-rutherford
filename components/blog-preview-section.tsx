@@ -103,7 +103,7 @@ export function BlogPreviewSection() {
         </div>
 
         <div className="blog-preview-footer">
-          <a className="button button-accent" href="/blog">
+          <a className="button button-outline-dark" href="/blog">
             {t.seeAll}
           </a>
         </div>

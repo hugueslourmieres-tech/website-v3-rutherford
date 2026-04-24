@@ -91,8 +91,8 @@ export function SiteFooter() {
 
   const resourceLinks: { key: ResourceKey; href: string }[] = [
     { key: 'blog', href: '/blog' },
-    { key: 'support', href: '/support' },
-    { key: 'console', href: '/console-validation' },
+    { key: 'support', href: 'https://form.typeform.com/to/LZtPUH' },
+    { key: 'console', href: 'https://form.typeform.com/to/elOTOK?typeform-source=rgproducts.typeform.com#english=xxxxx' },
     { key: 'contact', href: '/#contact' },
   ];
 
@@ -132,11 +132,19 @@ export function SiteFooter() {
               <section className="footer-column">
                 <h3 className="footer-column-label">{t.resources}</h3>
                 <ul>
-                  {resourceLinks.map((link) => (
-                    <li key={link.key}>
-                      <a href={link.href}>{t.resourceLabels[link.key]}</a>
-                    </li>
-                  ))}
+                  {resourceLinks.map((link) => {
+                    const external = link.href.startsWith('http');
+                    return (
+                      <li key={link.key}>
+                        <a
+                          href={link.href}
+                          {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                        >
+                          {t.resourceLabels[link.key]}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </section>
 

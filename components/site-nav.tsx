@@ -140,7 +140,16 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
   }, []);
 
   return (
-    <header className="site-header">
+    <>
+      <a className="site-announcement" href="/#colorloop">
+        <span className="site-announcement-badge">{labels.announcementBadge}</span>
+        <span className="site-announcement-text">{labels.announcementText}</span>
+        <span className="site-announcement-cta" aria-hidden="true">
+          {labels.announcementCta} →
+        </span>
+      </a>
+
+      <header className="site-header">
       <div className="container header-inner">
         <a className="brandmark" href="/" aria-label="Rutherford.fr">
           <Image src="/images/rutherford-logo-black.png" alt="Rutherford.fr" width={300} height={58} sizes="184px" priority />
@@ -179,14 +188,14 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           </a>
           <a
             className="mobile-nav-link mobile-nav-link-accent"
-            href="/support"
+            href="https://form.typeform.com/to/LZtPUH" target="_blank" rel="noreferrer"
             onClick={() => setOpen(false)}
           >
             {labels.support}
           </a>
           <a
             className="mobile-nav-link mobile-nav-link-dark"
-            href="/console-validation"
+            href="https://form.typeform.com/to/elOTOK?typeform-source=rgproducts.typeform.com#english=xxxxx" target="_blank" rel="noreferrer"
             onClick={() => setOpen(false)}
           >
             {labels.console}
@@ -245,26 +254,20 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
 
           <a
             className={`button button-accent header-button ${current === 'support' ? 'is-current' : ''}`}
-            href="/support"
+            href="https://form.typeform.com/to/LZtPUH" target="_blank" rel="noreferrer"
           >
             {labels.support}
           </a>
           <a
             className={`button button-dark header-button ${current === 'console-validation' ? 'is-current' : ''}`}
-            href="/console-validation"
+            href="https://form.typeform.com/to/elOTOK?typeform-source=rgproducts.typeform.com#english=xxxxx" target="_blank" rel="noreferrer"
           >
             {labels.console}
           </a>
         </div>
       </div>
 
-      <a className="site-announcement" href="/#colorloop">
-        <span className="site-announcement-badge">{labels.announcementBadge}</span>
-        <span className="site-announcement-text">{labels.announcementText}</span>
-        <span className="site-announcement-cta" aria-hidden="true">
-          {labels.announcementCta} →
-        </span>
-      </a>
     </header>
+    </>
   );
 }

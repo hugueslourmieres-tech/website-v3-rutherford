@@ -32,7 +32,26 @@
       "WebFetch(domain:www.youtube.com)",
       "WebFetch(domain:www.rutherford.fr)",
       "Bash(vercel inspect *)",
-      "Bash(grep -iE \"team|2026-04-24|$\\(date +%Y-%m-%d\\)\")"
+      "Bash(grep -iE \"team|2026-04-24|$\\(date +%Y-%m-%d\\)\")",
+      "Bash(vercel domains *)",
+      "Bash(dig +short rutherford.fr A)",
+      "Bash(dig +short www.rutherford.fr CNAME)",
+      "Bash(dig +short www.rutherford.fr A)",
+      "Bash(curl -sI https://rutherford.fr)",
+      "Bash(curl -sI https://www.rutherford.fr)",
+      "Bash(curl -sIvk --max-time 10 https://rutherford.fr)",
+      "Bash(curl -sI --max-time 10 http://rutherford.fr)",
+      "Bash(curl -sI --max-time 10 https://rutherford.fr)",
+      "Bash(curl -sI --max-time 10 https://www.rutherford.fr)",
+      "WebFetch(domain:rutherford.fr)",
+      "Bash(curl -sk https://rutherford.fr)",
+      "WebFetch(domain:web.archive.org)",
+      "Bash(curl -sL --max-time 15 \"https://web.archive.org/web/2025*/rutherford.fr/support*\")",
+      "Bash(curl -sL --max-time 15 \"https://web.archive.org/web/2025/https://www.rutherford.fr/\")",
+      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/Bundle%20Rutherford-4.jpg\")",
+      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/offset%20white.png\")",
+      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/Picto%20offset/1picto%20offset%20print.png\")",
+      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/8Veoria%20label%20photos%20prod%20.jpg\")"
     ]
   }
 }
