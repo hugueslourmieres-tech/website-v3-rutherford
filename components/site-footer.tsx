@@ -108,8 +108,9 @@ export function SiteFooter() {
         <div className="footer-shell">
           <div className="footer-grid">
             <div className="footer-brand">
-              <p className="footer-brand-name">Rutherford.fr</p>
-              <p className="footer-brand-tagline">{t.tagline}</p>
+              <a className="footer-brand-wordmark" href="/" aria-label="Rutherford.fr">
+                Rutherford.fr
+              </a>
               <div className="footer-brand-social">
                 <p className="footer-column-label">{t.follow}</p>
                 <SocialLinks links={socialLinks} className="footer-socials" />

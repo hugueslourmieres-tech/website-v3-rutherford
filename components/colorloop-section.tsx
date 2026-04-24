@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useLanguage, type Locale } from '@/components/language-provider';
 
 type Benefit = { title: string; body: string };
@@ -171,21 +170,20 @@ export function ColorLoopSection() {
           <p className="colorloop-offset-intro">{t.intro}</p>
         </header>
 
-        <div className="colorloop-offset-packshot">
-          <Image
-            src="/images/ImacCGSColorloopGraphicStudio-2.webp"
-            alt="ColorLoop Graphic Studio on iMac"
-            width={1366}
-            height={768}
-            sizes="(max-width: 768px) 92vw, (max-width: 1200px) 80vw, 1080px"
-          />
-        </div>
-
         <div className="colorloop-offset-grid">
-          {t.benefits.map((b) => (
+          {t.benefits.map((b, i) => (
             <article className="colorloop-offset-card" key={b.title}>
-              <h3>{b.title}</h3>
-              <p>{b.body}</p>
+              <div className="colorloop-offset-card-media">
+                <img
+                  src={`/images/Screenshotcolorloop/${i + 1}Colorlooplenovoscreenshot.png`}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div className="colorloop-offset-card-body">
+                <h3>{b.title}</h3>
+                <p>{b.body}</p>
+              </div>
             </article>
           ))}
         </div>

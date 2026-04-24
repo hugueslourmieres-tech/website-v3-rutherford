@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useLanguage, type Locale } from '@/components/language-provider';
 import { SiteNav } from '@/components/site-nav';
+import { ScrollReveal } from '@/components/scroll-reveal';
 
 const BrandExplainerSection = dynamic(
   () => import('@/components/brand-explainer-section').then((module) => module.BrandExplainerSection),
@@ -122,15 +123,25 @@ export default function HomePage() {
 
   return (
     <main className="page-shell" id="top">
+      <ScrollReveal />
       <SiteNav current="home" />
 
       <section className="hero-section">
+        <div className="hero-background" aria-hidden="true">
+          <span className="hero-orb hero-orb-a" />
+          <span className="hero-orb hero-orb-b" />
+          <span className="hero-orb hero-orb-c" />
+          <span className="hero-grid" />
+        </div>
+
         <div className="container hero-stack">
           <div className="hero-copy">
             <p className="hero-kicker">{t.eyebrow}</p>
             <h1 className="hero-headline">
-              {t.headlineLead}{' '}
-              <span className="hero-headline-accent">{t.headlineAccent}</span>
+              <span className="hero-headline-line hero-headline-line-1">{t.headlineLead}</span>{' '}
+              <span className="hero-headline-line hero-headline-line-2">
+                <span className="hero-headline-accent">{t.headlineAccent}</span>
+              </span>
             </h1>
             <p className="hero-supporting">{t.supporting}</p>
 
@@ -141,9 +152,6 @@ export default function HomePage() {
               <a className="button button-light hero-cta" href="#contact">
                 {t.secondaryCta}
               </a>
-              <a className="hero-text-link" href="#colorloop">
-                {t.tertiaryCta} <span aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
         </div>
@@ -153,9 +161,9 @@ export default function HomePage() {
 
       <BrandExplainerSection />
 
-      <HowRutherfordHelps />
-
       <ConsoleValidationCTA />
+
+      <HowRutherfordHelps />
 
       <ColorLoopSection />
 

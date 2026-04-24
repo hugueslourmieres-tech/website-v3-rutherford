@@ -134,6 +134,13 @@ const COPY: Record<Locale, Copy> = {
   },
 };
 
+const BENEFIT_IMAGES = [
+  '/images/how-rutherford-1.png',
+  '/images/how-rutherford-2.png',
+  '/images/how-rutherford-3.png',
+  '/images/how-rutherford-4.png',
+];
+
 export function HowRutherfordHelps() {
   const { locale } = useLanguage();
   const t = COPY[locale];
@@ -153,6 +160,9 @@ export function HowRutherfordHelps() {
               <span className="how-rutherford-card-index" aria-hidden="true">
                 0{i + 1}
               </span>
+              <div className="how-rutherford-card-media">
+                <img src={BENEFIT_IMAGES[i]} alt="" loading="lazy" />
+              </div>
               <h3>{b.title}</h3>
               <p>{b.body}</p>
             </article>

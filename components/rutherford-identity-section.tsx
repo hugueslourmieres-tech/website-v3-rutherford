@@ -1,15 +1,47 @@
 'use client';
 
 import Image from 'next/image';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { useLanguage, type Locale } from '@/components/language-provider';
 
 function Stat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+  const nodeRef = useRef<HTMLDivElement | null>(null);
+  const [display, setDisplay] = useState(0);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const node = nodeRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            hasAnimated.current = true;
+            const duration = 1600;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const t = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - t, 3);
+              setDisplay(Math.round(value * eased));
+              if (t < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [value]);
+
   return (
-    <div className="rutherford-stat">
+    <div className="rutherford-stat" ref={nodeRef}>
       <dt>
-        {value}
-        <span>{suffix}</span>
+        <span className="rutherford-stat-value">{display.toLocaleString('en-US')}</span>
+        <span className="rutherford-stat-suffix">{suffix}</span>
       </dt>
       <dd>{label}</dd>
     </div>
@@ -120,6 +152,17 @@ const COPY: Record<Locale, Copy> = {
   },
 };
 
+const printers = [
+  { src: '/images/printer-avery-dennison.png', alt: 'Avery Dennison' },
+  { src: '/images/printer-ds-smith.avif', alt: 'DS Smith' },
+  { src: '/images/printer-huhtamaki.png', alt: 'Huhtamaki' },
+  { src: '/images/printer-mm-packaging.png', alt: 'MM Packaging' },
+  { src: '/images/printer-printwell.png', alt: 'Printwell' },
+  { src: '/images/printer-westrock.png', alt: 'WestRock' },
+  { src: '/images/printer-yuto.png', alt: 'Yuto' },
+  { src: '/images/printer-rig.svg', alt: 'Rig' },
+];
+
 export function RutherfordIdentitySection() {
   const { locale } = useLanguage();
   const [slideIndex, setSlideIndex] = useState(0);
@@ -186,6 +229,22 @@ export function RutherfordIdentitySection() {
           <Stat value={30} suffix="+" label={t.countries} />
           <Stat value={1000} suffix="+" label={t.systems} />
         </dl>
+
+        <div className="rutherford-printers-marquee" aria-label="Printers we work with">
+          <div className="rutherford-printers-track">
+            {[...printers, ...printers].map((printer, idx) => (
+              <span className="rutherford-printers-item" key={`${printer.alt}-${idx}`}>
+                <Image
+                  src={printer.src}
+                  alt={idx < printers.length ? printer.alt : ''}
+                  width={240}
+                  height={90}
+                  sizes="160px"
+                />
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

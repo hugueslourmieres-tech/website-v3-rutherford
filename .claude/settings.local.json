@@ -3,7 +3,36 @@
     "allow": [
       "Read(//Users/hugueslourmieres/Documents/Website v4/**)",
       "Bash(npm run:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(vercel --version)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(npm install *)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel projects *)",
+      "Read(//Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/**)",
+      "Bash(vercel link *)",
+      "Bash(vercel deploy *)",
+      "Bash(vercel git *)",
+      "Bash(yes)",
+      "Bash(curl -sI https://website5-rust.vercel.app)",
+      "Bash(curl -sI https://website5-qube9q0ju-hugueslourmieres-techs-projects.vercel.app)",
+      "Bash(vercel ls *)",
+      "Bash(vercel project *)",
+      "Bash(curl -s -X PATCH 'https://api.vercel.com/v9/projects/website5?teamId=hugueslourmieres-techs-projects' -H 'Authorization: Bearer vca_68H928fEqPKHKIDbQleyu0YJVEi9skJTidqcfDlmsPpkLYmgDp49aHD5' -H 'Content-Type: application/json' -d '{\"framework\":\"nextjs\",\"buildCommand\":null,\"outputDirectory\":null,\"installCommand\":null,\"rootDirectory\":null}')",
+      "Bash(curl -sI https://website5-r0ayfdgnk-hugueslourmieres-techs-projects.vercel.app)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cp \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/public/images/DPP image website.jpg\" \"public/images/ppwr/ppwr-dpp-scan.jpg\")",
+      "Bash(cp \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/public/images/PPWR image Website.jpg\" \"public/images/ppwr/ppwr-compliance.jpg\")",
+      "Bash(curl -s https://website5-rust.vercel.app)",
+      "WebFetch(domain:website-v3-rutherford.vercel.app)",
+      "Bash(ls app/blog)",
+      "Bash(ls content/blog)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(open\\('data/blog-articles.json'\\)\\); print\\(len\\(data\\), 'articles'\\); [print\\(f\\\\\"  {i+1}. {a['slug']}: {a['title']}\\\\\"\\) for i,a in enumerate\\(data[:6]\\)]\")",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:www.rutherford.fr)",
+      "Bash(vercel inspect *)",
+      "Bash(grep -iE \"team|2026-04-24|$\\(date +%Y-%m-%d\\)\")"
     ]
   }
 }

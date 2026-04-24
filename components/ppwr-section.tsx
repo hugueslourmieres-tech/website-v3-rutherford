@@ -170,8 +170,6 @@ export function PPWRSection() {
           </article>
         </div>
 
-        <p className="ppwr-body">{t.intro}</p>
-
         <div className="ppwr-cta">
           <a
             className="button button-dark ppwr-cta-button"

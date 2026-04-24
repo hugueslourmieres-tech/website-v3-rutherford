@@ -26,8 +26,10 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       contact: string;
       openNav: string;
       mainNav: string;
-      ticker: string[];
       localeLabel: string;
+      announcementBadge: string;
+      announcementText: string;
+      announcementCta: string;
     }
   > = {
     en: {
@@ -41,12 +43,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       openNav: 'Open navigation',
       mainNav: 'Main navigation',
       localeLabel: 'Language selector',
-      ticker: [
-        'DIGITAL PRODUCT PASSPORT REQUIRED',
-        'JANUARY 1, 2030 — RECYCLED CONTENT TARGETS & GRADE D/E BAN',
-        'JANUARY 1, 2038 — ONLY GRADES A/B ALLOWED',
-        'AUGUST 12, 2026 — BE READY WITH COLORLOOP CONNECT',
-      ],
+      announcementBadge: 'New',
+      announcementText: 'Discover ColorLoop — Rutherford’s new software for offset production',
+      announcementCta: 'Discover',
     },
     fr: {
       home: 'Accueil',
@@ -59,12 +58,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       openNav: 'Ouvrir la navigation',
       mainNav: 'Navigation principale',
       localeLabel: 'Sélecteur de langue',
-      ticker: [
-        'PASSEPORT PRODUIT NUMÉRIQUE OBLIGATOIRE',
-        '1ER JANVIER 2030 — OBJECTIFS DE CONTENU RECYCLÉ & INTERDICTION DES GRADES D/E',
-        '1ER JANVIER 2038 — SEULS LES GRADES A/B SERONT AUTORISÉS',
-        '12 AOÛT 2026 — PRÉPAREZ-VOUS AVEC COLORLOOP CONNECT',
-      ],
+      announcementBadge: 'Nouveau',
+      announcementText: 'Découvrez ColorLoop — le nouveau logiciel Rutherford pour l’offset',
+      announcementCta: 'Découvrir',
     },
     de: {
       home: 'Start',
@@ -77,12 +73,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       openNav: 'Navigation öffnen',
       mainNav: 'Hauptnavigation',
       localeLabel: 'Sprachauswahl',
-      ticker: [
-        'DIGITALER PRODUKTPASS ERFORDERLICH',
-        '1. JANUAR 2030 — RECYCLINGANTEILE & VERBOT DER KLASSEN D/E',
-        '1. JANUAR 2038 — NUR KLASSEN A/B ZULÄSSIG',
-        '12. AUGUST 2026 — MIT COLORLOOP CONNECT BEREIT SEIN',
-      ],
+      announcementBadge: 'Neu',
+      announcementText: 'Entdecken Sie ColorLoop — Rutherfords neue Software für Offsetdruck',
+      announcementCta: 'Entdecken',
     },
     it: {
       home: 'Home',
@@ -95,12 +88,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       openNav: 'Apri navigazione',
       mainNav: 'Navigazione principale',
       localeLabel: 'Selettore lingua',
-      ticker: [
-        'PASSAPORTO DIGITALE DI PRODOTTO OBBLIGATORIO',
-        '1 GENNAIO 2030 — TARGET DI CONTENUTO RICICLATO E DIVIETO CLASSI D/E',
-        '1 GENNAIO 2038 — AMMESSE SOLO LE CLASSI A/B',
-        '12 AGOSTO 2026 — PREPARATI CON COLORLOOP CONNECT',
-      ],
+      announcementBadge: 'Nuovo',
+      announcementText: 'Scopri ColorLoop — il nuovo software Rutherford per l’offset',
+      announcementCta: 'Scopri',
     },
     es: {
       home: 'Inicio',
@@ -113,12 +103,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       openNav: 'Abrir navegación',
       mainNav: 'Navegación principal',
       localeLabel: 'Selector de idioma',
-      ticker: [
-        'PASAPORTE DIGITAL DE PRODUCTO OBLIGATORIO',
-        '1 DE ENERO DE 2030 — OBJETIVOS DE CONTENIDO RECICLADO Y PROHIBICIÓN DE GRADOS D/E',
-        '1 DE ENERO DE 2038 — SOLO SE PERMITIRÁN LOS GRADOS A/B',
-        '12 DE AGOSTO DE 2026 — PREPÁRESE CON COLORLOOP CONNECT',
-      ],
+      announcementBadge: 'Nuevo',
+      announcementText: 'Descubra ColorLoop — el nuevo software Rutherford para offset',
+      announcementCta: 'Descubrir',
     },
   };
 
@@ -271,13 +258,13 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
         </div>
       </div>
 
-      <div className="site-ticker" aria-label="PPWR and DPP timeline">
-        <div className="site-ticker-track">
-          {[...labels.ticker, ...labels.ticker].map((item, index) => (
-            <span key={`${item}-${index}`}>{item}</span>
-          ))}
-        </div>
-      </div>
+      <a className="site-announcement" href="/#colorloop">
+        <span className="site-announcement-badge">{labels.announcementBadge}</span>
+        <span className="site-announcement-text">{labels.announcementText}</span>
+        <span className="site-announcement-cta" aria-hidden="true">
+          {labels.announcementCta} →
+        </span>
+      </a>
     </header>
   );
 }
