@@ -51,7 +51,9 @@
       "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/Bundle%20Rutherford-4.jpg\")",
       "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/offset%20white.png\")",
       "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/Picto%20offset/1picto%20offset%20print.png\")",
-      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/8Veoria%20label%20photos%20prod%20.jpg\")"
+      "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/8Veoria%20label%20photos%20prod%20.jpg\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)"
     ]
   }
 }
