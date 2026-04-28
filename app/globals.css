@@ -495,6 +495,128 @@ svg {
   font-weight: 600;
 }
 
+/* Hero headline typewriter line */
+.hero-headline-typewriter {
+  display: flex !important;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3em;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+/* Typewriter tagline (inline in headline) */
+.hero-copy h1 span.typewriter-inline {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.32em;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.hero-copy h1 span.typewriter-inline span.typewriter-word {
+  display: inline-flex;
+}
+
+.typewriter-inline .typewriter-prefix {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.typewriter-inline .typewriter-word {
+  display: inline-flex;
+  align-items: baseline;
+  min-width: 11ch;
+  color: inherit;
+  font-weight: inherit;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.typewriter-inline .typewriter-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.typewriter-inline .typewriter-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 4px;
+  background: currentColor;
+  animation: typewriter-caret-blink 1s steps(2, start) infinite;
+  align-self: center;
+  vertical-align: -0.05em;
+}
+
+/* Typewriter tagline (standalone) */
+.typewriter-tagline {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: #1d1d1f;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.typewriter-prefix {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.typewriter-tagline .typewriter-prefix::after {
+  content: ':';
+  margin-left: 1px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.typewriter-word {
+  display: inline-flex;
+  align-items: baseline;
+  min-width: 11ch;
+  color: var(--accent);
+  font-weight: 700;
+  text-align: left;
+}
+
+.typewriter-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.typewriter-ghost {
+  display: none;
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.95em;
+  margin-left: 4px;
+  background: var(--accent);
+  animation: typewriter-caret-blink 1s steps(2, start) infinite;
+  align-self: center;
+  vertical-align: -0.05em;
+}
+
+@keyframes typewriter-caret-blink {
+  to { visibility: hidden; }
+}
+
+@media (max-width: 600px) {
+  .typewriter-tagline {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    gap: 6px;
+  }
+}
+
 .hero-line-accent {
   color: var(--accent);
 }

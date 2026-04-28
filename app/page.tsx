@@ -54,6 +54,7 @@ type HeroCopy = {
   eyebrow: string;
   headlineLead: string;
   headlineAccent: string;
+  reduceLabel: string;
   supporting: string;
   primaryCta: string;
   secondaryCta: string;
@@ -65,6 +66,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
     eyebrow: 'Offset printing expertise',
     headlineLead: 'Improve color control and',
     headlineAccent: 'reduce makeready waste.',
+    reduceLabel: 'Reduce',
     supporting:
       'From closed-loop workflow expertise to modern production software, Rutherford supports offset teams that want faster setup, stronger repeatability, and clearer press-side control. ColorLoop is Rutherford’s latest software platform for smarter offset production.',
     primaryCta: 'Request console validation',
@@ -75,6 +77,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
     eyebrow: 'Expertise impression offset',
     headlineLead: 'Améliorer le contrôle couleur et',
     headlineAccent: 'réduire la gâche au calage.',
+    reduceLabel: 'Réduire',
     supporting:
       "De l’expertise closed-loop aux logiciels de production modernes, Rutherford accompagne les équipes offset qui veulent un calage plus rapide, une meilleure répétabilité et un contrôle presse plus clair. ColorLoop est la dernière plateforme logicielle de Rutherford pour une production offset plus intelligente.",
     primaryCta: 'Demander une validation console',
@@ -85,6 +88,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
     eyebrow: 'Expertise im Offsetdruck',
     headlineLead: 'Farbsteuerung verbessern und',
     headlineAccent: 'Makulatur beim Einrichten reduzieren.',
+    reduceLabel: 'Reduzieren',
     supporting:
       'Von Closed-Loop-Workflow-Expertise bis zu moderner Produktionssoftware unterstützt Rutherford Offsetteams, die schnelleres Einrichten, bessere Wiederholbarkeit und klarere Maschinensteuerung wollen. ColorLoop ist Rutherfords neueste Softwareplattform für eine intelligentere Offsetproduktion.',
     primaryCta: 'Konsolenvalidierung anfragen',
@@ -95,6 +99,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
     eyebrow: 'Expertise nella stampa offset',
     headlineLead: 'Migliorare il controllo colore e',
     headlineAccent: 'ridurre lo scarto di avviamento.',
+    reduceLabel: 'Ridurre',
     supporting:
       "Dall’expertise closed-loop ai software di produzione moderni, Rutherford supporta i team offset che vogliono avviamenti più rapidi, maggiore ripetibilità e un controllo di macchina più chiaro. ColorLoop è l’ultima piattaforma software di Rutherford per una produzione offset più intelligente.",
     primaryCta: 'Richiedi validazione console',
@@ -105,6 +110,7 @@ const HERO_COPY: Record<Locale, HeroCopy> = {
     eyebrow: 'Experiencia en impresión offset',
     headlineLead: 'Mejorar el control del color y',
     headlineAccent: 'reducir el desperdicio de puesta a punto.',
+    reduceLabel: 'Reducir',
     supporting:
       'Desde la experiencia closed-loop hasta el software de producción moderno, Rutherford acompaña a los equipos offset que buscan puestas a punto más rápidas, mejor repetibilidad y un control de prensa más claro. ColorLoop es la última plataforma de software de Rutherford para una producción offset más inteligente.',
     primaryCta: 'Solicitar validación de consola',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LanguageProvider } from '@/components/language-provider';
+import { GoogleAnalytics } from '@/components/google-analytics';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );

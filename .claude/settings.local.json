@@ -53,7 +53,9 @@
       "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/Picto%20offset/1picto%20offset%20print.png\")",
       "Bash(curl -so /dev/null -w \"%{http_code}\\\\n\" --max-time 10 \"https://rutherford.fr/images/8Veoria%20label%20photos%20prod%20.jpg\")",
       "Bash(python3 -c ' *)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(cat .env.local)",
+      "Bash(ls -la .env*)"
     ]
   }
 }
