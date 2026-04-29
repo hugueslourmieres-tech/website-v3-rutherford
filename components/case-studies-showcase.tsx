@@ -136,18 +136,18 @@ const COPY: Record<Locale, Copy> = {
       },
       moderna: {
         challenge: 'Calages lents et manuels qui font grimper la gâche sur offset feuille à feuille.',
-        result: 'Démarrages plus intelligents, moins de gâche et accès plus rapide aux feuilles vendables.',
+        result: 'Démarrages plus intelligents, moins de gâche et accès plus rapide aux feuilles bonnes.',
       },
       colorconsulting: {
         challenge: 'Industrialiser l’expertise couleur auprès des clients packaging italiens.',
         result: 'Workflows standardisés et performance couleur mesurable.',
       },
       printwell: {
-        challenge: 'Scaler une couleur constante sur de l’offset commercial à fort volume aux US.',
+        challenge: 'Étendre une couleur constante sur de l’offset commercial à fort volume aux US.',
         result: 'Atelier standardisé, montée en compétence plus rapide et livraisons fiables.',
       },
       avery: {
-        challenge: 'Scaler la constance couleur sur la production d’étiquettes internationale.',
+        challenge: 'Étendre la constance couleur sur la production d’étiquettes internationale.',
         result: 'Atelier standardisé, qualité couleur fiable et données plus propres entre sites.',
       },
     },
@@ -232,7 +232,7 @@ const COPY: Record<Locale, Copy> = {
       },
       moderna: {
         challenge: 'Avviamenti lenti e manuali che alzano lo scarto su offset foglio.',
-        result: 'Startup più intelligenti, meno scarto e accesso più rapido ai fogli vendibili.',
+        result: 'Avviamenti più intelligenti, meno scarto e accesso più rapido ai fogli vendibili.',
       },
       colorconsulting: {
         challenge: 'Industrializzare l’expertise colore presso i clienti packaging italiani.',
@@ -288,11 +288,11 @@ const COPY: Record<Locale, Copy> = {
       },
       printwell: {
         challenge: 'Escalar un color consistente en offset comercial de alto volumen en EE. UU.',
-        result: 'Pressroom estandarizado, onboarding más rápido y entregas fiables.',
+        result: 'Sala de prensa estandarizada, onboarding más rápido y entregas fiables.',
       },
       avery: {
         challenge: 'Escalar la consistencia de color en producción de etiquetas internacional.',
-        result: 'Pressroom estandarizado, calidad de color fiable y datos más limpios entre plantas.',
+        result: 'Sala de prensa estandarizada, calidad de color fiable y datos más limpios entre plantas.',
       },
     },
   },

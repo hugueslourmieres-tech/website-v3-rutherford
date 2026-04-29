@@ -42,7 +42,7 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Comment nous travaillons',
     headline: 'L’expertise, le logiciel et la technologie derrière Rutherford',
     intro:
-      'Rutherford réunit expertise de l’impression offset, logiciel et technologie pour moderniser le contrôle de production.',
+      'Rutherford réunit expertise en impression offset, logiciel et technologie pour moderniser le contrôle de production.',
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford apporte des années d’expertise offset en gestion de la couleur, workflow presse et constance de production.',
@@ -90,7 +90,7 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Come lavoriamo',
     headline: 'L’expertise, il software e la tecnologia dietro Rutherford',
     intro:
-      'Rutherford combina expertise di stampa offset, software e tecnologia per modernizzare il controllo di produzione.',
+      'Rutherford combina expertise di stampa offset, software e tecnologia per modernizzare il controllo della produzione.',
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford porta anni di expertise nella stampa offset in gestione del colore, workflow di stampa e consistenza produttiva.',

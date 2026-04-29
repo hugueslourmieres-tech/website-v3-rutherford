@@ -40,7 +40,7 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Comment Rutherford aide',
     headline: 'Des résultats concrets pour la production offset.',
     intro:
-      'Rutherford accompagne les équipes offset sur la gestion couleur, le workflow presse et la standardisation de production — centré sur ce qui fait tourner les machines, pas sur des slogans.',
+      'Rutherford accompagne les équipes offset sur la gestion couleur, le workflow presse et la standardisation de production — centré sur ce qui fait tourner les presses, pas sur des slogans.',
     benefits: [
       {
         title: 'Couleur stable à chaque tirage',
@@ -56,7 +56,7 @@ const COPY: Record<Locale, Copy> = {
       },
       {
         title: 'Standardisation production',
-        body: 'Des processus reproductibles entre presses, équipes et sites — pour que marques et converters puissent s’y fier.',
+        body: 'Des processus reproductibles entre presses, équipes et sites — pour que marques et converters packaging puissent s’y fier.',
       },
     ],
   },
@@ -99,8 +99,8 @@ const COPY: Record<Locale, Copy> = {
         body: 'Meno fogli, meno inchiostro e cicli di avviamento più brevi grazie a un pilotaggio più affidabile.',
       },
       {
-        title: 'Controllo di workflow migliore',
-        body: 'Decisioni di macchina più chiare, dati di misura collegati e passaggi strutturati tra operatori e management.',
+        title: 'Migliore controllo del workflow',
+        body: 'Decisioni a bordo macchina più chiare, dati di misura collegati e passaggi strutturati tra operatori e management.',
       },
       {
         title: 'Standardizzazione produttiva',
