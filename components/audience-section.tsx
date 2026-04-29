@@ -60,7 +60,7 @@ const COPY: Record<Locale, Copy> = {
     cards: [
       {
         title: 'Offsetdruckereien',
-        body: 'Druckereien, die schnelleres Einrichten und stabilere Farbergebnisse über Aufträge, Schichten und Pressen hinweg wollen.',
+        body: 'Druckereien, die schnelleres Einrichten und stabilere Farbergebnisse über Aufträge, Schichten und Maschinen hinweg wollen.',
       },
       {
         title: 'Verpackungsverarbeiter',
@@ -76,7 +76,7 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Con chi lavoriamo',
     headline: 'Con chi lavora Rutherford',
     intro:
-      'Se una di queste situazioni Le suona familiare, Rutherford probabilmente fa al caso Suo. Lavoriamo meglio con team che pensano ai risultati reali in macchina.',
+      'Se una di queste situazioni ti suona familiare, Rutherford probabilmente fa al caso tuo. Lavoriamo meglio con team che pensano ai risultati reali in macchina.',
     cards: [
       {
         title: 'Stampatori offset',
