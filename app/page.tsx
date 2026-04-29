@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { useLanguage, type Locale } from '@/components/language-provider';
 import { SiteNav } from '@/components/site-nav';
 import { ScrollReveal } from '@/components/scroll-reveal';
+import { HeroBackground } from '@/components/hero-background';
 
 const BrandExplainerSection = dynamic(
   () => import('@/components/brand-explainer-section').then((module) => module.BrandExplainerSection),
@@ -129,12 +130,7 @@ export default function HomePage() {
       <SiteNav current="home" />
 
       <section className="hero-section">
-        <div className="hero-background" aria-hidden="true">
-          <span className="hero-orb hero-orb-a" />
-          <span className="hero-orb hero-orb-b" />
-          <span className="hero-orb hero-orb-c" />
-          <span className="hero-grid" />
-        </div>
+        <HeroBackground />
 
         <div className="container hero-stack">
           <div className="hero-copy">
@@ -145,6 +141,52 @@ export default function HomePage() {
                 <span className="hero-headline-accent">{t.headlineAccent}</span>
               </span>
             </h1>
+
+            <div className="hero-feature">
+              <img
+                src="/images/colorloop-lenovo-half-2.webp"
+                alt="ColorLoop running on a Lenovo laptop"
+                className="hero-feature-base"
+              />
+              <img
+                src="/images/colorloop-lenovo-half-2.webp"
+                alt=""
+                aria-hidden="true"
+                className="hero-feature-lens hero-feature-lens-rutherford"
+              />
+              <img
+                src="/images/colorloop-lenovo-half-2.webp"
+                alt=""
+                aria-hidden="true"
+                className="hero-feature-lens hero-feature-lens-xrite"
+              />
+              <img
+                src="/images/colorloop-lenovo-half-2.webp"
+                alt=""
+                aria-hidden="true"
+                className="hero-feature-lens hero-feature-lens-measurecolor"
+              />
+
+              <div className="hero-cursor hero-cursor-rutherford" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32">
+                  <path d="M5.5 3.5l13 8-5.4 1.6-2.6 5.4z" />
+                </svg>
+                <span className="hero-cursor-label">Rutherford</span>
+              </div>
+              <div className="hero-cursor hero-cursor-xrite" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32">
+                  <path d="M5.5 3.5l13 8-5.4 1.6-2.6 5.4z" />
+                </svg>
+                <span className="hero-cursor-label">X-Rite PANTONE</span>
+              </div>
+              <div className="hero-cursor hero-cursor-measurecolor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32">
+                  <path d="M5.5 3.5l13 8-5.4 1.6-2.6 5.4z" />
+                </svg>
+                <span className="hero-cursor-label">MeasureColor</span>
+              </div>
+            </div>
+
             <p className="hero-supporting">{t.supporting}</p>
 
             <div className="hero-actions">
@@ -165,17 +207,17 @@ export default function HomePage() {
 
       <ConsoleValidationCTA />
 
+      <CaseStudiesShowcase />
+
       <HowRutherfordHelps />
 
       <ColorLoopSection />
 
-      <CaseStudiesShowcase />
-
       <AudienceSection />
 
-      <BlogPreviewSection />
-
       <PPWRSection />
+
+      <BlogPreviewSection />
 
       <TeamShowcase />
 

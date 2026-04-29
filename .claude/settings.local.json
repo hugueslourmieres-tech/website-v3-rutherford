@@ -55,7 +55,18 @@
       "Bash(python3 -c ' *)",
       "Bash(python3)",
       "Bash(cat .env.local)",
-      "Bash(ls -la .env*)"
+      "Bash(ls -la .env*)",
+      "Bash(vercel env *)",
+      "Bash(curl -s --max-time 10 https://rutherford.fr)",
+      "WebSearch",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('public/images/Bundle Rutherford-4.jpg'\\); print\\(f'{img.size[0]}x{img.size[1]} ratio={img.size[0]/img.size[1]:.3f}'\\)\")",
+      "Bash(command -v yt-dlp)",
+      "Bash(yt-dlp --flat-playlist --print \"%\\(id\\)s|%\\(title\\)s\" \"https://www.youtube.com/playlist?list=PLr1x4-E5afOkvOVTLw5iidVcos_-MN7NB\")",
+      "Bash(pip3 list *)",
+      "Bash(pip3 install *)",
+      "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$HOME/Library/Python/3.12/bin:$HOME/Library/Python/3.11/bin:$HOME/.local/bin:$PATH\")",
+      "Bash(yt-dlp --version)",
+      "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$PATH\")"
     ]
   }
 }

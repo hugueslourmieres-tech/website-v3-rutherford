@@ -189,8 +189,30 @@ export function ColorLoopSection() {
         </div>
 
         <div className="colorloop-offset-tech">
-          <p className="colorloop-offset-tech-label">{t.techLabel}</p>
-          <p className="colorloop-offset-tech-body">{t.techBody}</p>
+          <div className="colorloop-offset-tech-copy">
+            <p className="colorloop-offset-tech-label">{t.techLabel}</p>
+            <p className="colorloop-offset-tech-body">{t.techBody}</p>
+          </div>
+          <div className="colorloop-offset-tech-media">
+            <a
+              className="colorloop-offset-tech-thumb"
+              href="https://www.xrite.com/categories/measurement-devices/intellitrax2"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="IntelliTrax2 by X-Rite"
+            >
+              <img src="/images/intellitrax2-3.jpg" alt="IntelliTrax2 measurement device" loading="lazy" />
+            </a>
+            <a
+              className="colorloop-offset-tech-thumb"
+              href="https://www.xrite.com/categories/measurement-devices/intellitrax2"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="IntelliTrax on press"
+            >
+              <img src="/images/intellitrax.jpg" alt="IntelliTrax on press console" loading="lazy" />
+            </a>
+          </div>
         </div>
 
         <div className="colorloop-offset-cta">

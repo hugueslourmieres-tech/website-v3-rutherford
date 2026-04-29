@@ -182,29 +182,28 @@ export function RutherfordIdentitySection() {
     const interval = window.setInterval(() => {
       setSlideIndex((current) => (current + 1) % slides.length);
     }, 3600);
-
     return () => window.clearInterval(interval);
   }, [slides.length]);
 
   return (
     <section className="section rutherford-identity-section">
       <div className="rutherford-identity-background" aria-hidden="true">
-        {slides.map((src, index) => (
+        {slides.map((src, i) => (
           <div
             key={src}
-            className={`rutherford-slide ${index === slideIndex ? 'is-active' : ''}`}
+            className={`rutherford-bg-slide ${i === slideIndex ? 'is-active' : ''}`}
           >
             <Image
               src={src}
               alt=""
               fill
-              className="rutherford-slide-image"
+              className="rutherford-bg-slide-image"
               sizes="100vw"
-              priority={index === 0}
+              priority={i === 0}
             />
           </div>
         ))}
-        <div className="rutherford-identity-overlay" />
+        <div className="rutherford-bg-overlay" />
       </div>
 
       <div className="container rutherford-identity-shell">
@@ -223,6 +222,7 @@ export function RutherfordIdentitySection() {
             ))}
           </p>
         </div>
+
 
         <dl className="rutherford-stats-grid">
           <Stat value={25} suffix="+" label={t.years} />
