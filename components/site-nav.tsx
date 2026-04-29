@@ -50,7 +50,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
     fr: {
       home: 'Accueil',
       colorloop: 'ColorLoop',
-      cases: 'Case Studies',
+      cases: 'Cas clients',
       blog: 'Blog',
       support: 'Support',
       console: 'Validation console',
