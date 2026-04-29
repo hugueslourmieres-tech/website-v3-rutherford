@@ -22,8 +22,8 @@ const COPY: Record<Locale, Copy> = {
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford brings years of offset print expertise in color management, press-side workflow, and production consistency.',
-      ctaLabel: 'Visit rutherford.fr',
-      href: 'https://www.rutherford.fr/',
+      ctaLabel: 'Discover Rutherford',
+      href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
@@ -46,8 +46,8 @@ const COPY: Record<Locale, Copy> = {
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford apporte des années d’expertise offset en gestion de la couleur, workflow presse et constance de production.',
-      ctaLabel: 'Visiter rutherford.fr',
-      href: 'https://www.rutherford.fr/',
+      ctaLabel: 'Découvrir Rutherford',
+      href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
@@ -70,8 +70,8 @@ const COPY: Record<Locale, Copy> = {
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford bringt jahrelange Offset-Druckexpertise in Farbmanagement, pressenseitigem Workflow und Produktionskonstanz.',
-      ctaLabel: 'rutherford.fr besuchen',
-      href: 'https://www.rutherford.fr/',
+      ctaLabel: 'Rutherford entdecken',
+      href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
@@ -94,8 +94,8 @@ const COPY: Record<Locale, Copy> = {
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford porta anni di expertise nella stampa offset in gestione del colore, workflow di stampa e consistenza produttiva.',
-      ctaLabel: 'Visita rutherford.fr',
-      href: 'https://www.rutherford.fr/',
+      ctaLabel: 'Scopri Rutherford',
+      href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
@@ -118,8 +118,8 @@ const COPY: Record<Locale, Copy> = {
     rutherford: {
       title: 'Rutherford.fr',
       body: 'Rutherford aporta años de experiencia en impresión offset en gestión del color, flujo de trabajo junto a la prensa y consistencia de producción.',
-      ctaLabel: 'Visitar rutherford.fr',
-      href: 'https://www.rutherford.fr/',
+      ctaLabel: 'Descubrir Rutherford',
+      href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
@@ -176,23 +176,35 @@ export function BrandExplainerSection() {
                 <p className="brand-explainer-card-label">0{index + 1}</p>
                 <h3>
                   {content.href ? (
-                    <a href={content.href} target="_blank" rel="noreferrer">
-                      {content.title}
-                    </a>
+                    (() => {
+                      const external = content.href.startsWith('http');
+                      return (
+                        <a
+                          href={content.href}
+                          {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                        >
+                          {content.title}
+                        </a>
+                      );
+                    })()
                   ) : (
                     content.title
                   )}
                 </h3>
                 <p>{content.body}</p>
                 {content.href && content.ctaLabel ? (
-                  <a
-                    className="brand-explainer-card-cta"
-                    href={content.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {content.ctaLabel} <span aria-hidden="true">→</span>
-                  </a>
+                  (() => {
+                    const external = content.href.startsWith('http');
+                    return (
+                      <a
+                        className="brand-explainer-card-cta"
+                        href={content.href}
+                        {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                      >
+                        {content.ctaLabel} <span aria-hidden="true">→</span>
+                      </a>
+                    );
+                  })()
                 ) : null}
               </div>
             </article>

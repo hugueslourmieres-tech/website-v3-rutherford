@@ -3682,8 +3682,7 @@ svg {
   text-align: center;
 }
 
-.flexo-copy h2,
-.ppwr-section h2 {
+.flexo-copy h2 {
   margin: 0;
   font-size: clamp(3rem, 6.8vw, 5.6rem);
   line-height: 0.94;
@@ -5397,6 +5396,12 @@ svg {
 .rutherford-identity-brand img {
   width: min(235px, 70vw);
   height: auto;
+}
+
+.rutherford-identity-copy {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
 }
 
 .rutherford-identity-copy .section-kicker {
@@ -7473,5 +7478,39 @@ svg {
   .blog-preview-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Harmonized section typography (reference: audience) ─────────────────────────── */
+
+.brand-explainer-headline,
+.how-rutherford-headline,
+.colorloop-offset-headline,
+.case-studies-headline,
+.blog-preview-headline,
+.ppwr-title,
+.rutherford-identity-headline,
+.console-cta-headline,
+.team-content-headline,
+.contact-headline {
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.brand-explainer-intro,
+.how-rutherford-intro,
+.colorloop-offset-intro,
+.case-studies-intro,
+.blog-preview-intro,
+.ppwr-tagline,
+.console-cta-supporting,
+.rutherford-identity-body,
+.team-content-body,
+.contact-tagline {
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.62;
+  margin: 0;
 }
 

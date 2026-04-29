@@ -186,7 +186,7 @@ export function RutherfordIdentitySection() {
   }, [slides.length]);
 
   return (
-    <section className="section rutherford-identity-section">
+    <section className="section rutherford-identity-section" id="who-we-are">
       <div className="rutherford-identity-background" aria-hidden="true">
         {slides.map((src, i) => (
           <div
