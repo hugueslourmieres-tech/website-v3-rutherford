@@ -63,7 +63,7 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'Über Rutherford', colorloop: 'ColorLoop', cases: 'Referenzen' },
   },
   it: {
-    tagline: 'Expertise offset, software e tecnologia — per modernizzare il controllo di produzione.',
+    tagline: 'Expertise offset, software e tecnologia — per modernizzare il controllo della produzione.',
     platforms: 'Piattaforme',
     resources: 'Risorse',
     company: 'Azienda',

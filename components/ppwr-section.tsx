@@ -84,7 +84,7 @@ const COPY: Record<Locale, Copy> = {
       'Ogni imballaggio diventa supporto dati. Una sola scansione rivela composizione, origine dei materiali e riciclabilità — dati strutturati, aggiornati in tempo reale, condivisi lungo tutta la catena del valore, dal fornitore al consumatore.',
     cardCta: 'Scopri di più',
     ctaLabel: 'Scopri PPWR Connect',
-    ctaSub: 'Il tuo percorso rapido alla conformità PPWR e DPP',
+    ctaSub: 'Il Suo percorso rapido alla conformità PPWR e DPP',
   },
   es: {
     kicker: 'Regulación',
@@ -101,7 +101,7 @@ const COPY: Record<Locale, Copy> = {
       'Cada envase se convierte en soporte de datos. Un escaneo revela composición, origen de los materiales y reciclabilidad — datos estructurados, actualizados en tiempo real, compartidos a lo largo de toda la cadena de valor, desde el proveedor hasta el consumidor.',
     cardCta: 'Saber más',
     ctaLabel: 'Descubrir PPWR Connect',
-    ctaSub: 'Tu vía rápida a la conformidad PPWR y DPP',
+    ctaSub: 'Su vía rápida a la conformidad PPWR y DPP',
   },
 };
 

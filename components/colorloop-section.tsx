@@ -79,7 +79,7 @@ const COPY: Record<Locale, Copy> = {
     benefits: [
       {
         title: 'Schnelleres Einrichten',
-        body: 'Mit KI-gestützten Setup- und Korrektur-Workflows schneller die Zielfarbe erreichen.',
+        body: 'Mit KI-gestützten Einrichtungs- und Korrektur-Workflows schneller die Zielfarbe erreichen.',
       },
       {
         title: 'Weniger Makulatur',
@@ -107,11 +107,11 @@ const COPY: Record<Locale, Copy> = {
     benefits: [
       {
         title: 'Avviamento più rapido',
-        body: 'Raggiungere prima il colore target con workflow di setup e correzione assistiti da IA.',
+        body: 'Raggiungere prima il colore target con workflow di avviamento e correzione assistiti da IA.',
       },
       {
         title: 'Meno scarto',
-        body: 'Meno carta, inchiostro e riavvii inutili grazie a una migliore consistenza di setup.',
+        body: 'Meno carta, inchiostro e riavvii inutili grazie a una migliore consistenza di avviamento.',
       },
       {
         title: 'Migliore ripetibilità',
@@ -124,7 +124,7 @@ const COPY: Record<Locale, Copy> = {
     ],
     techLabel: 'Integrazioni',
     techBody:
-      'ColorLoop si integra con gli strumenti standard del settore come MeasureColor e IntelliTrax2 — i tuoi investimenti in misura e reporting restano validi.',
+      'ColorLoop si integra con gli strumenti standard del settore come MeasureColor e IntelliTrax2 — i Suoi investimenti in misura e reporting restano validi.',
     primaryCta: 'Scopri ColorLoop',
   },
   es: {
