@@ -6914,14 +6914,14 @@ svg {
 .colorloop-roi-table-total {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #2e7d32;
+  color: var(--accent);
 }
 
 .colorloop-roi-table-sub-row {
-  font-size: 0.92rem !important;
-  color: var(--accent) !important;
+  font-size: 0.82rem !important;
+  color: rgba(29, 29, 31, 0.55) !important;
   padding-top: 0 !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
 }
 
 .colorloop-roi-disclaimer {
