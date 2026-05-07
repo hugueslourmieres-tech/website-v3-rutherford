@@ -205,9 +205,9 @@ export default function HomePage() {
 
       <BrandExplainerSection />
 
-      <ConsoleValidationCTA />
-
       <CaseStudiesShowcase />
+
+      <ConsoleValidationCTA />
 
       <HowRutherfordHelps />
 
