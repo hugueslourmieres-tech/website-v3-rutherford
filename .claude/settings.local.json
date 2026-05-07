@@ -69,7 +69,9 @@
       "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$PATH\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(vercel --prod --yes)",
+      "Bash(vercel alias *)"
     ]
   }
 }
