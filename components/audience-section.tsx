@@ -74,21 +74,21 @@ const COPY: Record<Locale, Copy> = {
   },
   it: {
     kicker: 'Con chi lavoriamo',
-    headline: 'Con chi lavora Rutherford',
+    headline: 'Rutherford è il partner giusto se…',
     intro:
-      'Se una di queste situazioni ti suona familiare, Rutherford probabilmente fa al caso tuo. Lavoriamo meglio con team che pensano ai risultati reali in macchina.',
+      'Se una di queste situazioni ti è familiare, probabilmente possiamo aiutarti. Lavoriamo al meglio con team che vogliono risultati concreti in macchina.',
     cards: [
       {
         title: 'Stampatori offset',
-        body: 'Stampatori che vogliono avviamenti più rapidi e risultati colore più stabili tra lavori, turni e macchine.',
+        body: 'Aziende di stampa che vogliono avviamenti più rapidi e risultati colore più stabili tra lavori, turni e macchine.',
       },
       {
-        title: 'Converter packaging',
-        body: 'Converter che cercano maggior controllo produttivo, standardizzazione e ripetibilità in pressroom.',
+        title: 'Converter di packaging',
+        body: 'Converter che cercano più controllo produttivo, maggiore standardizzazione e risultati più ripetibili in sala stampa.',
       },
       {
-        title: 'Decisori',
-        body: 'Leader che valutano modernizzazione del workflow, strategia closed-loop colore o compatibilità console prima di un rollout.',
+        title: 'Decision maker',
+        body: 'Responsabili che stanno valutando la modernizzazione del workflow, una strategia colore closed-loop o la compatibilità della console prima di un rollout.',
       },
     ],
   },

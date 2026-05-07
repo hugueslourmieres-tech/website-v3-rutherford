@@ -103,28 +103,28 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Il software',
     headline: 'ColorLoop per la stampa offset',
     intro:
-      'Costruito sull’esperienza closed-loop di Rutherford, ColorLoop aiuta i team offset a ridurre i tempi di avviamento, migliorare la consistenza del colore e collegare i dati di produzione in modo più chiaro.',
+      'Nato dall’esperienza closed-loop di Rutherford, ColorLoop aiuta i team offset a ridurre i tempi di setup, migliorare la coerenza del colore e collegare con maggiore chiarezza i dati di produzione lungo tutto il workflow.',
     benefits: [
       {
-        title: 'Avviamento più rapido',
-        body: 'Raggiungere prima il colore target con workflow di setup e correzione assistiti da IA.',
+        title: 'Avviamenti più rapidi',
+        body: 'Raggiungi prima il colore target grazie a workflow di setup e correzione guidati dall’AI.',
       },
       {
-        title: 'Meno scarto',
-        body: 'Meno carta, inchiostro e riavvii inutili grazie a una migliore consistenza di setup.',
+        title: 'Meno scarti',
+        body: 'Riduci sprechi di carta, inchiostro e ristampe evitabili grazie a setup più coerenti e prevedibili.',
       },
       {
-        title: 'Migliore ripetibilità',
-        body: 'Dati di produzione stabili per migliorare la performance da un lavoro all’altro.',
+        title: 'Maggiore ripetibilità',
+        body: 'Usa dati di produzione affidabili per migliorare le prestazioni da un lavoro al successivo.',
       },
       {
         title: 'Visibilità connessa',
-        body: 'Misurazioni, dati qualità e insight di produzione in un livello operativo più chiaro.',
+        body: 'Porta misurazioni, dati qualità e insight produttivi in un unico livello operativo, più chiaro e utilizzabile.',
       },
     ],
     techLabel: 'Integrazioni',
     techBody:
-      'ColorLoop si integra con gli strumenti standard del settore come MeasureColor e IntelliTrax2 — i tuoi investimenti in misura e reporting restano validi.',
+      'ColorLoop si integra con strumenti standard del settore come MeasureColor e IntelliTrax2 di X-Rite PANTONE, proteggendo gli investimenti già fatti in misurazione e reporting.',
     primaryCta: 'Scopri ColorLoop',
   },
   es: {

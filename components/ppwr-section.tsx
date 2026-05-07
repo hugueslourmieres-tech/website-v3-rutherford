@@ -70,21 +70,21 @@ const COPY: Record<Locale, Copy> = {
     ctaSub: 'Ihr schneller Weg zur PPWR- und DPP-Bereitschaft',
   },
   it: {
-    kicker: 'Regolamento',
+    kicker: 'Regolamentazione',
     title: 'PPWR & DPP',
     tagline:
-      'Accompagniamo stampatori e brand passo dopo passo verso la conformità PPWR e l’attivazione del Passaporto Digitale di Prodotto.',
+      'Aiutiamo stampatori e brand a prepararsi alla conformità PPWR e al Digital Product Passport, passo dopo passo.',
     intro:
-      "Il regolamento PPWR (Packaging and Packaging Waste Regulation) è il nuovo quadro europeo che stabilisce regole vincolanti per ogni imballaggio immesso sul mercato europeo: riciclabilità, contenuto riciclato, riduzione, etichettatura e tracciabilità. A dimostrazione della conformità, ogni prodotto avrà un Passaporto Digitale di Prodotto (DPP): una scheda leggibile da macchina, di norma accessibile via QR code, che espone composizione, origine dei materiali, riciclabilità e fine vita a brand, autorità e consumatori.",
+      "Il regolamento PPWR (Packaging and Packaging Waste Regulation) è il nuovo quadro europeo che stabilisce regole vincolanti per ogni imballaggio immesso sul mercato europeo: riciclabilità, contenuto riciclato, riduzione, etichettatura e tracciabilità. A dimostrazione della conformità, ogni prodotto avrà un Digital Product Passport (DPP): una scheda leggibile da macchina, di norma accessibile via QR code, che espone composizione, origine dei materiali, riciclabilità e fine vita a brand, autorità e consumatori.",
     ppwrTitle: 'Conformità PPWR',
     ppwrBody:
-      'Riciclabile per design, contenuto riciclato validato, supporti FSC, imballaggio minimizzato. Vi aiutiamo a tradurre il testo normativo in standard di produzione concreti — verificati, documentati e pronti per i controlli di mercato.',
-    dppTitle: 'Passaporto Digitale di Prodotto',
+      'Design riciclabile, contenuto riciclato validato, supporti certificati FSC, packaging ottimizzato. Ti aiutiamo a trasformare i requisiti normativi in standard produttivi concreti: documentati, verificabili e pronti per eventuali controlli di mercato.',
+    dppTitle: 'Digital Product Passport',
     dppBody:
-      'Ogni imballaggio diventa supporto dati. Una sola scansione rivela composizione, origine dei materiali e riciclabilità — dati strutturati, aggiornati in tempo reale, condivisi lungo tutta la catena del valore, dal fornitore al consumatore.',
+      'Ogni packaging diventa un supporto dati. Con una sola scansione è possibile accedere a composizione, origine dei materiali e riciclabilità: informazioni strutturate, sempre aggiornate e condivisibili lungo tutta la catena del valore, dal fornitore al consumatore.',
     cardCta: 'Scopri di più',
     ctaLabel: 'Scopri PPWR Connect',
-    ctaSub: 'Il tuo percorso rapido alla conformità PPWR e DPP',
+    ctaSub: 'Il percorso più rapido verso la preparazione PPWR & DPP',
   },
   es: {
     kicker: 'Regulación',

@@ -10,7 +10,7 @@ export function BlogIndexPage({ articles }: { articles: BlogArticle[] }) {
     en: { kicker: 'Rutherford Journal', title: 'Our Articles', subtitle: 'News, case studies, product releases, testimonials and practical insights from the print floor.', indexed: 'indexed articles', read: 'Read article', dateLocale: 'en-GB' },
     fr: { kicker: 'Journal Rutherford', title: 'Nos articles', subtitle: 'Actualités, études de cas, lancements produits, témoignages et retours terrain.', indexed: 'articles indexés', read: 'Lire l’article', dateLocale: 'fr-FR' },
     de: { kicker: 'Rutherford Journal', title: 'Unsere Artikel', subtitle: 'Neuigkeiten, Fallstudien, Produktneuheiten, Erfahrungsberichte und praktische Einblicke aus der Druckproduktion.', indexed: 'indizierte Artikel', read: 'Artikel lesen', dateLocale: 'de-DE' },
-    it: { kicker: 'Journal Rutherford', title: 'I nostri articoli', subtitle: 'Novità, case study, lanci di prodotto, testimonianze e spunti pratici dal reparto stampa.', indexed: 'articoli indicizzati', read: 'Leggi l’articolo', dateLocale: 'it-IT' },
+    it: { kicker: 'Rutherford Journal', title: 'I nostri articoli', subtitle: 'News, case study, release di prodotto, testimonianze e insight pratici dal reparto stampa.', indexed: 'articoli indicizzati', read: 'Leggi l’articolo', dateLocale: 'it-IT' },
     es: { kicker: 'Journal Rutherford', title: 'Nuestros artículos', subtitle: 'Noticias, casos de estudio, lanzamientos de producto, testimonios e ideas prácticas desde la planta de impresión.', indexed: 'artículos indexados', read: 'Leer artículo', dateLocale: 'es-ES' },
   };
   const t = copy[locale];

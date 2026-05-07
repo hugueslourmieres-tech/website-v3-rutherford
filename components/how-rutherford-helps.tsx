@@ -86,25 +86,25 @@ const COPY: Record<Locale, Copy> = {
   },
   it: {
     kicker: 'Come Rutherford aiuta',
-    headline: 'Risultati concreti per la produzione offset reale.',
+    headline: 'Risultati concreti per ambienti offset reali.',
     intro:
-      'Rutherford supporta i team offset su gestione del colore, workflow di stampa e standardizzazione di produzione — focalizzato su ciò che muove la macchina, non sugli slogan.',
+      'Rutherford supporta i team offset con gestione del colore, workflow a bordo macchina e standardizzazione della produzione. Il nostro obiettivo è semplice: migliorare ciò che accade davvero in macchina, con soluzioni concrete.',
     benefits: [
       {
-        title: 'Colore stabile in ogni tiratura',
-        body: 'Calibrazione standardizzata, modelli di inchiostrazione e correzione closed-loop per consegne costanti da un lavoro all’altro.',
+        title: 'Colore stabile, tiratura dopo tiratura',
+        body: 'Calibrazione standardizzata, modelli inchiostro e correzione closed-loop mantengono le consegne coerenti da un lavoro al successivo.',
       },
       {
-        title: 'Meno scarto di avviamento',
-        body: 'Meno fogli, meno inchiostro e cicli di avviamento più brevi grazie a un pilotaggio più affidabile.',
+        title: 'Meno scarti in avviamento',
+        body: 'Meno fogli, meno inchiostro e cicli di avviamento più brevi grazie a un raggiungimento più prevedibile del colore target e a un controllo macchina più preciso.',
       },
       {
-        title: 'Controllo di workflow migliore',
-        body: 'Decisioni di macchina più chiare, dati di misura collegati e passaggi strutturati tra operatori e management.',
+        title: 'Più controllo sul workflow',
+        body: 'Decisioni più chiare a bordo macchina, dati di misurazione centralizzati ed integrati, e un passaggio di informazioni più strutturato tra operatori e management.',
       },
       {
-        title: 'Standardizzazione produttiva',
-        body: 'Processi ripetibili tra macchine, turni e siti — affidabili per brand e converter.',
+        title: 'Produzione standardizzata',
+        body: 'Processi ripetibili tra macchine, turni e siti produttivi, così che brand owner e converter possano fidarsi di ogni consegna.',
       },
     ],
   },

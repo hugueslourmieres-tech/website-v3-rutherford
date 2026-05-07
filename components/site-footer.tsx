@@ -63,14 +63,14 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'Über Rutherford', colorloop: 'ColorLoop', cases: 'Referenzen' },
   },
   it: {
-    tagline: 'Expertise offset, software e tecnologia — per modernizzare il controllo di produzione.',
+    tagline: 'Competenza offset, software e tecnologia — per modernizzare il controllo della produzione.',
     platforms: 'Piattaforme',
     resources: 'Risorse',
     company: 'Azienda',
     follow: 'Seguici',
     rights: 'Tutti i diritti riservati',
-    resourceLabels: { blog: 'Blog', support: 'Supporto', console: 'Validazione console', contact: 'Contatto' },
-    companyLabels: { about: 'Chi siamo', colorloop: 'ColorLoop', cases: 'Case study' },
+    resourceLabels: { blog: 'Blog', support: 'Supporto', console: 'Validazione console', contact: 'Contatti' },
+    companyLabels: { about: 'Chi è Rutherford', colorloop: 'ColorLoop', cases: 'Case Study' },
   },
   es: {
     tagline: 'Experiencia offset, software y tecnología — para modernizar el control de producción.',

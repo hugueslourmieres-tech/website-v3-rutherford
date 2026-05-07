@@ -45,8 +45,8 @@ const COPY: Record<Locale, Copy> = {
   },
   it: {
     kicker: 'Dal blog',
-    headline: 'Ultimi articoli',
-    intro: 'Note Rutherford su produzione offset, gestione del colore e cambiamenti di settore.',
+    headline: 'Ultimi approfondimenti',
+    intro: 'Note Rutherford su produzione offset, gestione del colore e cambiamenti del settore.',
     readMore: 'Leggi l’articolo',
     seeAll: 'Vedi tutti gli articoli',
   },

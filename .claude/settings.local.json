@@ -66,7 +66,10 @@
       "Bash(pip3 install *)",
       "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$HOME/Library/Python/3.12/bin:$HOME/Library/Python/3.11/bin:$HOME/.local/bin:$PATH\")",
       "Bash(yt-dlp --version)",
-      "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$PATH\")"
+      "Bash(export PATH=\"$HOME/Library/Python/3.13/bin:$PATH\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }

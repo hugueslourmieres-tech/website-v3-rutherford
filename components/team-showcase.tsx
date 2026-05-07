@@ -33,7 +33,7 @@ const COPY: Record<Locale, Copy> = {
   it: {
     kicker: 'Made in France',
     headline: 'Il nostro team',
-    body: 'Rutherford.fr e Veoria.fr sono due aziende sorelle con sede in Francia. Il nostro team unisce expertise offset, ingegneria software e tecnologie di stampa industriale per supportare stampatori, converter e brand in Europa e oltre. Ogni progetto è seguito direttamente dalla Francia — da persone che conoscono la tua macchina, il tuo workflow e il tuo business.',
+    body: 'Rutherford.fr e Veoria.fr sono due società sorelle con sede in Francia. Il nostro team combina esperienza offset, ingegneria software e tecnologia di stampa industriale per supportare stampatori, converter e brand in Europa e nel mondo. Ogni progetto è gestito direttamente dalla Francia, da persone che conoscono la tua macchina, il tuo workflow e le esigenze del tuo business.',
     ctaLabel: 'Parla con il nostro team',
   },
   es: {

@@ -88,24 +88,24 @@ const COPY: Record<Locale, Copy> = {
   },
   it: {
     kicker: 'Come lavoriamo',
-    headline: 'L’expertise, il software e la tecnologia dietro Rutherford',
+    headline: 'Il know-how, il software e la tecnologia dietro Rutherford',
     intro:
-      'Rutherford combina expertise di stampa offset, software e tecnologia per modernizzare il controllo di produzione.',
+      'Rutherford unisce competenza nella stampa offset, sviluppo software e tecnologia industriale per aiutare le aziende a modernizzare il controllo della produzione.',
     rutherford: {
       title: 'Rutherford.fr',
-      body: 'Rutherford porta anni di expertise nella stampa offset in gestione del colore, workflow di stampa e consistenza produttiva.',
+      body: 'Rutherford porta in sala stampa anni di esperienza in stampa offset, gestione del colore, workflow a bordo macchina e coerenza produttiva.',
       ctaLabel: 'Scopri Rutherford',
       href: '/#who-we-are',
     },
     colorloop: {
       title: 'ColorLoop.ai',
-      body: 'ColorLoop è la piattaforma software di Rutherford per il controllo moderno della produzione offset, costruita sull’esperienza reale in pressroom.',
+      body: 'ColorLoop è la piattaforma software Rutherford per il controllo moderno della produzione offset, sviluppata a partire dall’esperienza concreta maturata in sala stampa.',
       ctaLabel: 'Visita colorloop.ai',
       href: 'https://colorloop.ai/',
     },
     veoria: {
       title: 'Veoria.fr',
-      body: 'VEORIA, azienda sorella di Rutherford, è una società di tecnologie di stampa focalizzata su sistemi industriali e controllo colore inline per le etichette. Il team di ingegneria ha sviluppato la tecnologia dietro ColorLoop insieme all’expertise offset di Rutherford.',
+      body: 'VEORIA, società sorella di Rutherford, è un’azienda tecnologica dedicata alla stampa industriale e al controllo colore in linea per la produzione di etichette. Il suo team di ingegneri ha sviluppato la tecnologia alla base di ColorLoop insieme agli esperti Rutherford della stampa offset.',
       ctaLabel: 'Visita veoria.fr',
       href: 'https://veoria.fr/',
     },

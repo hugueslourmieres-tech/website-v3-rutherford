@@ -37,11 +37,11 @@ const COPY: Record<Locale, Copy> = {
     secondaryCta: 'Mit Rutherford sprechen',
   },
   it: {
-    kicker: 'Fase di qualificazione',
-    headline: 'Verifica se la tua console è compatibile',
+    kicker: 'Fase di valutazione',
+    headline: 'Verifica la compatibilità della tua console',
     supporting:
-      'Racconta a Rutherford la tua console e il tuo workflow: valutiamo la compatibilità e indichiamo il passo successivo.',
-    primaryCta: 'Richiedi validazione console',
+      'Raccontaci quale console utilizzi e come funziona oggi il tuo workflow. Valuteremo la compatibilità del tuo impianto e ti guideremo verso il passo successivo.',
+    primaryCta: 'Richiedi la validazione della console',
     secondaryCta: 'Parla con Rutherford',
   },
   es: {
