@@ -6589,7 +6589,7 @@ svg {
 /* ─── ColorLoop for offset printing ─────────────────────────── */
 
 .colorloop-offset-section {
-  background: #ffffff;
+  background: #f5f5f7;
   padding: clamp(80px, 10vw, 128px) 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -6651,7 +6651,8 @@ svg {
 .colorloop-offset-card {
   display: flex;
   flex-direction: column;
-  background: #f5f5f7;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 18px;
   overflow: hidden;
   transition: transform 220ms ease, box-shadow 220ms ease;
@@ -6711,12 +6712,13 @@ svg {
   flex-direction: column;
   gap: clamp(18px, 2.4vw, 28px);
   padding: clamp(24px, 3.2vw, 40px);
-  background: #f5f5f7;
+  background: #ffffff;
   color: #1d1d1f;
   border-radius: 22px;
   width: 100%;
   margin: 0;
-  border: 1px solid rgba(0, 113, 227, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 40px -28px rgba(0, 0, 0, 0.12);
 }
 
 .colorloop-roi-header {
@@ -6837,8 +6839,8 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 16px;
   padding: clamp(18px, 2.4vw, 26px);
 }
@@ -6904,17 +6906,22 @@ svg {
   padding: 16px 0 4px;
 }
 
+.colorloop-roi-table tfoot tr:first-child th {
+  color: #1d1d1f;
+  font-weight: 700;
+}
+
 .colorloop-roi-table-total {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--accent);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2e7d32;
 }
 
 .colorloop-roi-table-sub-row {
-  font-size: 0.82rem !important;
-  color: rgba(29, 29, 31, 0.5) !important;
+  font-size: 0.92rem !important;
+  color: var(--accent) !important;
   padding-top: 0 !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
 .colorloop-roi-disclaimer {
