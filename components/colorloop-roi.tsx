@@ -241,7 +241,7 @@ export function ColorLoopROI() {
   }, [calages, temps, gache, coutPresse]);
 
   return (
-    <section className="colorloop-roi" aria-labelledby="colorloop-roi-title">
+    <section className="colorloop-roi" id="roi" aria-labelledby="colorloop-roi-title">
       <header className="colorloop-roi-header">
         <p className="section-kicker">{t.kicker}</p>
         <h3 id="colorloop-roi-title" className="colorloop-roi-headline">
