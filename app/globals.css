@@ -7837,21 +7837,27 @@ svg {
 /* ------------------------------------------------------------------ */
 
 .academy-hero {
-  padding-top: clamp(120px, 14vw, 220px);
-  padding-bottom: clamp(120px, 14vw, 220px);
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.82) 0%,
-      rgba(255, 255, 255, 0.68) 45%,
-      rgba(255, 255, 255, 0.86) 100%
-    ),
-    url('/images/academy/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-top: clamp(72px, 8vw, 110px);
+  padding-bottom: clamp(28px, 4vw, 48px);
+}
+
+.academy-hero-banner {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
   position: relative;
+  z-index: 1;
   isolation: isolate;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.academy-hero-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 36vw, 460px);
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .academy-hero-shell {

@@ -90,6 +90,14 @@ export function AcademyPage() {
         </div>
       </section>
 
+      <figure className="academy-hero-banner">
+        <img
+          src="/images/academy/hero.jpg"
+          alt="Rutherford team training on a press console"
+          loading="eager"
+        />
+      </figure>
+
       <section className="academy-section section" id="free">
         <div className="container">
           <header className="academy-section-head">
