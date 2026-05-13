@@ -215,12 +215,10 @@ export function AcademyPage() {
 
       <section className="academy-hero section">
         <div className="container academy-hero-shell">
-          <p className="section-kicker">Rutherford&rsquo;s Academy 🎓</p>
-          <h1 className="academy-hero-title">
-            Offset color management,
-            <br />
-            taught by people who run pressrooms.
-          </h1>
+          <h1 className="academy-hero-title">Rutherford&rsquo;s Academy 🎓</h1>
+          <p className="academy-hero-lead">
+            Offset color management, taught by people who run pressrooms.
+          </p>
           <p className="academy-hero-sub">
             Online courses and masterclasses on closed-loop color, MeasureColor, IntelliTrax2 and ColorLoop: built by
             Rutherford for offset printers, packaging converters and brand owners. 25+ years of pressroom experience,
