@@ -88,7 +88,8 @@
       "Bash(find \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-24/public/images/Academy Rutherford\" -type f 2>/dev/null && echo --- && find ~/Desktop ~/Downloads ~/Documents -maxdepth 5 -type d -iname \"*academy*\" 2>/dev/null | head -10)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/fundamentals)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/closed-loop-flagship)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/videos/academy/fundamentals.mp4)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/videos/academy/fundamentals.mp4)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/measurecolor-production)"
     ]
   }
 }

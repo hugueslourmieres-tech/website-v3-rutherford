@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 import type { AcademyCourse } from '@/data/academy-courses';
@@ -24,6 +25,8 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
   const tone = course.tone;
   const siblings = tone === 'premium' ? PREMIUM_COURSE_LIST : FREE_COURSE_LIST;
   const lessons = getLessonsForCourse(course.id);
+  const [openLesson, setOpenLesson] = useState<number>(0);
+  const toggleLesson = (index: number) => setOpenLesson((current) => (current === index ? -1 : index));
 
   return (
     <main className="page-shell" id="top">
@@ -134,22 +137,51 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
               </p>
             </header>
             <ol className="academy-course-lessons-list">
-              {lessons.map((lesson, index) => (
-                <li key={index} className="academy-course-lesson">
-                  <header className="academy-course-lesson-head">
-                    <span className="academy-course-lesson-index" aria-hidden="true">
-                      Module {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="academy-course-lesson-title">{lesson.title}</h3>
-                    <p className="academy-course-lesson-summary">{lesson.summary}</p>
-                  </header>
-                  <div className="academy-course-lesson-body">
-                    {lesson.body.map((para, paraIndex) => (
-                      <p key={paraIndex}>{para}</p>
-                    ))}
-                  </div>
-                </li>
-              ))}
+              {lessons.map((lesson, index) => {
+                const isOpen = openLesson === index;
+                const headId = `lesson-head-${index}`;
+                const bodyId = `lesson-body-${index}`;
+                return (
+                  <li
+                    key={index}
+                    className={`academy-course-lesson ${isOpen ? 'is-open' : ''}`}
+                  >
+                    <button
+                      type="button"
+                      id={headId}
+                      className="academy-course-lesson-head"
+                      onClick={() => toggleLesson(index)}
+                      aria-expanded={isOpen}
+                      aria-controls={bodyId}
+                    >
+                      <span className="academy-course-lesson-meta">
+                        <span className="academy-course-lesson-index" aria-hidden="true">
+                          Module {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span className="academy-course-lesson-step" aria-hidden="true">
+                          {index + 1} / {lessons.length}
+                        </span>
+                      </span>
+                      <h3 className="academy-course-lesson-title">{lesson.title}</h3>
+                      <p className="academy-course-lesson-summary">{lesson.summary}</p>
+                      <span className="academy-course-lesson-chevron" aria-hidden="true">
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                    <div
+                      id={bodyId}
+                      role="region"
+                      aria-labelledby={headId}
+                      className="academy-course-lesson-body"
+                      hidden={!isOpen}
+                    >
+                      {lesson.body.map((para, paraIndex) => (
+                        <p key={paraIndex}>{para}</p>
+                      ))}
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
           </div>
         </section>
