@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { AccountPage } from '@/components/account-page';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { ALL_COURSES } from '@/data/academy-courses';
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic';
 
 export default async function AccountRoute() {
+  if (process.env.NEXT_PUBLIC_ACADEMY_ENABLED !== 'true') notFound();
   const supabase = createSupabaseServerClient();
   const {
     data: { user },

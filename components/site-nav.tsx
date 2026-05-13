@@ -9,12 +9,15 @@ type SiteNavProps = {
   current?: 'home' | 'blog' | 'console-validation' | 'support' | 'academy' | 'account';
 };
 
+const ACADEMY_ENABLED = process.env.NEXT_PUBLIC_ACADEMY_ENABLED === 'true';
+
 export function SiteNav({ current = 'home' }: SiteNavProps) {
   const { locale, setLocale } = useLanguage();
   const [open, setOpen] = useState(false);
   const [localeOpen, setLocaleOpen] = useState(false);
   const localeRef = useRef<HTMLDivElement | null>(null);
   const [authedEmail, setAuthedEmail] = useState<string | null>(null);
+  const academyEnabled = ACADEMY_ENABLED;
 
   useEffect(() => {
     if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return;
@@ -196,16 +199,20 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
             {labels.blog}
           </a>
-          <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>
-            {labels.academy}
-          </a>
-          <a
-            className={`mobile-nav-link ${current === 'account' ? 'is-current' : ''}`}
-            href={authedEmail ? '/account' : '/account/sign-in'}
-            onClick={() => setOpen(false)}
-          >
-            {authedEmail ? 'Account' : 'Sign in'}
-          </a>
+          {academyEnabled ? (
+            <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>
+              {labels.academy}
+            </a>
+          ) : null}
+          {academyEnabled ? (
+            <a
+              className={`mobile-nav-link ${current === 'account' ? 'is-current' : ''}`}
+              href={authedEmail ? '/account' : '/account/sign-in'}
+              onClick={() => setOpen(false)}
+            >
+              {authedEmail ? 'Account' : 'Sign in'}
+            </a>
+          ) : null}
           <a href="mailto:contact@rutherford.fr" onClick={() => setOpen(false)}>
             {labels.contact}
           </a>
@@ -259,18 +266,20 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
             ) : null}
           </div>
 
-          <a
-            className={`header-account-icon ${current === 'account' ? 'is-current' : ''}`}
-            href={authedEmail ? '/account' : '/account/sign-in'}
-            aria-label={authedEmail ? 'Your account' : 'Sign in'}
-            title={authedEmail ? 'Your account' : 'Sign in'}
-          >
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-            </svg>
-            {authedEmail ? <span className="header-account-dot" aria-hidden="true" /> : null}
-          </a>
+          {academyEnabled ? (
+            <a
+              className={`header-account-icon ${current === 'account' ? 'is-current' : ''}`}
+              href={authedEmail ? '/account' : '/account/sign-in'}
+              aria-label={authedEmail ? 'Your account' : 'Sign in'}
+              title={authedEmail ? 'Your account' : 'Sign in'}
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+              {authedEmail ? <span className="header-account-dot" aria-hidden="true" /> : null}
+            </a>
+          ) : null}
           <a
             className={`button button-accent header-button ${current === 'support' ? 'is-current' : ''}`}
             href="https://form.typeform.com/to/LZtPUH" target="_blank" rel="noreferrer"

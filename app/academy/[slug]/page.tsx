@@ -22,6 +22,7 @@ export function generateMetadata({ params }: { params: RouteParams }): Metadata 
 }
 
 export default async function AcademyCourseRoute({ params }: { params: RouteParams }) {
+  if (process.env.NEXT_PUBLIC_ACADEMY_ENABLED !== 'true') notFound();
   const course = getCourseBySlug(params.slug);
   if (!course) {
     notFound();
