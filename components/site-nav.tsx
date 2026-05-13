@@ -147,14 +147,6 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
 
   return (
     <>
-      <a className="site-announcement" href="/#colorloop">
-        <span className="site-announcement-badge">{labels.announcementBadge}</span>
-        <span className="site-announcement-text">{labels.announcementText}</span>
-        <span className="site-announcement-cta" aria-hidden="true">
-          {labels.announcementCta} →
-        </span>
-      </a>
-
       <header className="site-header">
       <div className="container header-inner">
         <a className="brandmark" href="/" aria-label="Rutherford.fr">
