@@ -78,7 +78,13 @@
       "Bash(ls -la ~/.claude/skills/xrite-products/ ~/.claude/skills/xrite-products/reference/)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3002/academy\")",
       "Bash(awk '/text-transform: uppercase/ {for\\(i=NR-5;i<NR;i++\\) print lines[i]; print $0; print \"---\"} {lines[NR]=$0}' \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/.claude/worktrees/bold-feynman-7d979c/app/globals.css\")",
-      "Bash(grep -v \"import\\\\|type\\\\|: string\\\\|: number\\\\|: boolean\\\\|: 'free'\\\\|: Course\\\\|: '\\\\|Course:\\\\|: \\\\[\\\\|: \\\\{\\\\|: \\\\\\\\\\\\$\\\\|: number\\\\|http\")"
+      "Bash(grep -v \"import\\\\|type\\\\|: string\\\\|: number\\\\|: boolean\\\\|: 'free'\\\\|: Course\\\\|: '\\\\|Course:\\\\|: \\\\[\\\\|: \\\\{\\\\|: \\\\\\\\\\\\$\\\\|: number\\\\|http\")",
+      "Bash(find ~/Desktop ~/Downloads ~/Documents -maxdepth 3 -type d -iname \"*academy*rutherford*\" -o -iname \"*rutherford*academy*\" 2>/dev/null | head -10)",
+      "Bash(find ~/Desktop ~/Downloads ~/Documents -maxdepth 4 -type d \\\\\\( -iname \"*academy*\" -o -iname \"*masterclass*\" \\\\\\) -not -path \"*/node_modules/*\" 2>/dev/null | head)",
+      "Read(//Users/hugueslourmieres/Documents/Website v3/**)",
+      "Read(//Users/hugueslourmieres/Library/CloudStorage/**)",
+      "Bash(cp \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-24/public/images/Academy Rutherford/Academy hero.jpg\" \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/.claude/worktrees/bold-feynman-7d979c/public/images/academy/hero.jpg\")",
+      "Bash(cp \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-24/public/images/Academy Rutherford/academy illustration.jpg\" \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/.claude/worktrees/bold-feynman-7d979c/public/images/academy/illustration.jpg\")"
     ]
   }
 }

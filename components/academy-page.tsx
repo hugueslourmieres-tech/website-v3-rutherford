@@ -234,6 +234,13 @@ export function AcademyPage() {
               Start with a free course
             </a>
           </div>
+          <figure className="academy-hero-media">
+            <img
+              src="/images/academy/hero.jpg"
+              alt="Rutherford team training on a press console"
+              loading="eager"
+            />
+          </figure>
         </div>
       </section>
 
@@ -298,21 +305,32 @@ export function AcademyPage() {
 
       <section className="academy-why section">
         <div className="container academy-why-shell">
-          <header className="academy-section-head">
-            <p className="section-kicker">Why learn with us</p>
-            <h2>Built from real pressroom experience</h2>
-          </header>
-          <dl className="academy-why-grid">
-            {WHY_POINTS.map((point) => (
-              <div className="academy-why-stat" key={point.label}>
-                <dt>{point.value}</dt>
-                <dd>{point.label}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="academy-why-foot">
-            Rutherford has been pioneering closed-loop color control on offset presses since the 90s, with 1 000+ systems deployed across 30+ countries. We co-developed MeasureColor with ColorWare and continue to integrate with X-Rite PANTONE measurement tools.
-          </p>
+          <div className="academy-why-layout">
+            <figure className="academy-why-media">
+              <img
+                src="/images/academy/illustration.jpg"
+                alt="Two Rutherford engineers reviewing color data"
+                loading="lazy"
+              />
+            </figure>
+            <div className="academy-why-content">
+              <header className="academy-section-head academy-section-head-left">
+                <p className="section-kicker">Why learn with us</p>
+                <h2>Built from real pressroom experience</h2>
+              </header>
+              <dl className="academy-why-grid">
+                {WHY_POINTS.map((point) => (
+                  <div className="academy-why-stat" key={point.label}>
+                    <dt>{point.value}</dt>
+                    <dd>{point.label}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="academy-why-foot">
+                Rutherford has been pioneering closed-loop color control on offset presses since the 90s, with 1 000+ systems deployed across 30+ countries. We co-developed MeasureColor with ColorWare and continue to integrate with X-Rite PANTONE measurement tools.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
