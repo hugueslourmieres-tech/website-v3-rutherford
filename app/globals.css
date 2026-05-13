@@ -346,6 +346,51 @@ svg {
   font-size: 0.94rem;
 }
 
+.header-account-icon {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  color: #1d1d1f;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.header-account-icon:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.header-account-icon.is-current {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.header-account-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #2e7d32;
+  border: 2px solid #ffffff;
+}
+
+.header-account-icon.is-current .header-account-dot,
+.header-account-icon:hover .header-account-dot {
+  border-color: var(--accent);
+}
+
 .hero-section {
   padding: clamp(48px, 6vw, 76px) 0;
   min-height: calc(100vh - 160px);

@@ -200,7 +200,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
             {labels.academy}
           </a>
           <a
-            className={current === 'account' ? 'is-current' : undefined}
+            className={`mobile-nav-link ${current === 'account' ? 'is-current' : ''}`}
             href={authedEmail ? '/account' : '/account/sign-in'}
             onClick={() => setOpen(false)}
           >
@@ -259,6 +259,18 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
             ) : null}
           </div>
 
+          <a
+            className={`header-account-icon ${current === 'account' ? 'is-current' : ''}`}
+            href={authedEmail ? '/account' : '/account/sign-in'}
+            aria-label={authedEmail ? 'Your account' : 'Sign in'}
+            title={authedEmail ? 'Your account' : 'Sign in'}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+            </svg>
+            {authedEmail ? <span className="header-account-dot" aria-hidden="true" /> : null}
+          </a>
           <a
             className={`button button-accent header-button ${current === 'support' ? 'is-current' : ''}`}
             href="https://form.typeform.com/to/LZtPUH" target="_blank" rel="noreferrer"
