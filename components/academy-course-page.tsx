@@ -69,11 +69,10 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
             </div>
             <figure className="academy-course-video">
               <video
-                src={course.videoSrc}
+                src={`${course.videoSrc}#t=0.1`}
                 controls
                 playsInline
                 preload="metadata"
-                poster="/images/academy/hero.jpg"
               />
             </figure>
           </div>
