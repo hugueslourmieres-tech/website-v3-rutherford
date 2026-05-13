@@ -175,9 +175,6 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           <a href="/#colorloop" onClick={() => setOpen(false)}>
             {labels.colorloop}
           </a>
-          <a href="/#cases" onClick={() => setOpen(false)}>
-            {labels.cases}
-          </a>
           <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
             {labels.blog}
           </a>

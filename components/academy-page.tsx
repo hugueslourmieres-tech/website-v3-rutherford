@@ -215,7 +215,7 @@ export function AcademyPage() {
 
       <section className="academy-hero section">
         <div className="container academy-hero-shell">
-          <p className="section-kicker">Rutherford Academy</p>
+          <p className="section-kicker">Rutherford&rsquo;s Academy 🎓</p>
           <h1 className="academy-hero-title">
             Offset color management,
             <br />

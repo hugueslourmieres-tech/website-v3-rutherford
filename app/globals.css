@@ -7846,6 +7846,9 @@ svg {
   flex-direction: column;
   gap: 18px;
   max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
 }
 
 .academy-hero-title {
@@ -7869,6 +7872,7 @@ svg {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
+  justify-content: center;
 }
 
 .academy-section {
