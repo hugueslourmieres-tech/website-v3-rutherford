@@ -232,13 +232,6 @@ export function AcademyPage() {
               Start with a free course
             </a>
           </div>
-          <figure className="academy-hero-media">
-            <img
-              src="/images/academy/hero.jpg"
-              alt="Rutherford team training on a press console"
-              loading="eager"
-            />
-          </figure>
         </div>
       </section>
 
