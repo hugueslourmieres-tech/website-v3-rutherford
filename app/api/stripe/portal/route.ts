@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { stripe } from '@/lib/stripe';
+import { getStripe } from '@/lib/stripe';
 import { createSupabaseAdminClient, createSupabaseServerClient } from '@/lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
   }
 
   const origin = new URL(request.url).origin;
-  const session = await stripe.billingPortal.sessions.create({
+  const session = await getStripe().billingPortal.sessions.create({
     customer: profile.stripe_customer_id,
     return_url: `${origin}/account`,
   });

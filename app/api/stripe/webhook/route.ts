@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import type Stripe from 'stripe';
-import { stripe } from '@/lib/stripe';
+import { getStripe } from '@/lib/stripe';
 import { createSupabaseAdminClient } from '@/lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
   let event: Stripe.Event;
   try {
-    event = stripe.webhooks.constructEvent(rawBody, signature, WEBHOOK_SECRET);
+    event = getStripe().webhooks.constructEvent(rawBody, signature, WEBHOOK_SECRET);
   } catch (err) {
     const message = err instanceof Error ? err.message : 'invalid signature';
     return NextResponse.json({ error: message }, { status: 400 });

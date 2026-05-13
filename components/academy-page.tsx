@@ -1,5 +1,6 @@
 'use client';
 
+import { AcademyFreeVideos } from '@/components/academy-free-videos';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 import { FREE_COURSES, PREMIUM_COURSES, type AcademyCourse } from '@/data/academy-courses';
@@ -97,6 +98,8 @@ export function AcademyPage() {
           </div>
         </div>
       </section>
+
+      <AcademyFreeVideos />
 
       <section className="academy-section section" id="free">
         <div className="container">

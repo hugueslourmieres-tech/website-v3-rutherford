@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { createSupabaseAdminClient, createSupabaseServerClient } from '@/lib/supabase/server';
-import { stripe, getPriceIdForCourse } from '@/lib/stripe';
+import { getStripe, getPriceIdForCourse } from '@/lib/stripe';
 import { ALL_COURSES } from '@/data/academy-courses';
 
 export const dynamic = 'force-dynamic';
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
   let customerId = profile?.stripe_customer_id ?? null;
   if (!customerId) {
-    const customer = await stripe.customers.create({
+    const customer = await getStripe().customers.create({
       email: user.email ?? undefined,
       metadata: { supabase_user_id: user.id },
     });
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   }
 
   const origin = new URL(request.url).origin;
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     mode,
     customer: customerId,
     line_items: [{ price: priceId, quantity: 1 }],
