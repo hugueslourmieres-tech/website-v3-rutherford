@@ -1,0 +1,804 @@
+/* =============================================================================
+ * Rutherford brutalism — v2 design system (override layer)
+ * Imported AFTER globals.css in app/layout.tsx so it can override.
+ * Black & white, hard borders, mono kickers, system fonts only.
+ * =============================================================================
+ */
+
+:root {
+  --b-ink: #000000;
+  --b-paper: #ffffff;
+  --b-rule: 2px solid var(--b-ink);
+  --b-rule-thick: 3px solid var(--b-ink);
+  --b-mono: "SF Mono", "Cascadia Code", "Roboto Mono", ui-monospace, monospace;
+  --b-display: "Arial Black", "Helvetica Neue", "Helvetica", system-ui, sans-serif;
+  --b-body: "Helvetica Neue", "Helvetica", system-ui, sans-serif;
+}
+
+/* ---------- global reset of polish ---------------------------------------- */
+html,
+body {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body * {
+  border-color: var(--b-ink) !important;
+}
+
+button,
+.button,
+input,
+select,
+textarea,
+img,
+video,
+iframe,
+[class*="card"],
+[class*="banner"],
+[class*="media"],
+section,
+nav,
+header,
+footer,
+article,
+aside {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Kill page-shell dot pattern */
+.page-shell::before {
+  display: none !important;
+}
+
+/* ---------- typography ---------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--b-display);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--b-ink);
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(2.6rem, 8vw, 6rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 3.4rem); }
+h3 { font-size: clamp(1.2rem, 2.4vw, 1.6rem); text-transform: none; letter-spacing: -0.01em; }
+
+p, li {
+  font-family: var(--b-body);
+  color: var(--b-ink);
+  line-height: 1.45;
+}
+
+a {
+  color: var(--b-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  background: var(--b-ink);
+  color: var(--b-paper);
+  text-decoration: none;
+}
+
+.section-kicker,
+[class*="kicker"] {
+  font-family: var(--b-mono) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  color: var(--b-ink) !important;
+  background: transparent !important;
+}
+
+/* ---------- buttons ------------------------------------------------------- */
+.button,
+button.button {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  padding: 14px 22px !important;
+  font-family: var(--b-mono) !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: background 80ms linear, color 80ms linear;
+  cursor: pointer;
+}
+
+.button:hover,
+button.button:hover {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+.button-accent,
+.button-dark {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.button-accent:hover,
+.button-dark:hover {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+}
+
+.button-light,
+.button-light-on-dark {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+}
+
+/* ---------- nav ----------------------------------------------------------- */
+.site-header {
+  background: var(--b-paper) !important;
+  border-bottom: var(--b-rule) !important;
+  backdrop-filter: none !important;
+}
+
+.main-nav a,
+.main-nav button {
+  font-family: var(--b-mono) !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  color: var(--b-ink) !important;
+  padding: 6px 4px;
+}
+
+.main-nav a.is-current {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+}
+
+.main-nav a:hover {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+.header-button {
+  min-height: 44px !important;
+}
+
+.locale-dropdown-trigger {
+  background: transparent !important;
+  border: var(--b-rule) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-mono) !important;
+  font-size: 0.82rem !important;
+  padding: 8px 14px !important;
+}
+
+.locale-dropdown-menu {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+  box-shadow: none !important;
+}
+
+.locale-dropdown-menu button {
+  font-family: var(--b-mono) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ---------- sections (uniform whitespace, hard rules between) ------------- */
+.section {
+  background: var(--b-paper) !important;
+  border-bottom: var(--b-rule) !important;
+  padding: clamp(48px, 6vw, 96px) 0 !important;
+}
+
+.container {
+  max-width: 1320px !important;
+  padding: 0 clamp(20px, 4vw, 48px);
+  margin: 0 auto;
+}
+
+/* Remove section background colors */
+.colorloop-offset-section,
+.academy-section-premium,
+.audience-section,
+.flexo-section,
+.console-cta-section,
+.ppwr-section,
+.blog-preview-section,
+.team-section,
+.brand-explainer-section,
+.case-studies-section,
+.how-rutherford-section,
+.rutherford-identity-section,
+.academy-section,
+.academy-why,
+.academy-bundle,
+.academy-hero,
+.signin-section,
+.account-hero {
+  background: var(--b-paper) !important;
+}
+
+/* ---------- hero ---------------------------------------------------------- */
+.hero-section {
+  background: var(--b-paper) !important;
+  padding: clamp(60px, 9vw, 140px) 0 clamp(40px, 6vw, 80px) !important;
+  border-bottom: var(--b-rule) !important;
+  min-height: auto !important;
+}
+
+.hero-section::before,
+.hero-section::after {
+  display: none !important;
+}
+
+.hero-kicker {
+  font-family: var(--b-mono) !important;
+  font-size: 0.84rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  color: var(--b-ink) !important;
+  border-top: var(--b-rule);
+  border-bottom: var(--b-rule);
+  padding: 8px 0 !important;
+  margin: 0 0 28px !important;
+  max-width: max-content;
+}
+
+.hero-headline {
+  font-family: var(--b-display) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  font-size: clamp(2.6rem, 9vw, 7.5rem) !important;
+  letter-spacing: -0.035em !important;
+  line-height: 0.92 !important;
+  color: var(--b-ink) !important;
+  margin: 0 0 28px !important;
+}
+
+.hero-headline-accent {
+  color: var(--b-ink) !important;
+  background: transparent !important;
+}
+
+.hero-supporting {
+  font-family: var(--b-body) !important;
+  font-size: clamp(1rem, 1.4vw, 1.15rem) !important;
+  line-height: 1.5 !important;
+  color: var(--b-ink) !important;
+  max-width: 60ch;
+  margin: 0 0 28px !important;
+}
+
+.hero-actions {
+  display: flex !important;
+  gap: 0 !important;
+  border: var(--b-rule);
+  max-width: max-content;
+}
+
+.hero-actions .button {
+  border: 0 !important;
+  border-right: var(--b-rule) !important;
+}
+
+.hero-actions .button:last-child {
+  border-right: 0 !important;
+}
+
+.hero-feature {
+  border: var(--b-rule) !important;
+  margin: 32px 0 !important;
+}
+
+.hero-cursor {
+  display: none !important; /* hide the cursor annotations for brutalism */
+}
+
+/* ---------- cards generic ------------------------------------------------- */
+[class*="-card"]:not(.brand-explainer-card-cta):not(.academy-card-cta):not(.case-study-card),
+.brand-explainer-card,
+.colorloop-offset-card,
+.academy-card,
+.audience-card,
+.how-rutherford-card,
+.blog-preview-card,
+.case-study-card {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+[class*="-card"]:hover {
+  transform: none !important;
+}
+
+.academy-card.is-flagship {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.academy-card.is-flagship .academy-card-title,
+.academy-card.is-flagship .academy-card-title a,
+.academy-card.is-flagship .academy-card-desc,
+.academy-card.is-flagship .academy-card-meta,
+.academy-card.is-flagship .academy-card-syllabus,
+.academy-card.is-flagship .academy-card-syllabus li,
+.academy-card.is-flagship .academy-card-index,
+.academy-card.is-flagship .academy-card-cert,
+.academy-card.is-flagship .academy-card-flag {
+  color: var(--b-paper) !important;
+}
+
+/* ---------- identity section (Rutherford stats) --------------------------- */
+.rutherford-identity-section {
+  background: var(--b-paper) !important;
+}
+
+.rutherford-identity-background,
+.rutherford-bg-overlay {
+  display: none !important;
+}
+
+.rutherford-identity-headline {
+  color: var(--b-ink) !important;
+}
+
+.rutherford-identity-body,
+.rutherford-identity-accent {
+  color: var(--b-ink) !important;
+  background: transparent !important;
+  font-family: var(--b-body) !important;
+}
+
+.rutherford-stat {
+  border: var(--b-rule) !important;
+  padding: 24px !important;
+  background: var(--b-paper) !important;
+}
+
+.rutherford-stat dt {
+  font-family: var(--b-display) !important;
+  font-weight: 900 !important;
+  color: var(--b-ink) !important;
+}
+
+.rutherford-stat dd {
+  font-family: var(--b-mono) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--b-ink) !important;
+  font-weight: 500 !important;
+}
+
+/* ---------- ROI calculator (ColorLoop) ------------------------------------ */
+.colorloop-roi {
+  background: var(--b-paper) !important;
+  border: var(--b-rule-thick) !important;
+  box-shadow: none !important;
+}
+
+.colorloop-roi-result {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.colorloop-roi-headline {
+  font-family: var(--b-display) !important;
+  text-transform: uppercase !important;
+}
+
+.roi-input-number {
+  border: var(--b-rule) !important;
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-mono) !important;
+}
+
+.roi-input-range::-webkit-slider-thumb {
+  background: var(--b-ink) !important;
+  border: 2px solid var(--b-paper) !important;
+  box-shadow: 0 0 0 2px var(--b-ink) !important;
+  border-radius: 0 !important;
+}
+
+.roi-input-range::-moz-range-thumb {
+  background: var(--b-ink) !important;
+  border: 2px solid var(--b-paper) !important;
+  border-radius: 0 !important;
+}
+
+.roi-input-range {
+  background: var(--b-ink) !important;
+  opacity: 1;
+}
+
+.colorloop-roi-table th,
+.colorloop-roi-table td {
+  border-color: var(--b-ink) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-mono) !important;
+}
+
+.colorloop-roi-table-total {
+  color: var(--b-ink) !important;
+  font-family: var(--b-display) !important;
+  font-weight: 900 !important;
+}
+
+.colorloop-roi-table-sub-row {
+  color: var(--b-ink) !important;
+}
+
+.colorloop-roi-cta {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+/* ---------- footer -------------------------------------------------------- */
+.site-footer {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  border-top: var(--b-rule) !important;
+}
+
+.site-footer *,
+.site-footer a {
+  color: var(--b-paper) !important;
+  font-family: var(--b-mono) !important;
+  font-size: 0.86rem !important;
+}
+
+.site-footer h1, .site-footer h2, .site-footer h3 {
+  font-family: var(--b-display) !important;
+  text-transform: uppercase !important;
+  font-size: 0.84rem !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 700 !important;
+}
+
+.site-footer a:hover {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+}
+
+.footer-brand-wordmark img {
+  filter: invert(0) !important; /* keep colorful logo */
+}
+
+.footer-bottom-text {
+  font-size: 0.76rem !important;
+  opacity: 0.7;
+}
+
+/* ---------- case studies -------------------------------------------------- */
+.case-study-card {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.case-study-media,
+.case-study-thumb {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+
+.case-study-media:hover .case-study-thumb {
+  filter: grayscale(0) contrast(1) !important;
+}
+
+.case-study-play {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+}
+
+.case-study-detail dt {
+  font-family: var(--b-mono) !important;
+  text-transform: uppercase !important;
+  font-size: 0.74rem !important;
+  letter-spacing: 0.08em !important;
+  color: var(--b-ink) !important;
+}
+
+.case-studies-arrow {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  width: 44px;
+  height: 44px;
+}
+
+.case-studies-arrow:hover {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+/* ---------- announcement / press logos / blog ---------------------------- */
+.site-announcement {
+  display: none !important; /* killed already, just defensive */
+}
+
+.rutherford-printers-marquee,
+.console-cta-presses {
+  border-top: var(--b-rule) !important;
+  border-bottom: var(--b-rule) !important;
+  padding: 14px 0 !important;
+}
+
+.rutherford-printers-item img,
+.console-cta-press img {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+
+.blog-preview-image,
+.brand-explainer-card-image,
+.colorloop-offset-card-media img {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+
+.blog-card,
+.blog-preview-card {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+/* ---------- console CTA, PPWR, team --------------------------------------- */
+.console-cta-card,
+.ppwr-card,
+.team-section {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+  color: var(--b-ink) !important;
+}
+
+.team-background,
+.team-background-overlay {
+  display: none !important;
+}
+
+.team-content-headline,
+.team-content-body,
+.team-content-kicker {
+  color: var(--b-ink) !important;
+}
+
+.console-cta-headline,
+.console-cta-supporting {
+  color: var(--b-ink) !important;
+}
+
+.console-cta-illustration img {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+
+/* ---------- academy specifics --------------------------------------------- */
+.academy-hero-banner {
+  border-top: var(--b-rule) !important;
+  border-bottom: var(--b-rule) !important;
+}
+
+.academy-hero-banner img {
+  filter: grayscale(1) contrast(1.1) !important;
+}
+
+.academy-bundle-shell {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.academy-bundle-shell *,
+.academy-bundle-price-new,
+.academy-bundle-price-old,
+.academy-bundle-copy h2,
+.academy-bundle-sub {
+  color: var(--b-paper) !important;
+}
+
+.academy-bundle-list li::before {
+  background: var(--b-paper) !important;
+  border-radius: 0 !important;
+}
+
+.academy-bundle-price {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+}
+
+.academy-bundle-price * {
+  color: var(--b-ink) !important;
+}
+
+.academy-bundle-price-promo code {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  font-family: var(--b-mono) !important;
+}
+
+.academy-why-stat {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.academy-why-stat dt {
+  font-family: var(--b-display) !important;
+  color: var(--b-ink) !important;
+}
+
+.academy-why-stat dd {
+  font-family: var(--b-mono) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.academy-course-lesson {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+}
+
+.academy-course-lesson.is-open {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+.academy-course-lesson.is-open *,
+.academy-course-lesson.is-open .academy-course-lesson-title,
+.academy-course-lesson.is-open .academy-course-lesson-summary,
+.academy-course-lesson.is-open .academy-course-lesson-body p,
+.academy-course-lesson.is-open .academy-course-lesson-index,
+.academy-course-lesson.is-open .academy-course-lesson-step,
+.academy-course-lesson.is-open .academy-course-lesson-chevron {
+  color: var(--b-paper) !important;
+  background: transparent !important;
+}
+
+.academy-course-lesson-chevron {
+  background: transparent !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  font-family: var(--b-display) !important;
+  color: var(--b-ink) !important;
+}
+
+.academy-video-card,
+.academy-video-thumb {
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+}
+
+.academy-video-play {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+}
+
+.academy-videos-arrow {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+}
+
+/* ---------- console-cta (presses marquee logos) --------------------------- */
+.console-cta-card {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+}
+
+.console-cta-headline,
+.console-cta-kicker,
+.console-cta-supporting {
+  color: var(--b-ink) !important;
+}
+
+/* ---------- forms (console validation, sign-in) --------------------------- */
+input,
+select,
+textarea,
+.signin-input {
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-mono) !important;
+  font-size: 0.94rem !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--b-ink) !important;
+  outline-offset: 2px;
+  background: var(--b-paper) !important;
+}
+
+.signin-card,
+.signin-card * {
+  background: var(--b-paper) !important;
+  border-color: var(--b-ink) !important;
+}
+
+.signin-card {
+  border: var(--b-rule) !important;
+}
+
+.signin-provider {
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+  font-family: var(--b-mono) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  font-size: 0.82rem !important;
+}
+
+.signin-provider:hover {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+.signin-provider-apple {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+}
+
+.signin-provider-apple:hover {
+  background: var(--b-paper) !important;
+  color: var(--b-ink) !important;
+}
+
+.signin-divider::before,
+.signin-divider::after {
+  background: var(--b-ink) !important;
+}
+
+/* ---------- header account icon ------------------------------------------- */
+.header-account-icon {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+  color: var(--b-ink) !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.header-account-icon:hover {
+  background: var(--b-ink) !important;
+  color: var(--b-paper) !important;
+  transform: none !important;
+}
+
+.header-account-dot {
+  background: var(--b-ink) !important;
+  border: 2px solid var(--b-paper) !important;
+  border-radius: 0 !important;
+}
+
+/* ---------- mobile menu --------------------------------------------------- */
+.menu-toggle {
+  background: var(--b-paper) !important;
+  border: var(--b-rule) !important;
+  border-radius: 0 !important;
+}
+
+.menu-toggle span {
+  background: var(--b-ink) !important;
+}

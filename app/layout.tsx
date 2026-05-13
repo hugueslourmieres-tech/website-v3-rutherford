@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { LanguageProvider } from '@/components/language-provider';
 import { GoogleAnalytics } from '@/components/google-analytics';
 import './globals.css';
+import './brutalism.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rutherford.fr'),
