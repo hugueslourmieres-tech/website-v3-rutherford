@@ -3,6 +3,7 @@
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 import type { AcademyCourse } from '@/data/academy-courses';
+import { getLessonsForCourse } from '@/data/academy-lessons';
 
 const FREE_COURSE_LIST: { id: string; title: string }[] = [
   { id: 'fundamentals', title: 'Offset Color Management Fundamentals' },
@@ -22,6 +23,7 @@ const PREMIUM_COURSE_LIST: { id: string; title: string }[] = [
 export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
   const tone = course.tone;
   const siblings = tone === 'premium' ? PREMIUM_COURSE_LIST : FREE_COURSE_LIST;
+  const lessons = getLessonsForCourse(course.id);
 
   return (
     <main className="page-shell" id="top">
@@ -119,6 +121,39 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
           </aside>
         </div>
       </section>
+
+      {lessons && lessons.length > 0 ? (
+        <section className="academy-course-lessons section">
+          <div className="container academy-course-lessons-shell">
+            <header className="academy-section-head academy-section-head-left">
+              <p className="section-kicker">Course content</p>
+              <h2>The full lesson, module by module</h2>
+              <p>
+                The video is the introduction. The complete written course is below, structured to match the syllabus.
+                Read it in one sitting or come back module by module.
+              </p>
+            </header>
+            <ol className="academy-course-lessons-list">
+              {lessons.map((lesson, index) => (
+                <li key={index} className="academy-course-lesson">
+                  <header className="academy-course-lesson-head">
+                    <span className="academy-course-lesson-index" aria-hidden="true">
+                      Module {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="academy-course-lesson-title">{lesson.title}</h3>
+                    <p className="academy-course-lesson-summary">{lesson.summary}</p>
+                  </header>
+                  <div className="academy-course-lesson-body">
+                    {lesson.body.map((para, paraIndex) => (
+                      <p key={paraIndex}>{para}</p>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null}
 
       <section className="academy-course-siblings section">
         <div className="container">
