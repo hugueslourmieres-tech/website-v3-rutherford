@@ -76,7 +76,9 @@
       "Bash(ls -la ~/.claude/skills/measurecolor/ ~/.claude/skills/measurecolor/reference/)",
       "WebFetch(domain:www.xrite.com)",
       "Bash(ls -la ~/.claude/skills/xrite-products/ ~/.claude/skills/xrite-products/reference/)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3002/academy\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3002/academy\")",
+      "Bash(awk '/text-transform: uppercase/ {for\\(i=NR-5;i<NR;i++\\) print lines[i]; print $0; print \"---\"} {lines[NR]=$0}' \"/Users/hugueslourmieres/Documents/Website v3/export-dropbox/rutherford-site-source-2026-04-23/.claude/worktrees/bold-feynman-7d979c/app/globals.css\")",
+      "Bash(grep -v \"import\\\\|type\\\\|: string\\\\|: number\\\\|: boolean\\\\|: 'free'\\\\|: Course\\\\|: '\\\\|Course:\\\\|: \\\\[\\\\|: \\\\{\\\\|: \\\\\\\\\\\\$\\\\|: number\\\\|http\")"
     ]
   }
 }
