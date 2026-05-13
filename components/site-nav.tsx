@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { type Locale, useLanguage } from '@/components/language-provider';
+import { createSupabaseBrowserClient } from '@/lib/supabase/client';
 
 type SiteNavProps = {
-  current?: 'home' | 'blog' | 'console-validation' | 'support' | 'academy';
+  current?: 'home' | 'blog' | 'console-validation' | 'support' | 'academy' | 'account';
 };
 
 export function SiteNav({ current = 'home' }: SiteNavProps) {
@@ -13,6 +14,23 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
   const [open, setOpen] = useState(false);
   const [localeOpen, setLocaleOpen] = useState(false);
   const localeRef = useRef<HTMLDivElement | null>(null);
+  const [authedEmail, setAuthedEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) return;
+    const supabase = createSupabaseBrowserClient();
+    let active = true;
+    supabase.auth.getUser().then(({ data }) => {
+      if (active) setAuthedEmail(data.user?.email ?? null);
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      setAuthedEmail(session?.user?.email ?? null);
+    });
+    return () => {
+      active = false;
+      sub?.subscription.unsubscribe();
+    };
+  }, []);
 
   const navLabels: Record<
     Locale,
@@ -180,6 +198,13 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           </a>
           <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>
             {labels.academy}
+          </a>
+          <a
+            className={current === 'account' ? 'is-current' : undefined}
+            href={authedEmail ? '/account' : '/account/sign-in'}
+            onClick={() => setOpen(false)}
+          >
+            {authedEmail ? 'Account' : 'Sign in'}
           </a>
           <a href="mailto:contact@rutherford.fr" onClick={() => setOpen(false)}>
             {labels.contact}

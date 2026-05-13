@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 import type { AcademyCourse } from '@/data/academy-courses';
 import { getLessonsForCourse } from '@/data/academy-lessons';
+import type { CourseAccess } from '@/lib/entitlements';
 
 const FREE_COURSE_LIST: { id: string; title: string }[] = [
   { id: 'fundamentals', title: 'Offset Color Management Fundamentals' },
@@ -21,12 +22,42 @@ const PREMIUM_COURSE_LIST: { id: string; title: string }[] = [
   { id: 'offset360', title: 'Offset360 in Practice' },
 ];
 
-export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
+type Props = {
+  course: AcademyCourse;
+  access: CourseAccess;
+};
+
+export function AcademyCoursePage({ course, access }: Props) {
   const tone = course.tone;
   const siblings = tone === 'premium' ? PREMIUM_COURSE_LIST : FREE_COURSE_LIST;
   const lessons = getLessonsForCourse(course.id);
   const [openLesson, setOpenLesson] = useState<number>(0);
+  const [checkoutLoading, setCheckoutLoading] = useState<null | 'course' | 'pass'>(null);
   const toggleLesson = (index: number) => setOpenLesson((current) => (current === index ? -1 : index));
+
+  const handleCheckout = async (target: 'course' | 'pass') => {
+    setCheckoutLoading(target);
+    try {
+      const res = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(
+          target === 'course'
+            ? { courseSlug: course.id, mode: 'payment' }
+            : { courseSlug: 'academy-pass', mode: 'payment' }
+        ),
+      });
+      if (res.status === 401) {
+        window.location.href = `/account/sign-in?next=${encodeURIComponent(`/academy/${course.id}`)}`;
+        return;
+      }
+      const { url, error } = await res.json();
+      if (url) window.location.href = url;
+      else if (error) alert(error);
+    } finally {
+      setCheckoutLoading(null);
+    }
+  };
 
   return (
     <main className="page-shell" id="top">
@@ -66,6 +97,11 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
                 ) : null}
               </ul>
               {course.flagship ? <span className="academy-course-flag">Flagship masterclass</span> : null}
+              {access.hasAccess && tone === 'premium' ? (
+                <p className="academy-course-access-badge">
+                  ✓ {access.source === 'pass' ? 'Academy Pass active' : 'Enrolled'}
+                </p>
+              ) : null}
             </div>
             <figure className="academy-course-video">
               <video
@@ -96,94 +132,176 @@ export function AcademyCoursePage({ course }: { course: AcademyCourse }) {
           </div>
 
           <aside className="academy-course-cta-card">
-            <h3>{tone === 'premium' ? 'Enroll in this masterclass' : 'Watch the full course'}</h3>
-            <p>
-              {tone === 'premium'
-                ? 'Lifetime access, certificate on completion, private Q&A with Rutherford engineers.'
-                : 'Free, no signup required. Built to give every press team a shared vocabulary.'}
-            </p>
-            <p className="academy-course-cta-price">{course.price ?? 'Free'}</p>
-            <a
-              className={`button ${tone === 'premium' ? 'button-accent' : 'button-dark'} academy-course-cta-button`}
-              href={`mailto:contact@rutherford.fr?subject=Rutherford%20Academy%20${encodeURIComponent(course.title)}`}
-            >
-              {tone === 'premium' ? 'Enroll now' : 'Talk to us'} <span aria-hidden="true">→</span>
-            </a>
-            {tone === 'premium' ? (
-              <p className="academy-course-cta-sub">
-                Or get all 6 premium masterclasses with the{' '}
-                <a href="/academy#bundle">Rutherford Academy Pass</a> (€399).
-              </p>
+            {tone === 'premium' && !access.hasAccess ? (
+              <>
+                <h3>Enroll in this masterclass</h3>
+                <p>Lifetime access, certificate on completion, private Q&amp;A with Rutherford engineers.</p>
+                <p className="academy-course-cta-price">{course.price}</p>
+                <button
+                  type="button"
+                  className="button button-accent academy-course-cta-button"
+                  onClick={() => handleCheckout('course')}
+                  disabled={checkoutLoading !== null}
+                >
+                  {checkoutLoading === 'course' ? 'Loading…' : 'Buy this course'} <span aria-hidden="true">→</span>
+                </button>
+                <button
+                  type="button"
+                  className="button button-light academy-course-cta-button"
+                  onClick={() => handleCheckout('pass')}
+                  disabled={checkoutLoading !== null}
+                >
+                  {checkoutLoading === 'pass' ? 'Loading…' : 'Get the Academy Pass (€399)'}
+                </button>
+                <p className="academy-course-cta-sub">
+                  {access.signedIn
+                    ? 'You will be redirected to Stripe to complete the purchase.'
+                    : (
+                      <>
+                        Already a member?{' '}
+                        <a href={`/account/sign-in?next=${encodeURIComponent(`/academy/${course.id}`)}`}>Sign in</a>
+                      </>
+                    )}
+                </p>
+              </>
+            ) : tone === 'premium' ? (
+              <>
+                <h3>You&rsquo;re enrolled</h3>
+                <p>Full access to every module below, lifetime updates, and your certificate on completion.</p>
+                <a className="button button-dark academy-course-cta-button" href="/account">
+                  Go to your account <span aria-hidden="true">→</span>
+                </a>
+              </>
             ) : (
-              <p className="academy-course-cta-sub">
-                Ready for the next step? See the{' '}
-                <a href="/academy#premium">premium masterclasses</a>.
-              </p>
+              <>
+                <h3>Watch the full course</h3>
+                <p>Free, no signup required. Built to give every press team a shared vocabulary.</p>
+                <p className="academy-course-cta-price">Free</p>
+                <a className="button button-dark academy-course-cta-button" href="#course-content">
+                  Start the course <span aria-hidden="true">→</span>
+                </a>
+                <p className="academy-course-cta-sub">
+                  Ready for the next step? See the{' '}
+                  <a href="/academy#premium">premium masterclasses</a>.
+                </p>
+              </>
             )}
           </aside>
         </div>
       </section>
 
       {lessons && lessons.length > 0 ? (
-        <section className="academy-course-lessons section">
-          <div className="container academy-course-lessons-shell">
-            <header className="academy-section-head academy-section-head-left">
-              <p className="section-kicker">Course content</p>
-              <h2>The full lesson, module by module</h2>
-              <p>
-                The video is the introduction. The complete written course is below, structured to match the syllabus.
-                Read it in one sitting or come back module by module.
-              </p>
-            </header>
-            <ol className="academy-course-lessons-list">
-              {lessons.map((lesson, index) => {
-                const isOpen = openLesson === index;
-                const headId = `lesson-head-${index}`;
-                const bodyId = `lesson-body-${index}`;
-                return (
-                  <li
-                    key={index}
-                    className={`academy-course-lesson ${isOpen ? 'is-open' : ''}`}
-                  >
-                    <button
-                      type="button"
-                      id={headId}
-                      className="academy-course-lesson-head"
-                      onClick={() => toggleLesson(index)}
-                      aria-expanded={isOpen}
-                      aria-controls={bodyId}
-                    >
-                      <span className="academy-course-lesson-meta">
-                        <span className="academy-course-lesson-index" aria-hidden="true">
-                          Module {String(index + 1).padStart(2, '0')}
+        access.hasAccess ? (
+          <section className="academy-course-lessons section" id="course-content">
+            <div className="container academy-course-lessons-shell">
+              <header className="academy-section-head academy-section-head-left">
+                <p className="section-kicker">Course content</p>
+                <h2>The full lesson, module by module</h2>
+                <p>
+                  The video is the introduction. The complete written course is below, structured to match the syllabus.
+                  Read it in one sitting or come back module by module.
+                </p>
+              </header>
+              <ol className="academy-course-lessons-list">
+                {lessons.map((lesson, index) => {
+                  const isOpen = openLesson === index;
+                  const headId = `lesson-head-${index}`;
+                  const bodyId = `lesson-body-${index}`;
+                  return (
+                    <li key={index} className={`academy-course-lesson ${isOpen ? 'is-open' : ''}`}>
+                      <button
+                        type="button"
+                        id={headId}
+                        className="academy-course-lesson-head"
+                        onClick={() => toggleLesson(index)}
+                        aria-expanded={isOpen}
+                        aria-controls={bodyId}
+                      >
+                        <span className="academy-course-lesson-meta">
+                          <span className="academy-course-lesson-index" aria-hidden="true">
+                            Module {String(index + 1).padStart(2, '0')}
+                          </span>
+                          <span className="academy-course-lesson-step" aria-hidden="true">
+                            {index + 1} / {lessons.length}
+                          </span>
                         </span>
-                        <span className="academy-course-lesson-step" aria-hidden="true">
-                          {index + 1} / {lessons.length}
+                        <h3 className="academy-course-lesson-title">{lesson.title}</h3>
+                        <p className="academy-course-lesson-summary">{lesson.summary}</p>
+                        <span className="academy-course-lesson-chevron" aria-hidden="true">
+                          {isOpen ? '−' : '+'}
                         </span>
-                      </span>
-                      <h3 className="academy-course-lesson-title">{lesson.title}</h3>
-                      <p className="academy-course-lesson-summary">{lesson.summary}</p>
-                      <span className="academy-course-lesson-chevron" aria-hidden="true">
-                        {isOpen ? '−' : '+'}
-                      </span>
-                    </button>
-                    <div
-                      id={bodyId}
-                      role="region"
-                      aria-labelledby={headId}
-                      className="academy-course-lesson-body"
-                      hidden={!isOpen}
-                    >
-                      {lesson.body.map((para, paraIndex) => (
-                        <p key={paraIndex}>{para}</p>
-                      ))}
-                    </div>
+                      </button>
+                      <div
+                        id={bodyId}
+                        role="region"
+                        aria-labelledby={headId}
+                        className="academy-course-lesson-body"
+                        hidden={!isOpen}
+                      >
+                        {lesson.body.map((para, paraIndex) => (
+                          <p key={paraIndex}>{para}</p>
+                        ))}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          </section>
+        ) : (
+          <section className="academy-course-paywall section" id="course-content">
+            <div className="container academy-course-paywall-shell">
+              <header className="academy-section-head">
+                <p className="section-kicker">Course content</p>
+                <h2>Unlock the full masterclass</h2>
+                <p>
+                  The video above is the introduction. The complete {lessons.length}-module written course is locked
+                  behind purchase. Pick the option that fits your needs.
+                </p>
+              </header>
+
+              <ol className="academy-course-paywall-list">
+                {lessons.map((lesson, index) => (
+                  <li key={index} className="academy-course-paywall-item">
+                    <span className="academy-course-paywall-lock" aria-hidden="true">
+                      🔒
+                    </span>
+                    <span className="academy-course-paywall-index">
+                      Module {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="academy-course-paywall-title">{lesson.title}</span>
                   </li>
-                );
-              })}
-            </ol>
-          </div>
-        </section>
+                ))}
+              </ol>
+
+              <div className="academy-course-paywall-actions">
+                <button
+                  type="button"
+                  className="button button-accent"
+                  onClick={() => handleCheckout('course')}
+                  disabled={checkoutLoading !== null}
+                >
+                  {checkoutLoading === 'course' ? 'Loading…' : `Buy this course — ${course.price}`}
+                </button>
+                <button
+                  type="button"
+                  className="button button-light"
+                  onClick={() => handleCheckout('pass')}
+                  disabled={checkoutLoading !== null}
+                >
+                  {checkoutLoading === 'pass' ? 'Loading…' : 'Get the Academy Pass — €399'}
+                </button>
+              </div>
+              {!access.signedIn ? (
+                <p className="academy-course-paywall-signin">
+                  Already enrolled?{' '}
+                  <a href={`/account/sign-in?next=${encodeURIComponent(`/academy/${course.id}`)}`}>Sign in</a>{' '}
+                  to access your courses.
+                </p>
+              ) : null}
+            </div>
+          </section>
+        )
       ) : null}
 
       <section className="academy-course-siblings section">

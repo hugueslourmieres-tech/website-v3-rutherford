@@ -89,7 +89,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/fundamentals)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/closed-loop-flagship)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/videos/academy/fundamentals.mp4)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/measurecolor-production)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3002/academy/measurecolor-production)",
+      "Bash(python3 -c \"import json,sys; p=json.load\\(sys.stdin\\); print\\('next:', p.get\\('dependencies',{}\\).get\\('next'\\)\\); print\\('Has @supabase/ssr:', '@supabase/ssr' in p.get\\('dependencies',{}\\)\\); print\\('Has stripe:', 'stripe' in p.get\\('dependencies',{}\\)\\)\")"
     ]
   }
 }

@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AcademyCoursePage } from '@/components/academy-course-page';
 import { ALL_COURSES, getCourseBySlug } from '@/data/academy-courses';
+import { getCourseAccess } from '@/lib/entitlements';
 
 type RouteParams = { slug: string };
+
+export const dynamic = 'force-dynamic';
 
 export function generateStaticParams(): RouteParams[] {
   return ALL_COURSES.map((course) => ({ slug: course.id }));
@@ -18,10 +21,11 @@ export function generateMetadata({ params }: { params: RouteParams }): Metadata 
   };
 }
 
-export default function AcademyCourseRoute({ params }: { params: RouteParams }) {
+export default async function AcademyCourseRoute({ params }: { params: RouteParams }) {
   const course = getCourseBySlug(params.slug);
   if (!course) {
     notFound();
   }
-  return <AcademyCoursePage course={course} />;
+  const access = await getCourseAccess(course);
+  return <AcademyCoursePage course={course} access={access} />;
 }
