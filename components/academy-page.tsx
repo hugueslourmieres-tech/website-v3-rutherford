@@ -2,162 +2,7 @@
 
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
-
-type Course = {
-  id: string;
-  title: string;
-  duration: string;
-  modules: number;
-  description: string;
-  syllabus: string[];
-  price?: string;
-  certificate?: string;
-  flagship?: boolean;
-};
-
-const FREE_COURSES: Course[] = [
-  {
-    id: 'fundamentals',
-    title: 'Offset Color Management Fundamentals',
-    duration: '45 min',
-    modules: 5,
-    description: 'The shared vocabulary every press team needs.',
-    syllabus: [
-      'What "good color" actually means on a press',
-      'ISO 12647 in 10 minutes: substrates, TVI, primaries',
-      'M0, M1, M2, M3: when to measure under which illuminant',
-      'ΔE, ΔE 00, density: what to trust on the press floor',
-      'The role of standards (G7, GRACoL, FOGRA) without the jargon',
-    ],
-  },
-  {
-    id: 'measurement-essentials',
-    title: 'Press-Side Measurement Essentials',
-    duration: '35 min',
-    modules: 4,
-    description: 'From manual densitometer to inline scanning.',
-    syllabus: [
-      'Handheld vs strip-reader vs inline scanner: pros, cons, cost',
-      'The geometry that matters: 45°/0°, polarization, UV filtering',
-      'Color bars decoded: what to put on the sheet and why',
-      'Repeatability vs reproducibility: the trap that costs you hours',
-    ],
-  },
-  {
-    id: 'where-color-hurts',
-    title: 'Where Color Hurts: From Makeready to Saleable Sheet',
-    duration: '30 min',
-    modules: 4,
-    description: 'The hidden cost of inconsistency.',
-    syllabus: [
-      'Anatomy of a makeready: 800 sheets, 120 minutes, €450 on the floor',
-      'The "good copy" myth: why subjective approval is killing your margin',
-      'Drift, contamination, fountain solution, paper batch: the four silent killers',
-      'Self-financed automation: how reduced waste pays for the system',
-    ],
-  },
-];
-
-const PREMIUM_COURSES: Course[] = [
-  {
-    id: 'closed-loop-flagship',
-    title: 'The Complete Closed-Loop Color Masterclass',
-    duration: '120 min',
-    modules: 8,
-    price: '€149',
-    flagship: true,
-    description: 'The definitive course on building a closed-loop offset operation, from setup to scale.',
-    certificate: 'Rutherford Closed-Loop Expert',
-    syllabus: [
-      'The closed-loop concept: sensor, decision, actuator',
-      'Anatomy of the Rutherford system: console interface, ink-zone control, learning logic',
-      'Integrating with your press brand: Heidelberg, KBA, Komori, Manroland workflows',
-      'CIP3/CIP4 presetting: turning prepress data into ink-key opens',
-      'Spectral targets and ΔE strategy in production',
-      'Operator workflow: what changes day one vs week one vs month three',
-      'Closed-loop on extended gamut (ECG, 7-color)',
-      'Scaling across presses, shifts, sites',
-    ],
-  },
-  {
-    id: 'measurecolor-production',
-    title: 'MeasureColor Production: From Setup to Daily Operation',
-    duration: '90 min',
-    modules: 6,
-    price: '€119',
-    description: 'Master the measurement workflow that runs the pressroom.',
-    syllabus: [
-      'Installing and configuring MeasureColor Production',
-      'Job templates, color bars, tolerances',
-      'PQX, CXF, MIF, ICC, CGATS: what each format gives you',
-      'Daily operator routine: measure, judge, document',
-      'Integration with your MIS / job management via open XML',
-      'Troubleshooting common errors and false positives',
-    ],
-  },
-  {
-    id: 'measurecolor-reports',
-    title: 'MeasureColor Reports: Dashboards, Root-Cause & Continuous Improvement',
-    duration: '80 min',
-    modules: 6,
-    price: '€119',
-    description: 'Turn measurement data into management decisions.',
-    syllabus: [
-      'The Reports module architecture: data flow from press to dashboard',
-      'Building the dashboards that matter (per machine, per operator, per brand)',
-      'Drill-down for root-cause analysis: finding the failure pattern',
-      'Brand-owner reporting: what to send, in which format',
-      'Benchmarking machines, operators, shifts, sites',
-      'Driving continuous improvement loops with Reports',
-    ],
-  },
-  {
-    id: 'intellitrax2',
-    title: 'IntelliTrax2 & IntelliTrax2 Pro: Automated Scanning Mastery',
-    duration: '90 min',
-    modules: 6,
-    price: '€129',
-    description: 'Get every advantage out of X-Rite’s flagship scanning hardware.',
-    syllabus: [
-      'IntelliTrax2 (model 2900) vs IntelliTrax2 Pro (model 2900PRO): when to pick which',
-      'Hardware setup: tracks, sheet positioning, calibration',
-      'Geometry and conditions: 45°/0°, M0/M1/M3 single-pass strategy',
-      'Color bars sized for 2 mm: what fits, what breaks',
-      'Maintenance: non-contact best practices, UV LED life, certification cycles',
-      'Migrating from legacy IntelliTrax (discontinued): what to expect',
-    ],
-  },
-  {
-    id: 'colorloop-ai',
-    title: 'ColorLoop AI: Predictive Setup for Modern Offset',
-    duration: '70 min',
-    modules: 5,
-    price: '€99',
-    description: 'Rutherford’s own software: the new generation.',
-    syllabus: [
-      'What "AI-guided makeready" actually means (and what it doesn’t)',
-      'Training the model on your jobs: first 30, 90, 365 days',
-      'Predictive ink-key positioning vs reactive correction',
-      'ColorLoop’s data layer: connecting press, measurement, MIS',
-      'From operator decision to autonomous correction: staged adoption',
-    ],
-  },
-  {
-    id: 'offset360',
-    title: 'Offset360 in Practice: Rutherford + IntelliTrax2 + MeasureColor',
-    duration: '60 min',
-    modules: 5,
-    price: '€99',
-    description: 'The X-Rite + Rutherford solution bundle, in real production conditions.',
-    syllabus: [
-      'The Offset360 architecture: what each component does',
-      'Wiring the three systems together',
-      'End-to-end job flow: prepress → setup → measure → correct → report',
-      'Real-world ROI: calage, gâche, brand reports',
-      'Common implementation pitfalls and how to avoid them',
-    ],
-  },
-];
+import { FREE_COURSES, PREMIUM_COURSES, type AcademyCourse } from '@/data/academy-courses';
 
 const WHY_POINTS = [
   { value: '25+', label: 'years of pressroom experience' },
@@ -166,7 +11,8 @@ const WHY_POINTS = [
   { value: 'X-Rite', label: 'PANTONE partner' },
 ];
 
-function CourseCard({ course, tone }: { course: Course; tone: 'free' | 'premium' }) {
+function CourseCard({ course }: { course: AcademyCourse }) {
+  const tone = course.tone;
   return (
     <article className={`academy-card academy-card-${tone} ${course.flagship ? 'is-flagship' : ''}`}>
       {course.flagship ? <span className="academy-card-flag">Flagship masterclass</span> : null}
@@ -176,7 +22,9 @@ function CourseCard({ course, tone }: { course: Course; tone: 'free' | 'premium'
           <span aria-hidden="true">·</span>
           <span>{course.modules} modules</span>
         </p>
-        <h3 className="academy-card-title">{course.title}</h3>
+        <h3 className="academy-card-title">
+          <a href={`/academy/${course.id}`}>{course.title}</a>
+        </h3>
         <p className="academy-card-desc">{course.description}</p>
       </header>
 
@@ -198,9 +46,16 @@ function CourseCard({ course, tone }: { course: Course; tone: 'free' | 'premium'
           </p>
         ) : null}
         <div className="academy-card-cta-row">
-          {course.price ? <span className="academy-card-price">{course.price}</span> : <span className="academy-card-price-free">Free</span>}
-          <a className={`button ${tone === 'premium' ? 'button-accent' : 'button-dark'} academy-card-cta`} href="mailto: contact@rutherford.fr?subject=Rutherford%20Academy%20enrollment">
-            {tone === 'premium' ? 'Enroll' : 'Start course'} <span aria-hidden="true">→</span>
+          {course.price ? (
+            <span className="academy-card-price">{course.price}</span>
+          ) : (
+            <span className="academy-card-price-free">Free</span>
+          )}
+          <a
+            className={`button ${tone === 'premium' ? 'button-accent' : 'button-dark'} academy-card-cta`}
+            href={`/academy/${course.id}`}
+          >
+            {tone === 'premium' ? 'Watch & enroll' : 'Watch course'} <span aria-hidden="true">→</span>
           </a>
         </div>
       </footer>
@@ -244,7 +99,7 @@ export function AcademyPage() {
           </header>
           <div className="academy-grid academy-grid-free">
             {FREE_COURSES.map((course) => (
-              <CourseCard key={course.id} course={course} tone="free" />
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
         </div>
@@ -259,7 +114,7 @@ export function AcademyPage() {
           </header>
           <div className="academy-grid academy-grid-premium">
             {PREMIUM_COURSES.map((course) => (
-              <CourseCard key={course.id} course={course} tone="premium" />
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
         </div>
@@ -287,7 +142,7 @@ export function AcademyPage() {
               <br />
               <span>First 50 enrollments</span>
             </p>
-            <a className="button button-accent academy-bundle-cta" href="mailto: contact@rutherford.fr?subject=Rutherford%20Academy%20Pass">
+            <a className="button button-accent academy-bundle-cta" href="mailto:contact@rutherford.fr?subject=Rutherford%20Academy%20Pass">
               Get the Pass <span aria-hidden="true">→</span>
             </a>
           </aside>
