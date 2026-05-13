@@ -71,7 +71,12 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(vercel --prod --yes)",
-      "Bash(vercel alias *)"
+      "Bash(vercel alias *)",
+      "WebFetch(domain:measurecolor.com)",
+      "Bash(ls -la ~/.claude/skills/measurecolor/ ~/.claude/skills/measurecolor/reference/)",
+      "WebFetch(domain:www.xrite.com)",
+      "Bash(ls -la ~/.claude/skills/xrite-products/ ~/.claude/skills/xrite-products/reference/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3002/academy\")"
     ]
   }
 }

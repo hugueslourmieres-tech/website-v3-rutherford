@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { type Locale, useLanguage } from '@/components/language-provider';
 
 type SiteNavProps = {
-  current?: 'home' | 'blog' | 'console-validation' | 'support';
+  current?: 'home' | 'blog' | 'console-validation' | 'support' | 'academy';
 };
 
 export function SiteNav({ current = 'home' }: SiteNavProps) {
@@ -21,6 +21,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: string;
       cases: string;
       blog: string;
+      academy: string;
       support: string;
       console: string;
       contact: string;
@@ -37,6 +38,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Case Studies',
       blog: 'Blog',
+      academy: 'Academy',
       support: 'Support',
       console: 'Console Validation',
       contact: 'Contact',
@@ -52,6 +54,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Cas clients',
       blog: 'Blog',
+      academy: 'Academy',
       support: 'Support',
       console: 'Validation console',
       contact: 'Contact',
@@ -67,6 +70,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Referenzen',
       blog: 'Blog',
+      academy: 'Academy',
       support: 'Support',
       console: 'Konsolenvalidierung',
       contact: 'Kontakt',
@@ -82,6 +86,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Case Study',
       blog: 'Blog',
+      academy: 'Academy',
       support: 'Supporto',
       console: 'Validazione console',
       contact: 'Contatti',
@@ -97,6 +102,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Casos prácticos',
       blog: 'Blog',
+      academy: 'Academy',
       support: 'Soporte',
       console: 'Validación de consola',
       contact: 'Contacto',
@@ -182,6 +188,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           </a>
           <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
             {labels.blog}
+          </a>
+          <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>
+            {labels.academy}
           </a>
           <a href="mailto:contact@rutherford.fr" onClick={() => setOpen(false)}>
             {labels.contact}
