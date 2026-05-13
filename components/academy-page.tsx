@@ -68,6 +68,14 @@ export function AcademyPage() {
     <main className="page-shell" id="top">
       <SiteNav current="academy" />
 
+      <figure className="academy-hero-banner">
+        <img
+          src="/images/academy/hero.jpg"
+          alt="Rutherford team training on a press console"
+          loading="eager"
+        />
+      </figure>
+
       <section className="academy-hero section">
         <div className="container academy-hero-shell">
           <h1 className="academy-hero-title">Rutherford&rsquo;s Academy 🎓</h1>
@@ -89,14 +97,6 @@ export function AcademyPage() {
           </div>
         </div>
       </section>
-
-      <figure className="academy-hero-banner">
-        <img
-          src="/images/academy/hero.jpg"
-          alt="Rutherford team training on a press console"
-          loading="eager"
-        />
-      </figure>
 
       <section className="academy-section section" id="free">
         <div className="container">
