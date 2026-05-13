@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage, type Locale } from '@/components/language-provider';
 import { SocialLinks } from '@/components/social-links';
 import type { SocialLink } from '@/components/social-links';
@@ -109,7 +110,14 @@ export function SiteFooter() {
           <div className="footer-grid">
             <div className="footer-brand">
               <a className="footer-brand-wordmark" href="/" aria-label="Rutherford.fr">
-                Rutherford.fr
+                <Image
+                  src="/images/rutherford-logo-white.png"
+                  alt="Rutherford.fr"
+                  width={900}
+                  height={300}
+                  sizes="(max-width: 768px) 200px, 240px"
+                  priority={false}
+                />
               </a>
               <div className="footer-brand-social">
                 <p className="footer-column-label">{t.follow}</p>
