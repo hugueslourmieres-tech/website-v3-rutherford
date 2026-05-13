@@ -198,22 +198,6 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           >
             {labels.console}
           </a>
-          <div className="mobile-language-list" role="group" aria-label={labels.localeLabel}>
-            {languageOptions.map((option) => (
-              <button
-                key={option.code}
-                type="button"
-                className={option.code === locale ? 'is-active' : undefined}
-                onClick={() => {
-                  setLocale(option.code);
-                  setLocaleOpen(false);
-                  setOpen(false);
-                }}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
         </nav>
 
         <div className="header-actions">
