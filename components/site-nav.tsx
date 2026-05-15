@@ -196,9 +196,6 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           <a href="/#colorloop" onClick={() => setOpen(false)}>
             {labels.colorloop}
           </a>
-          <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
-            {labels.blog}
-          </a>
           {academyEnabled ? (
             <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>
               {labels.academy}
@@ -233,39 +230,6 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
         </nav>
 
         <div className="header-actions">
-          <div className="locale-dropdown" ref={localeRef}>
-            <button
-              type="button"
-              className={`locale-dropdown-trigger ${localeOpen ? 'is-open' : ''}`}
-              aria-haspopup="menu"
-              aria-expanded={localeOpen}
-              onClick={() => setLocaleOpen((value) => !value)}
-            >
-              <span>{locale.toUpperCase()}</span>
-              <span className="locale-dropdown-caret" aria-hidden="true">⌄</span>
-            </button>
-
-            {localeOpen ? (
-              <div className="locale-dropdown-menu" role="menu" aria-label={labels.localeLabel}>
-                {languageOptions.map((option) => (
-                  <button
-                    key={option.code}
-                    type="button"
-                    className={option.code === locale ? 'is-active' : undefined}
-                    role="menuitemradio"
-                    aria-checked={option.code === locale}
-                    onClick={() => {
-                      setLocale(option.code);
-                      setLocaleOpen(false);
-                    }}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            ) : null}
-          </div>
-
           {academyEnabled ? (
             <a
               className={`header-account-icon ${current === 'account' ? 'is-current' : ''}`}

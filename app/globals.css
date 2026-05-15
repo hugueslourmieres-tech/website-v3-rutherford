@@ -354,25 +354,20 @@ svg {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.04);
+  background: transparent;
   color: #1d1d1f;
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+  border: 0;
+  transition: color 160ms ease, transform 160ms ease;
 }
 
 .header-account-icon:hover {
-  background: var(--accent);
-  color: #ffffff;
-  border-color: var(--accent);
-  transform: scale(1.05);
+  color: var(--accent);
+  transform: scale(1.06);
 }
 
 .header-account-icon.is-current {
-  background: var(--accent);
-  color: #ffffff;
-  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .header-account-dot {
