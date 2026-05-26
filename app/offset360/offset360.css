@@ -14,39 +14,6 @@
   text-decoration: none;
 }
 
-/* Hero logo strip */
-.o360-logos {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin: 0 auto 30px;
-  opacity: 0.85;
-}
-
-.o360-logos img {
-  height: 22px;
-  width: auto;
-  display: block;
-  filter: grayscale(1) brightness(0.55);
-  transition: filter 0.2s ease, opacity 0.2s ease;
-}
-
-.o360-logo-sep {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--o360-line);
-  display: inline-block;
-}
-
-@media (min-width: 720px) {
-  .o360-logos img {
-    height: 26px;
-  }
-}
-
 /* Generic section spacing */
 .o360-section {
   padding: 96px 0;

@@ -79,13 +79,6 @@ export function Offset360Page() {
       {/* Hero */}
       <section className="o360-section">
         <div className="o360-narrow">
-          <div className="o360-logos" aria-label="Built by X-Rite, Rutherford and ColorLoop">
-            <img src="/images/xrite-logo-black.png" alt="X-Rite" />
-            <span className="o360-logo-sep" aria-hidden="true" />
-            <img src="/images/rutherford-logo-black.png" alt="Rutherford" />
-            <span className="o360-logo-sep" aria-hidden="true" />
-            <img src="/images/colorloop-logo-black.png" alt="ColorLoop" />
-          </div>
           <h1 className="o360-h1">Offset360</h1>
           <p className="o360-lede">
             The closed-loop bundle for sheetfed offset. Scan, compare, correct — without leaving the console.
