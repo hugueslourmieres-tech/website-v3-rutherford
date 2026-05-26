@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Offset360Page } from '@/components/offset360-page';
+import './offset360.css';
 
 export const metadata: Metadata = {
   title: 'Offset360 — Closed-loop color for sheetfed offset | Rutherford.fr',
