@@ -1,8 +1,8 @@
 [
   {
     "slug": "offset360-closed-loop-bundle",
-    "title": "Offset360 — closed-loop color for sheetfed offset",
-    "excerpt": "What Offset360 is, what's in the bundle, and how it changes makeready, color stability and traceability on the press floor.",
+    "title": "Offset360",
+    "excerpt": "The X-Rite + Rutherford closed-loop bundle for sheetfed offset. Discover the dedicated page.",
     "lead": "Offset360 is the X-Rite + Rutherford bundle that pairs IntelliTrax2 scanning, MeasureColor reporting and Rutherford ColorLoop closed-loop control into a single workflow for sheetfed offset printing. The dedicated landing page is at rutherford.fr/offset360.",
     "image": "/images/Bundle Rutherford-4.jpg",
     "publishedAt": "2026-05-26",
@@ -43,7 +43,8 @@
         "label": "Rutherford — Console validation form",
         "href": "https://rutherford.fr/console-validation"
       }
-    ]
+    ],
+    "href": "/offset360"
   },
   {
     "slug": "ppwr-dpp-for-offset-printing",
