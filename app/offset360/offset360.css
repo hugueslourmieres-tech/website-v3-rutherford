@@ -14,6 +14,39 @@
   text-decoration: none;
 }
 
+/* Hero logo strip */
+.o360-logos {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto 30px;
+  opacity: 0.85;
+}
+
+.o360-logos img {
+  height: 22px;
+  width: auto;
+  display: block;
+  filter: grayscale(1) brightness(0.55);
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.o360-logo-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--o360-line);
+  display: inline-block;
+}
+
+@media (min-width: 720px) {
+  .o360-logos img {
+    height: 26px;
+  }
+}
+
 /* Generic section spacing */
 .o360-section {
   padding: 96px 0;
@@ -178,10 +211,9 @@
 .o360-card {
   background: #ffffff;
   border-radius: 22px;
-  padding: 32px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 14px;
   border: 1px solid var(--o360-line);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -195,13 +227,46 @@
   box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.18);
 }
 
+.o360-card-media {
+  aspect-ratio: 4 / 3;
+  background: var(--o360-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  overflow: hidden;
+}
+
+.o360-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.o360-card-body {
+  padding: 26px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
 .o360-card-vendor {
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--o360-accent);
-  font-weight: 600;
-  margin: 0;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 4px;
+}
+
+.o360-card-vendor img {
+  height: 16px;
+  width: auto;
+  display: block;
+  filter: grayscale(1) brightness(0.5);
+  opacity: 0.85;
 }
 
 .o360-card-role {

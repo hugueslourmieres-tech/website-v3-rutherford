@@ -8,9 +8,12 @@ const VIDEO_ID = '7X0fOMXK72Y';
 
 type BundleComponent = {
   name: string;
-  vendor: string;
+  vendorLogo: string;
+  vendorAlt: string;
   role: string;
   description: string;
+  image: string;
+  imageAlt: string;
   href: string;
   external: boolean;
 };
@@ -18,28 +21,37 @@ type BundleComponent = {
 const bundleComponents: BundleComponent[] = [
   {
     name: 'IntelliTrax2',
-    vendor: 'X-Rite',
+    vendorLogo: '/images/xrite-logo-black.png',
+    vendorAlt: 'X-Rite',
     role: 'Press-side scanning',
     description:
       'Automated spectrophotometer for sheetfed offset. Reads a full color bar in under ten seconds, 2 mm bars at 45°/0°, M0 / M1 / M3 in a single pass.',
+    image: '/images/intellitrax2-clean.jpg',
+    imageAlt: 'IntelliTrax2 scanner',
     href: 'https://www.xrite.com/categories/scanning-spectrophotometers/intellitrax2',
     external: true,
   },
   {
     name: 'MeasureColor',
-    vendor: 'X-Rite',
+    vendorLogo: '/images/xrite-logo-black.png',
+    vendorAlt: 'X-Rite',
     role: 'Quality & reporting',
     description:
       'Production color management. Aggregates measurements, computes ΔE in real time, exports PQX and CXF for the supply chain.',
+    image: '/images/measurecolor-hero.jpg',
+    imageAlt: 'MeasureColor on a press-side display',
     href: 'https://www.xrite.com/categories/formulation-and-quality-assurance-software/measurecolor-production',
     external: true,
   },
   {
     name: 'Rutherford ColorLoop',
-    vendor: 'Rutherford',
+    vendorLogo: '/images/rutherford-logo-black.png',
+    vendorAlt: 'Rutherford',
     role: 'Closed-loop on the console',
     description:
       'Converts measurement deltas into ink-key corrections. Pushes them to the press console. The operator validates. The loop closes.',
+    image: '/images/Imac CGS Colorloop Graphic Studio.jpg',
+    imageAlt: 'Rutherford ColorLoop on an iMac',
     href: '/#colorloop',
     external: false,
   },
@@ -67,10 +79,14 @@ export function Offset360Page() {
       {/* Hero */}
       <section className="o360-section">
         <div className="o360-narrow">
-          <p className="o360-eyebrow">Offset360 — a Rutherford × X-Rite solution</p>
-          <h1 className="o360-h1">
-            Color, closed.
-          </h1>
+          <div className="o360-logos" aria-label="Built by X-Rite, Rutherford and ColorLoop">
+            <img src="/images/xrite-logo-black.png" alt="X-Rite" />
+            <span className="o360-logo-sep" aria-hidden="true" />
+            <img src="/images/rutherford-logo-black.png" alt="Rutherford" />
+            <span className="o360-logo-sep" aria-hidden="true" />
+            <img src="/images/colorloop-logo-black.png" alt="ColorLoop" />
+          </div>
+          <h1 className="o360-h1">Offset360</h1>
           <p className="o360-lede">
             The closed-loop bundle for sheetfed offset. Scan, compare, correct — without leaving the console.
           </p>
@@ -121,18 +137,25 @@ export function Offset360Page() {
           <div className="o360-bundle">
             {bundleComponents.map((item) => (
               <article className="o360-card" key={item.name}>
-                <p className="o360-card-vendor">{item.vendor}</p>
-                <h3 className="o360-h3">{item.name}</h3>
-                <p className="o360-card-role">{item.role}</p>
-                <p>{item.description}</p>
-                <a
-                  className="o360-card-link"
-                  href={item.href}
-                  target={item.external ? '_blank' : undefined}
-                  rel={item.external ? 'noreferrer' : undefined}
-                >
-                  Learn more
-                </a>
+                <div className="o360-card-media">
+                  <img src={item.image} alt={item.imageAlt} loading="lazy" />
+                </div>
+                <div className="o360-card-body">
+                  <div className="o360-card-vendor">
+                    <img src={item.vendorLogo} alt={item.vendorAlt} />
+                  </div>
+                  <h3 className="o360-h3">{item.name}</h3>
+                  <p className="o360-card-role">{item.role}</p>
+                  <p>{item.description}</p>
+                  <a
+                    className="o360-card-link"
+                    href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noreferrer' : undefined}
+                  >
+                    Learn more
+                  </a>
+                </div>
               </article>
             ))}
           </div>
