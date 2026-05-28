@@ -177,32 +177,34 @@ svg {
 }
 
 .nav-has-badge {
-  position: relative;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Red notification dot, top-right of the Academy link */
-.nav-badge-dot {
-  position: absolute;
-  top: -3px;
-  right: -9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ff3b30;
-  box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.55);
-  animation: nav-dot-pulse 2s ease-in-out infinite;
+.nav-badge-new {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--accent);
+  transform: translateY(-1px);
+  animation: nav-badge-pulse 2.4s ease-in-out infinite;
 }
 
-@keyframes nav-dot-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.55); }
-  70% { box-shadow: 0 0 0 6px rgba(255, 59, 48, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+@keyframes nav-badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0.45); }
+  50% { box-shadow: 0 0 0 5px rgba(0, 113, 227, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-badge-dot { animation: none; }
+  .nav-badge-new { animation: none; }
 }
 
 .header-actions {

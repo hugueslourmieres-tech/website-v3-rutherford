@@ -208,7 +208,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           {academyEnabled ? (
             <a className={`nav-has-badge ${current === 'academy' ? 'is-current' : ''}`} href="/academy" onClick={() => setOpen(false)}>
               {labels.academy}
-              <span className="nav-badge-dot" role="status" aria-label="New — something to discover" />
+              <span className="nav-badge-new">New</span>
             </a>
           ) : null}
           {academyEnabled ? (
