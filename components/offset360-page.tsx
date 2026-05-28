@@ -105,8 +105,8 @@ const bundleComponents: BundleComponent[] = [
     role: 'Process control & reporting',
     description:
       'One platform for offset, flexo and digital. Real-time ΔE, ChromaTrack ink-density guidance, audit-ready reports.',
-    image: '/images/measurecolor-hero.jpg',
-    imageAlt: 'MeasureColor on a press-side display',
+    image: '/images/Hugues on console press offset.jpg',
+    imageAlt: 'Operator running MeasureColor at the press console',
     href: 'https://www.xrite.com/categories/formulation-and-quality-assurance-software/measurecolor-production',
     external: true,
   },

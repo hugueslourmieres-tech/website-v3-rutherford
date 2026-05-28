@@ -313,9 +313,9 @@
 
 .o360-number strong {
   display: block;
-  font-size: clamp(3rem, 5.4vw, 5rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
   font-weight: 700;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.03em;
   line-height: 1;
   color: var(--o360-fg);
   white-space: nowrap;
