@@ -14,6 +14,30 @@
   text-decoration: none;
 }
 
+/* Hero X-Rite logo */
+.o360-hero-logo {
+  display: inline-block;
+  margin: 0 auto 26px;
+  line-height: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.o360-hero-logo img {
+  height: 18px;
+  width: auto;
+  display: block;
+}
+
+.o360-hero-logo:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 720px) {
+  .o360-hero-logo img {
+    height: 22px;
+  }
+}
+
 /* Generic section spacing */
 .o360-section {
   padding: 96px 0;
@@ -357,4 +381,313 @@
   color: var(--o360-mute);
   font-size: 1.08rem;
   line-height: 1.5;
+}
+
+/* ============================================================
+   Enriched product-page sections
+   ============================================================ */
+
+/* Problem statement */
+.o360-statement {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 22px;
+  text-align: center;
+}
+
+.o360-statement h2 {
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.o360-statement h2 em {
+  font-style: normal;
+  color: var(--o360-accent);
+}
+
+.o360-statement p {
+  font-size: clamp(1.1rem, 1.7vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--o360-mute);
+  margin: 24px auto 0;
+  max-width: 680px;
+}
+
+/* Alternating feature rows */
+.o360-feature {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.o360-feature + .o360-feature {
+  margin-top: 96px;
+}
+
+@media (min-width: 860px) {
+  .o360-feature {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+  }
+  .o360-feature.is-reverse .o360-feature-media {
+    order: 2;
+  }
+}
+
+.o360-feature-media {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--o360-soft);
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.35);
+}
+
+.o360-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.o360-feature-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.o360-feature-eyebrow img {
+  height: 16px;
+  width: auto;
+  filter: grayscale(1) brightness(0.45);
+}
+
+.o360-feature-eyebrow span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--o360-mute);
+}
+
+.o360-feature-copy h3 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.o360-feature-copy > p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--o360-mute);
+  margin: 16px 0 0;
+}
+
+/* Spec chips */
+.o360-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.o360-chips li {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--o360-fg);
+  background: var(--o360-soft);
+  border: 1px solid var(--o360-line);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+
+.o360-quiet .o360-chips li {
+  background: #ffffff;
+}
+
+.o360-feature-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 22px;
+  color: var(--o360-accent);
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.o360-feature-link::after {
+  content: '›';
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.o360-feature-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* ROI band */
+.o360-band {
+  background: var(--o360-fg);
+  color: #fff;
+}
+
+.o360-band .o360-narrow {
+  color: #fff;
+}
+
+.o360-band .o360-eyebrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.o360-band-stat {
+  font-size: clamp(4rem, 12vw, 8.5rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  margin: 0;
+  background: linear-gradient(90deg, #6fb1ff, #0071e3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.o360-band-sub {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 18px auto 0;
+  max-width: 600px;
+}
+
+.o360-band .o360-numbers {
+  margin-top: 64px;
+}
+
+.o360-band .o360-number strong {
+  color: #fff;
+}
+
+.o360-band .o360-number span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Process — 3 stages */
+.o360-process {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+}
+
+@media (min-width: 760px) {
+  .o360-process {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.o360-process-card {
+  background: #fff;
+  border: 1px solid var(--o360-line);
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.o360-quiet .o360-process-card {
+  background: var(--o360-soft);
+  border-color: transparent;
+}
+
+.o360-process-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--o360-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.o360-process-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.o360-process-card p {
+  margin: 0;
+  color: var(--o360-mute);
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+
+/* Included checklist */
+.o360-included {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin: 48px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 680px) {
+  .o360-included {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.o360-included li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.02rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.o360-included li svg {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  color: var(--o360-accent);
+}
+
+/* Open-architecture reassurance line */
+.o360-reassure {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.o360-reassure p {
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--o360-fg);
+  margin: 0;
+}
+
+.o360-reassure p strong {
+  color: var(--o360-accent);
+  font-weight: 600;
 }

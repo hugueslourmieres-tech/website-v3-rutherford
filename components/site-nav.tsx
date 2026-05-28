@@ -42,6 +42,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: string;
       cases: string;
       blog: string;
+      news: string;
       academy: string;
       support: string;
       console: string;
@@ -59,6 +60,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Case Studies',
       blog: 'Blog',
+      news: 'News',
       academy: 'Academy',
       support: 'Support',
       console: 'Console Validation',
@@ -75,6 +77,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Cas clients',
       blog: 'Blog',
+      news: 'Actualités',
       academy: 'Academy',
       support: 'Support',
       console: 'Validation console',
@@ -91,6 +94,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Referenzen',
       blog: 'Blog',
+      news: 'News',
       academy: 'Academy',
       support: 'Support',
       console: 'Konsolenvalidierung',
@@ -107,6 +111,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Case Study',
       blog: 'Blog',
+      news: 'News',
       academy: 'Academy',
       support: 'Supporto',
       console: 'Validazione console',
@@ -123,6 +128,7 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
       colorloop: 'ColorLoop',
       cases: 'Casos prácticos',
       blog: 'Blog',
+      news: 'Noticias',
       academy: 'Academy',
       support: 'Soporte',
       console: 'Validación de consola',
@@ -195,6 +201,9 @@ export function SiteNav({ current = 'home' }: SiteNavProps) {
           </a>
           <a href="/#colorloop" onClick={() => setOpen(false)}>
             {labels.colorloop}
+          </a>
+          <a className={current === 'blog' ? 'is-current' : undefined} href="/blog" onClick={() => setOpen(false)}>
+            {labels.news}
           </a>
           {academyEnabled ? (
             <a className={current === 'academy' ? 'is-current' : undefined} href="/academy" onClick={() => setOpen(false)}>

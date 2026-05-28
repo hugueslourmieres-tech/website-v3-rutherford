@@ -25,19 +25,19 @@ const bundleComponents: BundleComponent[] = [
     vendorAlt: 'X-Rite',
     role: 'Press-side scanning',
     description:
-      'Automated spectrophotometer for sheetfed offset. Reads a full color bar in under ten seconds, 2 mm bars at 45°/0°, M0 / M1 / M3 in a single pass.',
+      'The first desktop automated scanning system. Reads a full color bar in under ten seconds, bars down to 2 mm, contactless.',
     image: '/images/intellitrax2-clean.jpg',
     imageAlt: 'IntelliTrax2 scanner',
-    href: 'https://www.xrite.com/categories/scanning-spectrophotometers/intellitrax2',
+    href: 'https://www.xrite.com/categories/scanning-instruments/intellitrax2',
     external: true,
   },
   {
     name: 'MeasureColor',
     vendorLogo: '/images/xrite-logo-black.png',
     vendorAlt: 'X-Rite',
-    role: 'Quality & reporting',
+    role: 'Process control & reporting',
     description:
-      'Production color management. Aggregates measurements, computes ΔE in real time, exports PQX and CXF for the supply chain.',
+      'One platform for offset, flexo and digital. Real-time ΔE, ChromaTrack ink-density guidance, audit-ready reports.',
     image: '/images/measurecolor-hero.jpg',
     imageAlt: 'MeasureColor on a press-side display',
     href: 'https://www.xrite.com/categories/formulation-and-quality-assurance-software/measurecolor-production',
@@ -47,11 +47,68 @@ const bundleComponents: BundleComponent[] = [
     name: 'Rutherford ColorLoop',
     vendorLogo: '/images/rutherford-logo-black.png',
     vendorAlt: 'Rutherford',
-    role: 'Closed-loop on the console',
+    role: 'Closed-loop presetting',
     description:
-      'Converts measurement deltas into ink-key corrections. Pushes them to the press console. The operator validates. The loop closes.',
+      'Turns measurement data into ink-key corrections and pushes them to the console. The loop closes — automatically.',
     image: '/images/Imac CGS Colorloop Graphic Studio.jpg',
     imageAlt: 'Rutherford ColorLoop on an iMac',
+    href: '/#colorloop',
+    external: false,
+  },
+];
+
+type Feature = {
+  vendorLogo: string;
+  vendorAlt: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  chips: string[];
+  image: string;
+  imageAlt: string;
+  href: string;
+  external: boolean;
+  reverse?: boolean;
+};
+
+const features: Feature[] = [
+  {
+    vendorLogo: '/images/xrite-logo-black.png',
+    vendorAlt: 'X-Rite',
+    eyebrow: 'Reading',
+    title: 'IntelliTrax2 reads the sheet, not the operator’s eye.',
+    body:
+      'A desktop automated spectrophotometer that scans the full control strip across the sheet in seconds. Contactless optics prevent smudges and scratches, a look-ahead sensor aligns the bar automatically, and every zone is captured under M0, M1 or M3 in a single pass.',
+    chips: ['Scan < 10 s', 'Bars from 2 mm', '45°/0° geometry', 'M0 / M1 / M3', 'Inter-instrument 0.3 ΔE avg', 'Non-contact'],
+    image: '/images/intellitrax2-3.jpg',
+    imageAlt: 'IntelliTrax2 scanning a printed sheet',
+    href: 'https://www.xrite.com/categories/scanning-instruments/intellitrax2',
+    external: true,
+  },
+  {
+    vendorLogo: '/images/xrite-logo-black.png',
+    vendorAlt: 'X-Rite',
+    eyebrow: 'Process control',
+    title: 'MeasureColor turns measurements into decisions.',
+    body:
+      'A client-server platform unifying offset, flexo and digital. ChromaTrack calculates the optimal ink-density correction and the expected ΔE before the operator touches a key. Jobs set up in under 30 seconds, and quality data flows into customizable, audit-ready reports — your data, on your server.',
+    chips: ['Job setup < 30 s', 'Real-time ΔE / density', 'ChromaTrack guidance', 'PQX · CXF · CGATS export', 'Offset · flexo · digital'],
+    image: '/images/measurecolor-hero.jpg',
+    imageAlt: 'MeasureColor quality control on a pressroom display',
+    href: 'https://www.xrite.com/categories/formulation-and-quality-assurance-software/measurecolor-production',
+    external: true,
+    reverse: true,
+  },
+  {
+    vendorLogo: '/images/rutherford-logo-black.png',
+    vendorAlt: 'Rutherford',
+    eyebrow: 'Closed loop',
+    title: 'Rutherford ColorLoop closes the loop on the console.',
+    body:
+      'CIP3 / CIP4 presets load before the press starts. As IntelliTrax2 and MeasureColor read and compare, ColorLoop converts the deltas into ink-key corrections and pushes them straight to the console. The operator validates — and the press holds color through the run, on any major press brand.',
+    chips: ['CIP3 / CIP4 presetting', 'Automatic ink-key correction', 'Heidelberg · Komori · KBA · Manroland', 'Press-agnostic'],
+    image: '/images/colorloop-screen.gif',
+    imageAlt: 'Rutherford ColorLoop interface in action',
     href: '/#colorloop',
     external: false,
   },
@@ -71,6 +128,41 @@ const steps: { num: string; title: string; body: string }[] = [
   { num: '04', title: 'Correct', body: 'ColorLoop pushes the corrections to the console. The operator validates. The loop closes.' },
 ];
 
+const process: { step: string; title: string; body: string }[] = [
+  {
+    step: '1',
+    title: 'Connect & collaborate',
+    body: 'X-Rite color experts and Rutherford map your production objectives and your real color challenges — together.',
+  },
+  {
+    step: '2',
+    title: 'Assess & configure',
+    body: 'Your current setup is evaluated for compatibility, the ideal configuration is designed, and measurable performance targets are set.',
+  },
+  {
+    step: '3',
+    title: 'Proof of concept & support',
+    body: 'Installation, team training and results validation. Targets not met? You can stop. Annual audits keep performance on track.',
+  },
+];
+
+const included: string[] = [
+  'IntelliTrax2 scanning system',
+  'MeasureColor process-control software',
+  'Rutherford ColorLoop closed-loop technology',
+  'Expert color-consultant support',
+  'Annual performance audit, included',
+  'Professional installation & training',
+];
+
+function Check() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
 export function Offset360Page() {
   return (
     <main className="page-shell o360">
@@ -79,6 +171,9 @@ export function Offset360Page() {
       {/* Hero */}
       <section className="o360-section">
         <div className="o360-narrow">
+          <a className="o360-hero-logo" href={XRITE_OFFSET360_URL} target="_blank" rel="noreferrer" aria-label="X-Rite">
+            <img src="/images/xrite-logo-black.png" alt="X-Rite" />
+          </a>
           <h1 className="o360-h1">Offset360</h1>
           <p className="o360-lede">
             The closed-loop bundle for sheetfed offset. Scan, compare, correct — without leaving the console.
@@ -107,26 +202,35 @@ export function Offset360Page() {
         </div>
       </section>
 
-      {/* Punchline */}
+      {/* Problem statement */}
       <section className="o360-section o360-quiet">
-        <div className="o360-narrow">
-          <p className="o360-eyebrow">The idea</p>
-          <h2 className="o360-h2">Three pieces. One loop.</h2>
-          <p className="o360-lede">
-            Two best-in-class X-Rite products. One Rutherford software. Together they form a single workflow,
-            engineered for press operators who can&apos;t afford to chase color.
+        <div className="o360-statement">
+          <p className="o360-eyebrow">The real bottleneck</p>
+          <h2>
+            Often the problem isn’t the press. <em>It’s the reading system in front of it.</em>
+          </h2>
+          <p>
+            Obsolete or closed OEM measurement tools leave color inconsistent, waste material and stretch every makeready.
+            Offset360 replaces guesswork with a connected, press-side reading system — without buying a new press.
           </p>
         </div>
       </section>
 
-      {/* Bundle */}
+      {/* What it is */}
       <section className="o360-section">
-        <div className="o360-container">
-          <div className="o360-narrow" style={{ marginBottom: 16 }}>
-            <p className="o360-eyebrow">In the bundle</p>
-            <h2 className="o360-h2">Each piece, best at its job.</h2>
-          </div>
+        <div className="o360-narrow">
+          <p className="o360-eyebrow">The idea</p>
+          <h2 className="o360-h2">Three pieces. One loop.</h2>
+          <p className="o360-lede">
+            Two best-in-class X-Rite products and one Rutherford software, combined into a single workflow — plus the expert
+            support to keep it performing.
+          </p>
+        </div>
+      </section>
 
+      {/* Bundle cards */}
+      <section className="o360-section" style={{ paddingTop: 0 }}>
+        <div className="o360-container">
           <div className="o360-bundle">
             {bundleComponents.map((item) => (
               <article className="o360-card" key={item.name}>
@@ -155,33 +259,45 @@ export function Offset360Page() {
         </div>
       </section>
 
-      {/* Numbers */}
+      {/* Deep-dive feature rows */}
       <section className="o360-section o360-quiet">
-        <div className="o360-container">
-          <div className="o360-narrow">
-            <p className="o360-eyebrow">What it delivers</p>
-            <h2 className="o360-h2">On the press floor, in plain numbers.</h2>
-          </div>
-
-          <div className="o360-numbers">
-            {numbers.map((n) => (
-              <div className="o360-number" key={n.label}>
-                <strong>{n.value}</strong>
-                <span>{n.label}</span>
+        {features.map((f) => (
+          <div className={`o360-feature ${f.reverse ? 'is-reverse' : ''}`} key={f.title}>
+            <div className="o360-feature-media">
+              <img src={f.image} alt={f.imageAlt} loading="lazy" />
+            </div>
+            <div className="o360-feature-copy">
+              <div className="o360-feature-eyebrow">
+                <img src={f.vendorLogo} alt={f.vendorAlt} />
+                <span>{f.eyebrow}</span>
               </div>
-            ))}
+              <h3>{f.title}</h3>
+              <p>{f.body}</p>
+              <ul className="o360-chips">
+                {f.chips.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+              <a
+                className="o360-feature-link"
+                href={f.href}
+                target={f.external ? '_blank' : undefined}
+                rel={f.external ? 'noreferrer' : undefined}
+              >
+                Learn more
+              </a>
+            </div>
           </div>
-        </div>
+        ))}
       </section>
 
-      {/* Workflow */}
+      {/* How it works */}
       <section className="o360-section">
         <div className="o360-container">
           <div className="o360-narrow" style={{ marginBottom: 16 }}>
             <p className="o360-eyebrow">How it runs</p>
             <h2 className="o360-h2">The Offset360 loop.</h2>
           </div>
-
           <ol className="o360-steps">
             {steps.map((s) => (
               <li className="o360-step" key={s.num}>
@@ -196,8 +312,75 @@ export function Offset360Page() {
         </div>
       </section>
 
-      {/* Closing CTA */}
+      {/* ROI band */}
+      <section className="o360-section o360-band">
+        <div className="o360-narrow">
+          <p className="o360-eyebrow">Return on investment</p>
+          <p className="o360-band-stat">up to 60%</p>
+          <p className="o360-band-sub">
+            lower initial cost than a new measurement setup — Offset360 modernizes color control through flexible financing,
+            with no new-press investment.
+          </p>
+          <div className="o360-numbers">
+            {numbers.map((n) => (
+              <div className="o360-number" key={n.label}>
+                <strong>{n.value}</strong>
+                <span>{n.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation process */}
       <section className="o360-section o360-quiet">
+        <div className="o360-container">
+          <div className="o360-narrow" style={{ marginBottom: 0 }}>
+            <p className="o360-eyebrow">How we deploy it</p>
+            <h2 className="o360-h2">A guided rollout, not a drop-shipment.</h2>
+          </div>
+          <div className="o360-process">
+            {process.map((p) => (
+              <div className="o360-process-card" key={p.step}>
+                <span className="o360-process-step">{p.step}</span>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What's included */}
+      <section className="o360-section">
+        <div className="o360-container">
+          <div className="o360-narrow" style={{ marginBottom: 0 }}>
+            <p className="o360-eyebrow">What’s included</p>
+            <h2 className="o360-h2">Everything to run a closed loop.</h2>
+          </div>
+          <ul className="o360-included">
+            {included.map((item) => (
+              <li key={item}>
+                <Check />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Open architecture */}
+      <section className="o360-section o360-quiet">
+        <div className="o360-reassure">
+          <p>
+            Open and flexible by design. Offset360 works with <strong>any press brand and any workflow</strong> — no vendor
+            lock-in, no rip-and-replace.
+          </p>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="o360-section">
         <div className="o360-narrow o360-end">
           <p className="o360-eyebrow">Next step</p>
           <h2 className="o360-h2">Get it on your press.</h2>
