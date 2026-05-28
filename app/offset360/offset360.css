@@ -691,3 +691,30 @@
   color: var(--o360-accent);
   font-weight: 600;
 }
+
+/* Scroll-reveal */
+.o360-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.o360-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .o360-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* keep the gradient on the animated ROI stat */
+.o360-band-stat span {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+}

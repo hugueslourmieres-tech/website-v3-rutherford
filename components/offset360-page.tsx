@@ -1,10 +1,77 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 
 const XRITE_OFFSET360_URL = 'https://www.xrite.com/page/offset360';
 const VIDEO_ID = '7X0fOMXK72Y';
+
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/** Animated number that counts up from 0 to `value` when scrolled into view. */
+function CountUp({
+  value,
+  prefix = '',
+  suffix = '',
+  duration = 1400,
+}: {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  duration?: number;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (prefersReducedMotion()) {
+      setDisplay(value);
+      return;
+    }
+    let raf = 0;
+    let started = false;
+    const run = () => {
+      const start = performance.now();
+      const tick = (t: number) => {
+        const p = Math.min((t - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setDisplay(value * eased);
+        if (p < 1) raf = requestAnimationFrame(tick);
+        else setDisplay(value);
+      };
+      raf = requestAnimationFrame(tick);
+    };
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started) {
+            started = true;
+            run();
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    obs.observe(el);
+    return () => {
+      cancelAnimationFrame(raf);
+      obs.disconnect();
+    };
+  }, [value, duration]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {Math.round(display)}
+      {suffix}
+    </span>
+  );
+}
 
 type BundleComponent = {
   name: string;
@@ -114,11 +181,11 @@ const features: Feature[] = [
   },
 ];
 
-const numbers: { value: string; label: string }[] = [
-  { value: '− 50 %', label: 'Makeready waste' },
-  { value: '− 30 %', label: 'Setup time' },
-  { value: 'ΔE < 2', label: 'In-run color stability' },
-  { value: '100 %', label: 'Traceable sheets' },
+const numbers: { prefix: string; value: number; suffix: string; label: string }[] = [
+  { prefix: '− ', value: 50, suffix: ' %', label: 'Makeready waste' },
+  { prefix: '− ', value: 30, suffix: ' %', label: 'Setup time' },
+  { prefix: 'ΔE < ', value: 2, suffix: '', label: 'In-run color stability' },
+  { prefix: '', value: 100, suffix: ' %', label: 'Traceable sheets' },
 ];
 
 const steps: { num: string; title: string; body: string }[] = [
@@ -164,8 +231,34 @@ function Check() {
 }
 
 export function Offset360Page() {
+  const rootRef = useRef<HTMLElement>(null);
+
+  // Reveal-on-scroll for every .o360-reveal element inside the page.
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const els = Array.from(root.querySelectorAll<HTMLElement>('.o360-reveal'));
+    if (prefersReducedMotion()) {
+      els.forEach((el) => el.classList.add('is-in'));
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+    );
+    els.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <main className="page-shell o360">
+    <main className="page-shell o360" ref={rootRef}>
       <SiteNav current="home" />
 
       {/* Hero */}
@@ -204,7 +297,7 @@ export function Offset360Page() {
 
       {/* Problem statement */}
       <section className="o360-section o360-quiet">
-        <div className="o360-statement">
+        <div className="o360-statement o360-reveal">
           <p className="o360-eyebrow">The real bottleneck</p>
           <h2>
             Often the problem isn’t the press. <em>It’s the reading system in front of it.</em>
@@ -218,7 +311,7 @@ export function Offset360Page() {
 
       {/* What it is */}
       <section className="o360-section">
-        <div className="o360-narrow">
+        <div className="o360-narrow o360-reveal">
           <p className="o360-eyebrow">The idea</p>
           <h2 className="o360-h2">Three pieces. One loop.</h2>
           <p className="o360-lede">
@@ -232,8 +325,8 @@ export function Offset360Page() {
       <section className="o360-section" style={{ paddingTop: 0 }}>
         <div className="o360-container">
           <div className="o360-bundle">
-            {bundleComponents.map((item) => (
-              <article className="o360-card" key={item.name}>
+            {bundleComponents.map((item, i) => (
+              <article className="o360-card o360-reveal" key={item.name} style={{ transitionDelay: `${i * 90}ms` }}>
                 <div className="o360-card-media">
                   <img src={item.image} alt={item.imageAlt} loading="lazy" />
                 </div>
@@ -262,7 +355,7 @@ export function Offset360Page() {
       {/* Deep-dive feature rows */}
       <section className="o360-section o360-quiet">
         {features.map((f) => (
-          <div className={`o360-feature ${f.reverse ? 'is-reverse' : ''}`} key={f.title}>
+          <div className={`o360-feature o360-reveal ${f.reverse ? 'is-reverse' : ''}`} key={f.title}>
             <div className="o360-feature-media">
               <img src={f.image} alt={f.imageAlt} loading="lazy" />
             </div>
@@ -294,13 +387,13 @@ export function Offset360Page() {
       {/* How it works */}
       <section className="o360-section">
         <div className="o360-container">
-          <div className="o360-narrow" style={{ marginBottom: 16 }}>
+          <div className="o360-narrow o360-reveal" style={{ marginBottom: 16 }}>
             <p className="o360-eyebrow">How it runs</p>
             <h2 className="o360-h2">The Offset360 loop.</h2>
           </div>
           <ol className="o360-steps">
-            {steps.map((s) => (
-              <li className="o360-step" key={s.num}>
+            {steps.map((s, i) => (
+              <li className="o360-step o360-reveal" key={s.num} style={{ transitionDelay: `${i * 80}ms` }}>
                 <span className="o360-step-num">{s.num}</span>
                 <div className="o360-step-body">
                   <h3>{s.title}</h3>
@@ -314,17 +407,21 @@ export function Offset360Page() {
 
       {/* ROI band */}
       <section className="o360-section o360-band">
-        <div className="o360-narrow">
+        <div className="o360-narrow o360-reveal">
           <p className="o360-eyebrow">Return on investment</p>
-          <p className="o360-band-stat">up to 60%</p>
+          <p className="o360-band-stat">
+            <CountUp prefix="up to " value={60} suffix="%" duration={1600} />
+          </p>
           <p className="o360-band-sub">
             lower initial cost than a new measurement setup, Offset360 modernizes color control through flexible financing,
             with no new-press investment.
           </p>
           <div className="o360-numbers">
-            {numbers.map((n) => (
-              <div className="o360-number" key={n.label}>
-                <strong>{n.value}</strong>
+            {numbers.map((n, i) => (
+              <div className="o360-number o360-reveal" key={n.label} style={{ transitionDelay: `${i * 90}ms` }}>
+                <strong>
+                  <CountUp prefix={n.prefix} value={n.value} suffix={n.suffix} />
+                </strong>
                 <span>{n.label}</span>
               </div>
             ))}
@@ -335,13 +432,13 @@ export function Offset360Page() {
       {/* Implementation process */}
       <section className="o360-section o360-quiet">
         <div className="o360-container">
-          <div className="o360-narrow" style={{ marginBottom: 0 }}>
+          <div className="o360-narrow o360-reveal" style={{ marginBottom: 0 }}>
             <p className="o360-eyebrow">How we deploy it</p>
             <h2 className="o360-h2">A guided rollout, not a drop-shipment.</h2>
           </div>
           <div className="o360-process">
-            {process.map((p) => (
-              <div className="o360-process-card" key={p.step}>
+            {process.map((p, i) => (
+              <div className="o360-process-card o360-reveal" key={p.step} style={{ transitionDelay: `${i * 90}ms` }}>
                 <span className="o360-process-step">{p.step}</span>
                 <h3>{p.title}</h3>
                 <p>{p.body}</p>
@@ -354,13 +451,13 @@ export function Offset360Page() {
       {/* What's included */}
       <section className="o360-section">
         <div className="o360-container">
-          <div className="o360-narrow" style={{ marginBottom: 0 }}>
+          <div className="o360-narrow o360-reveal" style={{ marginBottom: 0 }}>
             <p className="o360-eyebrow">What’s included</p>
             <h2 className="o360-h2">Everything to run a closed loop.</h2>
           </div>
           <ul className="o360-included">
-            {included.map((item) => (
-              <li key={item}>
+            {included.map((item, i) => (
+              <li key={item} className="o360-reveal" style={{ transitionDelay: `${i * 70}ms` }}>
                 <Check />
                 <span>{item}</span>
               </li>
@@ -371,7 +468,7 @@ export function Offset360Page() {
 
       {/* Open architecture */}
       <section className="o360-section o360-quiet">
-        <div className="o360-reassure">
+        <div className="o360-reassure o360-reveal">
           <p>
             Open and flexible by design. Offset360 works with <strong>any press brand and any workflow</strong>, no vendor
             lock-in, no rip-and-replace.
@@ -381,7 +478,7 @@ export function Offset360Page() {
 
       {/* Closing CTA */}
       <section className="o360-section">
-        <div className="o360-narrow o360-end">
+        <div className="o360-narrow o360-end o360-reveal">
           <p className="o360-eyebrow">Next step</p>
           <h2 className="o360-h2">Get it on your press.</h2>
           <p>
