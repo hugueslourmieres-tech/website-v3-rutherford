@@ -34,7 +34,7 @@ type Copy = {
 
 const COPY: Record<Locale, Copy> = {
   en: {
-    tagline: 'Offset printing expertise, software, and technology — helping printers modernize production control.',
+    tagline: 'Offset printing expertise, software, and technology, helping printers modernize production control.',
     platforms: 'Platforms',
     resources: 'Resources',
     company: 'Company',
@@ -44,7 +44,7 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'About Rutherford', colorloop: 'ColorLoop', offset360: 'Offset360', cases: 'Case Studies' },
   },
   fr: {
-    tagline: 'Expertise offset, logiciel et technologie — pour moderniser le contrôle de production.',
+    tagline: 'Expertise offset, logiciel et technologie, pour moderniser le contrôle de production.',
     platforms: 'Plateformes',
     resources: 'Ressources',
     company: 'Entreprise',
@@ -54,7 +54,7 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'À propos', colorloop: 'ColorLoop', offset360: 'Offset360', cases: 'Cas clients' },
   },
   de: {
-    tagline: 'Offset-Expertise, Software und Technologie — zur Modernisierung der Produktionssteuerung.',
+    tagline: 'Offset-Expertise, Software und Technologie, zur Modernisierung der Produktionssteuerung.',
     platforms: 'Plattformen',
     resources: 'Ressourcen',
     company: 'Unternehmen',
@@ -64,7 +64,7 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'Über Rutherford', colorloop: 'ColorLoop', offset360: 'Offset360', cases: 'Referenzen' },
   },
   it: {
-    tagline: 'Competenza offset, software e tecnologia — per modernizzare il controllo della produzione.',
+    tagline: 'Competenza offset, software e tecnologia, per modernizzare il controllo della produzione.',
     platforms: 'Piattaforme',
     resources: 'Risorse',
     company: 'Azienda',
@@ -74,7 +74,7 @@ const COPY: Record<Locale, Copy> = {
     companyLabels: { about: 'Chi è Rutherford', colorloop: 'ColorLoop', offset360: 'Offset360', cases: 'Case Study' },
   },
   es: {
-    tagline: 'Experiencia offset, software y tecnología — para modernizar el control de producción.',
+    tagline: 'Experiencia offset, software y tecnología, para modernizar el control de producción.',
     platforms: 'Plataformas',
     resources: 'Recursos',
     company: 'Empresa',
@@ -174,7 +174,7 @@ export function SiteFooter() {
 
           <div className="footer-bottom">
             <p className="footer-bottom-text">
-              © {year} Rutherford.fr — {t.rights}
+              © {year} Rutherford.fr. {t.rights}
             </p>
           </div>
         </div>

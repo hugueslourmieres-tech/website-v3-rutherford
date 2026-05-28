@@ -49,7 +49,7 @@ const bundleComponents: BundleComponent[] = [
     vendorAlt: 'Rutherford',
     role: 'Closed-loop presetting',
     description:
-      'Turns measurement data into ink-key corrections and pushes them to the console. The loop closes — automatically.',
+      'Turns measurement data into ink-key corrections and pushes them to the console. The loop closes, automatically.',
     image: '/images/Imac CGS Colorloop Graphic Studio.jpg',
     imageAlt: 'Rutherford ColorLoop on an iMac',
     href: '/#colorloop',
@@ -91,7 +91,7 @@ const features: Feature[] = [
     eyebrow: 'Process control',
     title: 'MeasureColor turns measurements into decisions.',
     body:
-      'A client-server platform unifying offset, flexo and digital. ChromaTrack calculates the optimal ink-density correction and the expected ΔE before the operator touches a key. Jobs set up in under 30 seconds, and quality data flows into customizable, audit-ready reports — your data, on your server.',
+      'A client-server platform unifying offset, flexo and digital. ChromaTrack calculates the optimal ink-density correction and the expected ΔE before the operator touches a key. Jobs set up in under 30 seconds, and quality data flows into customizable, audit-ready reports, your data, on your server.',
     chips: ['Job setup < 30 s', 'Real-time ΔE / density', 'ChromaTrack guidance', 'PQX · CXF · CGATS export', 'Offset · flexo · digital'],
     image: '/images/Bundle Rutherford-4.jpg',
     imageAlt: 'Offset360 bundle in a Rutherford pressroom',
@@ -105,7 +105,7 @@ const features: Feature[] = [
     eyebrow: 'Closed loop',
     title: 'Rutherford ColorLoop closes the loop on the console.',
     body:
-      'CIP3 / CIP4 presets load before the press starts. As IntelliTrax2 and MeasureColor read and compare, ColorLoop converts the deltas into ink-key corrections and pushes them straight to the console. The operator validates — and the press holds color through the run, on any major press brand.',
+      'CIP3 / CIP4 presets load before the press starts. As IntelliTrax2 and MeasureColor read and compare, ColorLoop converts the deltas into ink-key corrections and pushes them straight to the console. The operator validates, and the press holds color through the run, on any major press brand.',
     chips: ['CIP3 / CIP4 presetting', 'Automatic ink-key correction', 'Heidelberg · Komori · KBA · Manroland', 'Press-agnostic'],
     image: '/images/colorloop-screen.gif',
     imageAlt: 'Rutherford ColorLoop interface in action',
@@ -132,7 +132,7 @@ const process: { step: string; title: string; body: string }[] = [
   {
     step: '1',
     title: 'Connect & collaborate',
-    body: 'X-Rite color experts and Rutherford map your production objectives and your real color challenges — together.',
+    body: 'X-Rite color experts and Rutherford map your production objectives and your real color challenges, together.',
   },
   {
     step: '2',
@@ -176,7 +176,7 @@ export function Offset360Page() {
           </a>
           <h1 className="o360-h1">Offset360</h1>
           <p className="o360-lede">
-            The closed-loop bundle for sheetfed offset. Scan, compare, correct — without leaving the console.
+            The closed-loop bundle for sheetfed offset. Scan, compare, correct, without leaving the console.
           </p>
           <div className="o360-cta-row">
             <a className="o360-btn o360-btn-primary" href="#film">Watch the film</a>
@@ -193,7 +193,7 @@ export function Offset360Page() {
           <div className="o360-video-wrap">
             <iframe
               src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?rel=0&modestbranding=1`}
-              title="Offset360 — closed-loop color for sheetfed offset"
+              title="Offset360, closed-loop color for sheetfed offset"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -211,7 +211,7 @@ export function Offset360Page() {
           </h2>
           <p>
             Obsolete or closed OEM measurement tools leave color inconsistent, waste material and stretch every makeready.
-            Offset360 replaces guesswork with a connected, press-side reading system — without buying a new press.
+            Offset360 replaces guesswork with a connected, press-side reading system, without buying a new press.
           </p>
         </div>
       </section>
@@ -222,7 +222,7 @@ export function Offset360Page() {
           <p className="o360-eyebrow">The idea</p>
           <h2 className="o360-h2">Three pieces. One loop.</h2>
           <p className="o360-lede">
-            Two best-in-class X-Rite products and one Rutherford software, combined into a single workflow — plus the expert
+            Two best-in-class X-Rite products and one Rutherford software, combined into a single workflow, plus the expert
             support to keep it performing.
           </p>
         </div>
@@ -318,7 +318,7 @@ export function Offset360Page() {
           <p className="o360-eyebrow">Return on investment</p>
           <p className="o360-band-stat">up to 60%</p>
           <p className="o360-band-sub">
-            lower initial cost than a new measurement setup — Offset360 modernizes color control through flexible financing,
+            lower initial cost than a new measurement setup, Offset360 modernizes color control through flexible financing,
             with no new-press investment.
           </p>
           <div className="o360-numbers">
@@ -373,7 +373,7 @@ export function Offset360Page() {
       <section className="o360-section o360-quiet">
         <div className="o360-reassure">
           <p>
-            Open and flexible by design. Offset360 works with <strong>any press brand and any workflow</strong> — no vendor
+            Open and flexible by design. Offset360 works with <strong>any press brand and any workflow</strong>, no vendor
             lock-in, no rip-and-replace.
           </p>
         </div>
@@ -385,7 +385,7 @@ export function Offset360Page() {
           <p className="o360-eyebrow">Next step</p>
           <h2 className="o360-h2">Get it on your press.</h2>
           <p>
-            Send a few photos of your console — we come back with an Offset360 scope tailored to your machines and brand standards.
+            Send a few photos of your console, we come back with an Offset360 scope tailored to your machines and brand standards.
           </p>
           <div className="o360-cta-row">
             <a className="o360-btn o360-btn-primary" href="/console-validation">

@@ -69,7 +69,7 @@ const COPY: Record<Locale, Copy> = {
     ],
     techLabel: 'Intégrations',
     techBody:
-      'ColorLoop s’intègre aux outils standards du secteur comme MeasureColor et IntelliTrax2 — vos investissements mesure et reporting restent valorisés.',
+      'ColorLoop s’intègre aux outils standards du secteur comme MeasureColor et IntelliTrax2, vos investissements mesure et reporting restent valorisés.',
     primaryCta: 'Découvrir ColorLoop',
   },
   de: {
@@ -97,7 +97,7 @@ const COPY: Record<Locale, Copy> = {
     ],
     techLabel: 'Integrationen',
     techBody:
-      'ColorLoop arbeitet mit Branchenstandards wie MeasureColor und IntelliTrax2 — Ihre bestehenden Mess- und Reporting-Investitionen bleiben erhalten.',
+      'ColorLoop arbeitet mit Branchenstandards wie MeasureColor und IntelliTrax2, Ihre bestehenden Mess- und Reporting-Investitionen bleiben erhalten.',
     primaryCta: 'ColorLoop entdecken',
   },
   it: {
@@ -153,7 +153,7 @@ const COPY: Record<Locale, Copy> = {
     ],
     techLabel: 'Integraciones',
     techBody:
-      'ColorLoop funciona con herramientas estándar del sector como MeasureColor y IntelliTrax2 — sus inversiones en medición y reporting se mantienen.',
+      'ColorLoop funciona con herramientas estándar del sector como MeasureColor y IntelliTrax2, sus inversiones en medición y reporting se mantienen.',
     primaryCta: 'Descubrir ColorLoop',
   },
 };

@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: RouteParams }): Metadata 
   const course = getCourseBySlug(params.slug);
   if (!course) return { title: 'Rutherford Academy' };
   return {
-    title: `${course.title} — Rutherford Academy`,
+    title: `${course.title} | Rutherford Academy`,
     description: course.description,
   };
 }

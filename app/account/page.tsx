@@ -5,7 +5,7 @@ import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { ALL_COURSES } from '@/data/academy-courses';
 
 export const metadata: Metadata = {
-  title: 'Your account — Rutherford Academy',
+  title: 'Your account | Rutherford Academy',
 };
 
 export const dynamic = 'force-dynamic';

@@ -98,7 +98,7 @@ export function AccountPage({ user, enrolledCourses, passSubscription }: Props) 
                       : `Renews on ${formatDate(passSubscription.currentPeriodEnd)}`}
                   </p>
                 ) : (
-                  <p className="account-pass-detail">Lifetime access — no renewal required.</p>
+                  <p className="account-pass-detail">Lifetime access, no renewal required.</p>
                 )}
               </div>
               <button type="button" className="button button-light" onClick={handleOpenPortal}>

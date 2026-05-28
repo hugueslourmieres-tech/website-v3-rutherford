@@ -281,7 +281,7 @@ export function AcademyCoursePage({ course, access }: Props) {
                   onClick={() => handleCheckout('course')}
                   disabled={checkoutLoading !== null}
                 >
-                  {checkoutLoading === 'course' ? 'Loading…' : `Buy this course — ${course.price}`}
+                  {checkoutLoading === 'course' ? 'Loading…' : `Buy this course · ${course.price}`}
                 </button>
                 <button
                   type="button"
@@ -289,7 +289,7 @@ export function AcademyCoursePage({ course, access }: Props) {
                   onClick={() => handleCheckout('pass')}
                   disabled={checkoutLoading !== null}
                 >
-                  {checkoutLoading === 'pass' ? 'Loading…' : 'Get the Academy Pass — €399'}
+                  {checkoutLoading === 'pass' ? 'Loading…' : 'Get the Academy Pass · €399'}
                 </button>
               </div>
               {!access.signedIn ? (

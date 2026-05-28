@@ -32,7 +32,7 @@ const COPY: Record<Locale, Copy> = {
     kicker: 'Qualifizierungsschritt',
     headline: 'Prüfen Sie, ob Ihre Konsole kompatibel ist',
     supporting:
-      'Teilen Sie Rutherford Ihre Druckkonsole und Ihren Workflow mit — wir prüfen die Kompatibilität und leiten den nächsten Schritt.',
+      'Teilen Sie Rutherford Ihre Druckkonsole und Ihren Workflow mit, wir prüfen die Kompatibilität und leiten den nächsten Schritt.',
     primaryCta: 'Konsolenvalidierung anfragen',
     secondaryCta: 'Mit Rutherford sprechen',
   },
