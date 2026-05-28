@@ -6,6 +6,12 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteNav } from '@/components/site-nav';
 import { createSupabaseBrowserClient } from '@/lib/supabase/client';
 
+// Front-end demo mode: sign-in buttons drop straight into the sample
+// dashboard so collaborators can walk the UI without real auth.
+// Flip to false (or wire NEXT_PUBLIC_AUTH_DEMO) to restore real Supabase auth.
+const DEMO_AUTH = true;
+const DEMO_DASHBOARD = '/account/demo';
+
 export function SignInPage() {
   const search = useSearchParams();
   const next = search.get('next') ?? '/account';
@@ -19,6 +25,11 @@ export function SignInPage() {
   }, [search]);
 
   const handleGoogle = async () => {
+    if (DEMO_AUTH) {
+      setStatus('sending');
+      window.location.href = DEMO_DASHBOARD;
+      return;
+    }
     setStatus('sending');
     setErrorMsg(null);
     const supabase = createSupabaseBrowserClient();
@@ -34,6 +45,11 @@ export function SignInPage() {
   };
 
   const handleApple = async () => {
+    if (DEMO_AUTH) {
+      setStatus('sending');
+      window.location.href = DEMO_DASHBOARD;
+      return;
+    }
     setStatus('sending');
     setErrorMsg(null);
     const supabase = createSupabaseBrowserClient();
@@ -51,6 +67,11 @@ export function SignInPage() {
   const handleMagicLink = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!email) return;
+    if (DEMO_AUTH) {
+      setStatus('sending');
+      window.location.href = DEMO_DASHBOARD;
+      return;
+    }
     setStatus('sending');
     setErrorMsg(null);
     const supabase = createSupabaseBrowserClient();
