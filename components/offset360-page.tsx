@@ -93,8 +93,8 @@ const features: Feature[] = [
     body:
       'A client-server platform unifying offset, flexo and digital. ChromaTrack calculates the optimal ink-density correction and the expected ΔE before the operator touches a key. Jobs set up in under 30 seconds, and quality data flows into customizable, audit-ready reports — your data, on your server.',
     chips: ['Job setup < 30 s', 'Real-time ΔE / density', 'ChromaTrack guidance', 'PQX · CXF · CGATS export', 'Offset · flexo · digital'],
-    image: '/images/measurecolor-hero.jpg',
-    imageAlt: 'MeasureColor quality control on a pressroom display',
+    image: '/images/Bundle Rutherford-4.jpg',
+    imageAlt: 'Offset360 bundle in a Rutherford pressroom',
     href: 'https://www.xrite.com/categories/formulation-and-quality-assurance-software/measurecolor-production',
     external: true,
     reverse: true,
