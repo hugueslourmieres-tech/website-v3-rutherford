@@ -313,17 +313,25 @@
 
 .o360-number strong {
   display: block;
-  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
+  font-size: clamp(3rem, 5.4vw, 5rem);
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 1;
   color: var(--o360-fg);
+  white-space: nowrap;
 }
 
-.o360-number span {
+/* the count-up span sits inside <strong> — keep it the strong's size */
+.o360-number strong span {
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+/* label only (direct child), not the number span nested in <strong> */
+.o360-number > span {
   display: block;
-  margin-top: 12px;
-  font-size: 0.92rem;
+  margin-top: 14px;
+  font-size: 1.02rem;
   color: var(--o360-mute);
 }
 
