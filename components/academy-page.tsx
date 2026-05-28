@@ -99,8 +99,6 @@ export function AcademyPage() {
         </div>
       </section>
 
-      <AcademyFreeVideos />
-
       <section className="academy-section section" id="free">
         <div className="container">
           <header className="academy-section-head">
@@ -159,6 +157,8 @@ export function AcademyPage() {
           </aside>
         </div>
       </section>
+
+      <AcademyFreeVideos />
 
       <section className="academy-why section">
         <div className="container academy-why-shell">
